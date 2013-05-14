@@ -1,0 +1,17 @@
+{
+  "name": "webRTC-Test",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "opentok": "",
+    "express": "3.2.4",
+    "jade": "*"
+  },
+  "subdomain": "dylantrnr",
+  "engines": {
+    "node": "0.8.x"
+  }
+}
