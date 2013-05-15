@@ -50,6 +50,18 @@ app.get("/about", function (req, res) {
   res.render( 'about', {title: "about"});
 });
 
+// When user goes to /room/:room give them the same thing as a regular meeting except prompt them for a password first
+app.get("/room/:room", function(req, res){
+  if(urlSessions[ req.params.room ] == undefined){
+    OpenTokObject.createSession(function(sessionId){
+      urlSessions[ req.params.room ] = sessionId;
+      sendResponse2( sessionId, res );
+    }, {'p2p.preference':'enabled'});
+  }else{
+    sessionId = urlSessions[req.params.room];
+    sendResponse2( sessionId, res );
+  }
+});
 
 // ***
 // *** When user goes to meeting directory, redirect them to a room (timestamp)
@@ -87,6 +99,11 @@ app.get("/:room", function(req, res){
   }
 });
 
+function sendResponse2( sessionId, responder ){
+  var token = OpenTokObject.generateToken( {session_id: sessionId} );
+  var data = {OpenTokKey:OTKEY, sessionId: sessionId, token:token, title: "New Room"};
+  responder.render( 'scheduled', data );
+}
 
 
 

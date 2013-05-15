@@ -23,14 +23,13 @@ function RoomCtrl ($scope) {
     $scope.unavailable = true;
 
     $scope.scheduleRoom = function() {
-      var room = new Room({time: when, password: $scope.password});
-
-      room.$save(function(room) {
-        //an element in the view binds to this value and sets its text to it
-        $scope.roomUrl = '/room/' + room.id;
-        //the view will now show the div with link and password
-        $scope.roomReady = true;
-      });
+      var room = {time: when, password: $scope.password};
+      
+      //an element in the view binds to this value and sets its text to it
+      $scope.roomUrl = '/room/' + RandomRoom();
+      //the view will now show the div with link and password
+      $scope.roomReady = true;
+      
     };
 
     //every time these values change, check to see if there is a valid date for the meeting
@@ -56,3 +55,15 @@ function RoomCtrl ($scope) {
       when = 0;
     }
 };
+
+//Random Room Generator - inspired by webrtcio guys on github
+function RandomRoom () {
+  var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+    var length_of_string = 9;
+    var randomstring = '';
+    for(var i = 0; i < length_of_string; i++) {
+      var random_num = Math.floor(Math.random() * chars.length);
+      randomstring += chars.substring(random_num, random_num + 1);
+    }
+    return randomstring;
+}
