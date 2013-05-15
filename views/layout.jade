@@ -1,15 +1,18 @@
 doctype 5
-html
+html(ng-app)
 	head
 		title= title
 		link(rel='stylesheet', href='/stylesheets/style.css')
 
 	body
 		h1 #{title}
-		a(href="/") Home Page
-		div#quickMeeting
-			a(href="/meeting") quick meeting
-		div#about
-			a(href="/about") about
+		ul
+			li#home 
+				a(href="/") Home Page
+			
+			li#about
+				a(href="/about") about
 		hr
 		block content
+
+	script(src='javascripts/lib/angular/angular.js')

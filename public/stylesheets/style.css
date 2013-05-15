@@ -1,8 +1,26 @@
+html {
+	margin:0;
+	padding:0;
+	border:0;
+}
 body {
+	color: #346c8c;
+	background: white no-repeat center center fixed; background-size: 100%; min-width:500px;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+ul { 
+	list-style: none; display: inline;
 }
 
 a {
   color: #00B7FF;
 }
+
+html, body { height: 100%;}
+
