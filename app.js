@@ -5,7 +5,6 @@
 
 var express = require('express')
   , routes = require('./routes')
-  , user = require('./routes/user')
   , http = require('http')
   , path = require('path');
 
@@ -42,14 +41,20 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+// When user goes to route directory send them the index.html file
+app.get("/", routes.index);
+
+
+// When user goes to /about send to about page
 app.get("/about", function (req, res) {
   res.render( 'about', {title: "about"});
 });
 
+
 // ***
-// *** When user goes to root directory, redirect them to a room (timestamp)
+// *** When user goes to meeting directory, redirect them to a room (timestamp)
 // ***
-app.get("/", function( req, res ){
+app.get("/meeting", function( req, res ){
   res.writeHead(302, { 'Location': RandomRoom() });
   res.end();
 });
@@ -92,7 +97,7 @@ app.get("/:room", function(req, res){
 function sendResponse( sessionId, responder ){
   var token = OpenTokObject.generateToken( {session_id: sessionId} );
   var data = {OpenTokKey:OTKEY, sessionId: sessionId, token:token, title: "something"};
-  responder.render( 'index', data );
+  responder.render( 'meeting', data );
 }
 
 http.createServer(app).listen(app.get('port'), function(){
