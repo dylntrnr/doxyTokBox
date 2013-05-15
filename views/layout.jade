@@ -1,8 +1,15 @@
 doctype 5
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
 
-  body
-    block content
+	body
+		h1 #{title}
+		a(href="/") Home Page
+		div#quickMeeting
+			a(href="/meeting") quick meeting
+		div#about
+			a(href="/about") about
+		hr
+		block content
