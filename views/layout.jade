@@ -7,6 +7,10 @@ html(ng-app="content")
 
 	body
 		h1 #{title}
+		
+		//- This is where all the partials are put
+		block content
+
 		ul
 			li
 				a(href="/#/about") About 
@@ -16,8 +20,6 @@ html(ng-app="content")
 				a(href="/#/home") Home
 			li
 				a(href="/quick/meeting") Quick Meeting
-		//- This is where all the partials are put
-		block content
-
+				
 	footer
 		p 2013 DOXY.ME ALL RIGHTS RESERVED

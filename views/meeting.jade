@@ -10,8 +10,9 @@ block content
     var apiKey = #{OpenTokKey}
     var token = "#{token}"
     var pathname = window.location.pathname
+    var cleaned = pathname.slice(6)
     var resort = function() {
-      window.location.replace('/flash/room' + pathname)
+      window.location.replace('/flash/room' + cleaned)
     };
     
   script(src="/javascripts/main.js")
