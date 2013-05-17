@@ -2,7 +2,8 @@
 
 angular.module('content', [])
   .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
-    $routeProvider.when('/', {templateUrl: 'partials/schedule', controller: RoomCtrl});
-    $routeProvider.otherwise({redirectTo: '/'});
-    $locationProvider.html5Mode(true);
+    $routeProvider.when('/home', {templateUrl: '/partials/home'});
+    $routeProvider.when('/schedule', {templateUrl: 'partials/schedule', controller: RoomCtrl});
+    $routeProvider.when('/about', {templateUrl: 'partials/about'});
+    $routeProvider.otherwise({redirectTo: '/home'});
   }]);

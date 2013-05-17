@@ -41,15 +41,15 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-// When user goes to route directory send them the index.html file
+// When user goes to route directory send them the index.html file and partials
 app.get("/", routes.index);
 app.get('/partials/:name', routes.partials);
 
 
-// When user goes to /about send to about page
-app.get("/about", function (req, res) {
-  res.render( 'about', {title: "about"});
-});
+// // When user goes to /about send to about page
+// app.get("/about", function (req, res) {
+//   res.render( 'about', {title: "about"});
+// });
 
 // When user goes to /room/:room give them the same thing as a regular meeting except prompt them for a password first
 app.get("/room/:room", function(req, res){
@@ -86,7 +86,7 @@ function sendResponse3( sessionId, responder ){
 // ***
 // *** When user goes to meeting directory, redirect them to a room (timestamp)
 // ***
-app.get("/meeting", function( req, res ){
+app.get("/quick/meeting", function( req, res ){
   res.writeHead(302, { 'Location': RandomRoom() });
   res.end();
 });
@@ -107,7 +107,7 @@ function RandomRoom () {
 // *** When user goes to root directory, redirect them to a room (timestamp)
 // *** If sessionId does not exist for url, create one
 // ***
-app.get("/:room", function(req, res){
+app.get("/quick/:room", function(req, res){
   if(urlSessions[ req.params.room ] == undefined){
     OpenTokObject.createSession(function(sessionId){
       urlSessions[ req.params.room ] = sessionId;

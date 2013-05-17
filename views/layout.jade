@@ -7,7 +7,15 @@ html(ng-app="content")
 
 	body
 		h1 #{title}
-		
+		ul
+			li
+				a(href="/#/about") About 
+			li
+				a(href="/#/schedule") Schedule 
+			li
+				a(href="/#/home") Home
+			li
+				a(href="/quick/meeting") Quick Meeting
 		//- This is where all the partials are put
 		block content
 
