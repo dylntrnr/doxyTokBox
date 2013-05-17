@@ -1,0 +1,18 @@
+div
+  a(href="/meeting") Quick Meeting
+  hr
+  h2 Reserve Room
+  input(data-ng-model='date', placeholder='mm/dd/yy')
+  input(data-ng-model='time', placeholder='hh:mm')
+  select(data-ng-model='ampm')
+    option(value='am') AM
+    option(value='pm') PM
+  br
+  label
+    | Password
+    input(data-ng-model='password', type='password')
+  br
+  button.btn(data-ng-click='scheduleRoom()', data-ng-disabled='unavailable') Schedule Meeting
+  div(data-ng-show='roomReady')
+    a(data-ng-href='{{roomUrl}}', data-ng-bind='roomUrl')
+  

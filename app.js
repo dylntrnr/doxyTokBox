@@ -43,6 +43,7 @@ if ('development' == app.get('env')) {
 
 // When user goes to route directory send them the index.html file
 app.get("/", routes.index);
+app.get('/partials/:name', routes.partials);
 
 
 // When user goes to /about send to about page

@@ -1,5 +1,5 @@
 doctype 5
-html(ng-app)
+html(ng-app="content")
 	head
 		
 		title= title
@@ -7,14 +7,9 @@ html(ng-app)
 
 	body
 		h1 #{title}
-		ul
-			li#home 
-				a(href="/") Home Page
-			
-			li#about
-				a(href="/about") about
-		hr
+		
 		//- This is where all the partials are put
 		block content
 
-	script(src='javascripts/lib/angular/angular.js')
+	footer
+		p 2013 DOXY.ME ALL RIGHTS RESERVED

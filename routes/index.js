@@ -4,5 +4,10 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: "Doxy Home" });
+  res.render('index', { title: "DOXY.ME" });
+};
+
+exports.partials = function (req, res) {
+  var name = req.params.name;
+  res.render('partials/' + name);
 };
