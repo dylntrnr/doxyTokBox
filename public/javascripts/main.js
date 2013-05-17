@@ -1,10 +1,9 @@
-console.log("hello");
+
 
 TB.setLogLevel(TB.DEBUG);
-
 // Initialize session, set up event listeners, and connect
-var session = TB.initSession(sessionId);
-session.addEventListener('sessionConnected', sessionConnectedHandler);
+window.session = TB.initSession(sessionId);
+session.addEventListener('sessionConnected', sessionConnectedHandler);  
 session.addEventListener('streamCreated', streamCreatedHandler);
 session.connect(apiKey, token);
 
@@ -39,3 +38,5 @@ function subscribeToStreams(streams) {
     session.subscribe(streams[i], div.id, {height: "480px", width: "640px"});
   }
 }
+
+

@@ -2,11 +2,21 @@ extends layout
 
 
 block content
-	script(src="https://swww.tokbox.com/webrtc/v2.0/js/TB.min.js")
-	script
-		var sessionId = "#{sessionId}"
-		var apiKey = #{OpenTokKey}
-		var token = "#{token}"
-	script(src="/javascripts/main.js")
+  script(src="https://swww.tokbox.com/webrtc/v2.0/js/TB.min.js")
+  //- script(src="http://static.opentok.com/v1.1/js/TB.min.js")
 
-	div#myPublisherDiv
+  script
+    var sessionId = "#{sessionId}"
+    var apiKey = #{OpenTokKey}
+    var token = "#{token}"
+    var pathname = window.location.pathname
+    var resort = function() {
+      window.location.replace('/flash/room' + pathname)
+    };
+    
+  script(src="/javascripts/main.js")
+
+  div#myPublisherDiv
+  
+  p Has is been a while and your Dr/Patient isn't here? Maybe their browser is old and they need to use flash. Hit the button to fall back to using Flash - you really should get Google Chrome because it is a much better experiance. 
+  button(onclick="resort()") Flash Fall Back

@@ -1,0 +1,20 @@
+extends layout
+
+
+block content
+  //- script(src="https://swww.tokbox.com/webrtc/v2.0/js/TB.min.js")
+  script(src="http://static.opentok.com/v1.1/js/TB.min.js")
+
+  script
+    var sessionId = "#{sessionId}"
+    var apiKey = #{OpenTokKey}
+    var token = "#{token}"
+    var pathname = window.location.pathname
+    var resort = function() {
+      window.location.replace('/flash/room' + pathname)
+    };
+    
+  script(src="/javascripts/main.js")
+
+  div#myPublisherDiv
+  

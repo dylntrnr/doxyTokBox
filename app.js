@@ -63,6 +63,25 @@ app.get("/room/:room", function(req, res){
   }
 });
 
+// when they hit the flash fall back button go to room with flash
+app.get("/flash/room/:room", function(req, res){
+  if(urlSessions[ req.params.room ] == undefined){
+    OpenTokObject.createSession(function(sessionId){
+      urlSessions[ req.params.room ] = sessionId;
+      sendResponse3( sessionId, res );
+    }, {'p2p.preference':'enabled'});
+  }else{
+    sessionId = urlSessions[req.params.room];
+    sendResponse3( sessionId, res );
+  }
+});
+
+function sendResponse3( sessionId, responder ){
+  var token = OpenTokObject.generateToken( {session_id: sessionId} );
+  var data = {OpenTokKey:OTKEY, sessionId: sessionId, token:token, title: "New Room"};
+  responder.render( 'fallback', data );
+}
+
 // ***
 // *** When user goes to meeting directory, redirect them to a room (timestamp)
 // ***
