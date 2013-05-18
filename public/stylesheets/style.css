@@ -5,7 +5,7 @@ html {
 }
 body {
 	color: #346c8c;
-	background: white no-repeat center center fixed; background-size: 100%; min-width:500px;
+	background: white url('../images/background.jpg') no-repeat center center fixed; background-size: 100%; min-width:500px;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
