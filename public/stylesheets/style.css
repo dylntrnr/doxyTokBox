@@ -26,7 +26,7 @@ img {
 	border:4px #fff solid;
 	border-radius:4px;
 	text-align:center;
-	max-width:520px;
+	max-width:600px;
 }
 
 #haveApt p {
@@ -44,7 +44,7 @@ img {
 	height:35px;
 	width:100px;
 }
-#haveApt label:first {
+#haveApt label:first-child {
 	float:left;
 	margin-right: 15px;
 }
