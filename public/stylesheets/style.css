@@ -11,14 +11,50 @@ body {
 	-o-background-size: cover;
 	background-size: cover;
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 16px Helvetica, Arial, sans-serif;
+}
+
+img {
+	max-width: 446px;
+}
+
+.ng-scope p {
+	color:#c14543;
+}
+.ng-scope button {
+	background-color:#c14543;
+	border-radius:4px;
+	color:#fff;
+	border:none;
+	font-size:16px;
+	padding:5px 15px;
 }
 
 ul { 
-	list-style: none; display: inline;
+	list-style: none;
+	display: inline;
+	padding:0px;
+}
+li:first {
+	margin-left:0px;
+}
+li {
+	display: inline-block;
+	margin-left:10px;
+	background-color:#4d5968;
+	border-radius:4px;
+	padding:5px 10px;
 }
 
+<<<<<<< HEAD
+a {
+  color: #ffffff;
+  text-transform:uppercase;
+  text-decoration:none;
+}
+=======
 
+>>>>>>> 66989ed4185580994cd8c9bed966aa37046f7f4a
 
 html, body { height: 100%;}
 
