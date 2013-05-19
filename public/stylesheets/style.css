@@ -29,6 +29,11 @@ img {
 	max-width:520px;
 }
 
+.container {
+	height: 200px;
+	width: 300px;
+}
+
 #haveApt p {
 	color:#c14543;
 }
