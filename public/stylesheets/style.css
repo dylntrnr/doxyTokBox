@@ -31,7 +31,7 @@ h2 {
 img {
 	max-width: 21.875em;
 	background-color:rgba(214,213,209,0.4);
-	margin:0 0 3.125em;
+	margin:0 0 2.125em;
 	padding:5em 7.8125em;
 }
 
@@ -122,12 +122,14 @@ img {
 	border-radius:0.25em;
 	text-align:center;
 	max-width:37.5em;
-	padding:1.25em 0;
+	padding:0.75em 0 1.25em;
 }
 #schedule h2 {
 	text-transform: uppercase;
 	font-family: 'Steagal-Bo', Helvetica, Arial, sans-serif;
 	color:#c14543;
+	padding:0;
+	margin:10px 0 20px;
 }
 #schedule input {
 	padding:0.625em 1.25em;
@@ -182,8 +184,6 @@ img {
 	pointer-events:none;
 	display:block;
 }
-
-
 #schedule label {
 	font: 0.875em 'Steagal-Re', Helvetica, Arial, sans-serif;
 	margin:10px 0 5px;
@@ -196,16 +196,26 @@ img {
 	font-size:1em;
 	padding:0.625em 1.5625em 0.3125em;
 	display:block;
-	margin:1.25em auto 0.3125em;
+	margin:1.25em auto 0.75em;
 	height:2.1875em;
 	clear:left;
 	font: 1.20em 'Steagal-Me', Helvetica, Arial, sans-serif;
 	letter-spacing: 0.0625em;
 	line-height:0;
 }
+#schedule button:hover {
+	background-color:rgba(223,91,89,1);
+	cursor:pointer;
+}
 #schedule button:disabled {
 	background-color:#999;
 	color:#666;
+}
+#schedule div a {
+	color:#4d5968;
+	background-color:#fff;
+	padding:5px;
+	margin:10px;
 }
 
 /*--- Begin Navigation button styles ---*/
@@ -244,7 +254,7 @@ footer {
 	max-width:37.5em;
 	position:absolute;
 	clear:both;
-	left:16.25em;
+	left:18em;
 }
 footer p {
 	text-align:center;
