@@ -14,7 +14,6 @@ function sessionConnectedHandler(event) {
 
   // Subscribe to streams that were in the session when we connected
   subscribeToStreams(event.streams);
-  window.test = event.streams;
 }
 
 function streamCreatedHandler(event) {
@@ -32,7 +31,8 @@ function subscribeToStreams(streams) {
     // Create the div to put the subscriber element in to
     var div = document.createElement('div');
     div.setAttribute('id', 'stream' + streams[i].streamId);
-    document.body.appendChild(div);
+    var streamsContainer = document.getElementById('streamsContainer');
+    streamsContainer.appendChild(div);
 
     // Subscribe to the stream
     session.subscribe(streams[i], div.id, {height: "480px", width: "640px"});
