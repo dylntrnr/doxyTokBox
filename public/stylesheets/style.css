@@ -255,6 +255,13 @@ footer {
 	position:absolute;
 	clear:both;
 	left:18em;
+	bottom:0;
+}
+@media (max-height: 750px) {
+	footer {
+		max-width:37.5em;
+		position:static;
+	}
 }
 footer p {
 	text-align:center;
