@@ -11,14 +11,15 @@ body {
 	-o-background-size: cover;
 	background-size: cover;
   padding: 0 50px;
-  font: 1em Helvetica, Arial, sans-serif;
+  font: 1em 'Steagal-Re', Helvetica, Arial, sans-serif;
+  margin:0;
 }
 
 img {
-	max-width: 400px;
-	background-color:#d6d5d1;
-	margin:0 0 50px;
-	padding:50px;
+	max-width: 350px;
+	background-color:rgba(214,213,209,0.4);
+	margin:0 0 100px;
+	padding:80px 130px;
 }
 
 #haveApt {
@@ -27,10 +28,36 @@ img {
 	border-radius:4px;
 	text-align:center;
 	max-width:600px;
+	padding:20px 0;
 }
 
 #haveApt p {
 	color:#c14543;
+	font: 1.25em 'Steagal-Bo', Helvetica, Arial, sans-serif;
+	letter-spacing:1px;
+}
+#aptForm {
+	text-align:center;
+	width:90%;
+	margin:0 auto;
+}
+#haveApt label:first-of-type {
+	float:left;
+	margin-right: 15px;
+}
+#haveApt label:last-of-type {
+	float:right;
+}
+#haveApt input {
+	display:block;
+	padding:10px 20px;
+	border-radius:4px;
+	border:none;
+	width:18em;
+}
+.clearfix {
+	float:none;
+	clear:both;
 }
 #haveApt button {
 	background-color:#c14543;
@@ -43,22 +70,13 @@ img {
 	margin:10px auto;
 	height:35px;
 	width:100px;
+	clear:left;
 }
-#haveApt label:first-child {
-	float:left;
-	margin-right: 15px;
+.nav {
+	text-align:center;
+	max-width:600px;
+	margin: 60px 0 0;
 }
-#haveApt label {
-	float:left;
-}
-#haveApt input {
-	display:block;
-	padding:10px 20px;
-	border-radius:4px;
-	border:none;
-	width:18em;
-}
-
 ul { 
 	list-style: none;
 	padding:0px;
@@ -79,6 +97,16 @@ a {
   color: #ffffff;
   text-transform:uppercase;
   text-decoration:none;
+}
+footer {
+	max-width:600px;
+	position:absolute;
+	top:96%;
+	left:225px;
+}
+footer p {
+	text-align:center;
+	margin:0;
 }
 
 html, body { height: 100%;}
