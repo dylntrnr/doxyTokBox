@@ -108,13 +108,20 @@ img {
 
 /*--- Begin About div styles ---*/
 #about {
-	text-align:left;
-	padding:0 0.75em;
+	text-align:center;
+	padding:4em 0.75em;
+	max-width:100%;
+	margin:0 auto;
+	border-top:1px dashed #fff;
+	border-bottom:1px dashed #fff;
+	background:rgba(214,213,209,0.05);
 }
-#about h1 {
-	text-transform: uppercase;
+#about div {
 	font-family: 'Steagal-Li', Helvetica, Arial, sans-serif;
+	width:80%;
+	margin:0 auto;
 }
+
 /*--- Begin Schedule div styles ---*/
 #schedule {
 	background-color:rgba(214,213,209,0.4);
@@ -255,8 +262,9 @@ footer {
 	position:absolute;
 	clear:both;
 	left:18em;
-	bottom:0;
+	bottom:5px;
 }
+/*--- This Media Query keeps the footer from overlaping any of the other elements on smaller screens. --*/
 @media (max-height: 750px) {
 	footer {
 		max-width:37.5em;
