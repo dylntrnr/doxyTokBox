@@ -1,45 +1,62 @@
+/*--- Begin Universal Styles --*/
 html {
 	margin:0;
 	padding:0;
 	border:0;
 }
 body {
-	color: #346c8c;
+	color: #4d5968;
 	background: white url('../images/background.jpg') no-repeat center center fixed; background-size: 100%; min-width:500px;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-  padding: 0 50px;
+  padding: 0 0 0 6.25em;
   font: 1em 'Steagal-Re', Helvetica, Arial, sans-serif;
   margin:0;
 }
-
-img {
-	max-width: 350px;
-	background-color:rgba(214,213,209,0.4);
-	margin:0 0 100px;
-	padding:80px 130px;
+html, body {
+	height: 100%;
+}
+h1 {
+	font-size:2em;
+	line-height:1em;
+}
+h2 {
+	font-size:1.5em;
+	line-height:0.75em;
 }
 
+/*--- Logo Img Styles - Super Simple ---*/
+img {
+	max-width: 21.875em;
+	background-color:rgba(214,213,209,0.4);
+	margin:0 0 3.125em;
+	padding:5em 7.8125em;
+}
+
+/*--- Begin changeable content of the page with a master div. All hail the master div. --*/
+.container {
+	height: 12.5em;
+	max-width: 37.5em;
+}
+.content {
+	text-align:center;
+}
+
+/*--- The main appointment box styles for the landing page ---*/
 #haveApt {
 	background-color:rgba(214,213,209,0.4);
-	border:4px #fff solid;
-	border-radius:4px;
+	border:0.25em #fff solid;
+	border-radius:0.25em;
 	text-align:center;
-	max-width:600px;
-	padding:20px 0;
+	max-width:37.5em;
+	padding:1.25em 0;
 }
-
-.container {
-	height: 200px;
-	width: 300px;
-}
-
 #haveApt p {
 	color:#c14543;
 	font: 1.25em 'Steagal-Bo', Helvetica, Arial, sans-serif;
-	letter-spacing:1px;
+	letter-spacing:0.0625em;
 }
 #aptForm {
 	text-align:center;
@@ -48,15 +65,19 @@ img {
 }
 #haveApt label:first-of-type {
 	float:left;
-	margin-right: 15px;
+	margin-right: 0.9375em;
+	font: 0.875em 'Steagal-Re', Helvetica, Arial, sans-serif;
+	text-align:left;
 }
 #haveApt label:last-of-type {
 	float:right;
+	font: 0.875em 'Steagal-Re', Helvetica, Arial, sans-serif;
+	text-align:left;
 }
 #haveApt input {
 	display:block;
-	padding:10px 20px;
-	border-radius:4px;
+	padding:0.625em 1.25em;
+	border-radius:0.25em;
 	border:none;
 	width:18em;
 }
@@ -66,56 +87,125 @@ img {
 }
 #haveApt button {
 	background-color:#c14543;
-	border-radius:4px;
+	border-radius:0.25em;
 	color:#fff;
 	border:none;
 	font-size:1em;
-	padding:5px 15px;
+	padding:0.625em 1.5625em 0.3125em;
 	display:block;
-	margin:10px auto;
-	height:35px;
-	width:100px;
+	margin:1.25em auto 0.3125em;
+	height:2.1875em;
+	width:7.5em;
 	clear:left;
+	font: 1.20em 'Steagal-Me', Helvetica, Arial, sans-serif;
+	letter-spacing: 0.0625em;
+	line-height:0;
 }
+#haveApt button:hover {
+	background-color:rgba(223,91,89,1);
+	cursor:pointer;
+}
+
+/*--- Begin About div styles ---*/
+#about {
+	text-align:left;
+	padding:0 0.75em;
+}
+#about h1 {
+	text-transform: uppercase;
+	font-family: 'Steagal-Li', Helvetica, Arial, sans-serif;
+}
+/*--- Begin Schedule div styles ---*/
+#schedule {
+	background-color:rgba(214,213,209,0.4);
+	border:0.25em #fff solid;
+	border-radius:0.25em;
+	text-align:center;
+	max-width:37.5em;
+	padding:1.25em 0;
+}
+#schedule h2 {
+	text-transform: uppercase;
+	font-family: 'Steagal-Bo', Helvetica, Arial, sans-serif;
+	color:#c14543;
+}
+#schedule input {
+	padding:0.625em 1.25em;
+	border-radius:0.25em;
+	border:none;
+	width:18em;
+	margin:0.25em 0.5em;
+}
+#schedule select {
+	padding:0.625em 1.25em;
+	border-radius:0.25em;
+	border:solid 1px #ddd;
+	background-color:#fff;
+	color:#4d5968;
+}
+#schedule label {
+	font: 0.875em 'Steagal-Re', Helvetica, Arial, sans-serif;
+	margin:10px 0 5px;
+}
+#schedule button {
+	background-color:#c14543;
+	border-radius:0.25em;
+	color:#fff;
+	border:none;
+	font-size:1em;
+	padding:0.625em 1.5625em 0.3125em;
+	display:block;
+	margin:1.25em auto 0.3125em;
+	height:2.1875em;
+	clear:left;
+	font: 1.20em 'Steagal-Me', Helvetica, Arial, sans-serif;
+	letter-spacing: 0.0625em;
+	line-height:0;
+}
+
+/*--- Begin Navigation button styles ---*/
 .nav {
 	text-align:center;
-	max-width:600px;
-	margin: 60px 0 0;
+	max-width:37.5em;
+	margin: 3.75em 0 0;
 }
 ul { 
 	list-style: none;
-	padding:0px;
+	padding:0;
 	text-align:center;
 }
-li:first {
-	margin-left:0px;
+li:first-of-type {
+	margin-left:0;
 }
 li {
 	display: inline-block;
-	margin-left:10px;
+	margin-left:0.625em;
 	background-color:#4d5968;
-	border-radius:4px;
-	padding:5px 10px;
+	border-radius:0.25em;
+	padding:0.625em 1.25em 0.5em;
+	min-width:4.375em;
 }
-
+li:hover {
+	background-color:#66717f;
+}
 a {
   color: #ffffff;
   text-transform:uppercase;
   text-decoration:none;
-}
+  }
 
+/*--- Begin Footer Styles ---*/
 footer {
-	max-width:600px;
+	max-width:37.5em;
 	position:absolute;
-	top:96%;
-	left:225px;
+	clear:both;
+	left:16.25em;
 }
 footer p {
 	text-align:center;
 	margin:0;
+	font: 0.875em 'Steagal-Li', Helvetica, Arial, sans-serif;
 }
-
-html, body { height: 100%;}
 
 
 
