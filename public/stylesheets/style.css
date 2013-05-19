@@ -137,7 +137,7 @@ img {
 	margin:0.25em 0.5em;
 }
 #schedule select {
-	padding:0.625em 1.25em;
+	padding:3px;
 	border-radius:0.25em;
 	border:solid 1px #ddd;
 	background-color:#fff;
