@@ -137,7 +137,7 @@ img {
 	margin:0.25em 0.5em;
 }
 #schedule select {
-	padding:3px;
+	padding:5px 6px 8px;
 	margin:0;
 	-webkit-border-radius:0.25em;
 	-moz-border-radius:0.25em;
@@ -151,7 +151,39 @@ img {
 	-moz-appearance:none;
 	appearance:none;
 	cursor:pointer;
+	width:40px;
 }
+#schedule label:first-of-type {
+	position:relative;
+}
+#schedule label:first-of-type:after {
+	content: "<>";
+	/* style */
+ font: 11px 'Consolas', monospace;
+ color:#aaa;
+ -webkit-transform:rotate(90deg);
+ -moz-transform:rotate(90deg);
+ -ms-transform:rotate(90deg);
+ transfrom:rotate(90deg);
+ right:5px;
+ top:0px;
+ padding:0 0 2px;
+ position:absolute;
+ pointer-events:none;
+}
+#schedule label:first-of-type:before {
+	content: "";
+	/* style */
+	right:6px;
+	top:0px;
+	width:20px;
+	height:20px;
+	position:absolute;
+	pointer-events:none;
+	display:block;
+}
+
+
 #schedule label {
 	font: 0.875em 'Steagal-Re', Helvetica, Arial, sans-serif;
 	margin:10px 0 5px;
@@ -171,6 +203,10 @@ img {
 	letter-spacing: 0.0625em;
 	line-height:0;
 }
+#schedule button:disabled {
+	background-color:#999;
+	color:#666;
+}
 
 /*--- Begin Navigation button styles ---*/
 .nav {
@@ -188,7 +224,6 @@ li:first-of-type {
 }
 li {
 	display: inline-block;
-	margin-left:0.625em;
 	background-color:#4d5968;
 	border-radius:0.25em;
 	padding:0.625em 1.25em 0.5em;
@@ -201,6 +236,7 @@ a {
   color: #ffffff;
   text-transform:uppercase;
   text-decoration:none;
+  margin-left:0.625em;
   }
 
 /*--- Begin Footer Styles ---*/
