@@ -138,10 +138,19 @@ img {
 }
 #schedule select {
 	padding:3px;
+	margin:0;
+	-webkit-border-radius:0.25em;
+	-moz-border-radius:0.25em;
 	border-radius:0.25em;
-	border:solid 1px #ddd;
+	border:none;
 	background-color:#fff;
 	color:#4d5968;
+	outline:none;
+	display:inline-block;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+	cursor:pointer;
 }
 #schedule label {
 	font: 0.875em 'Steagal-Re', Helvetica, Arial, sans-serif;
