@@ -26,7 +26,7 @@ function RoomCtrl ($scope) {
       var room = {time: when, password: $scope.password};
       
       //an element in the view binds to this value and sets its text to it
-      $scope.roomUrl = '/room/' + RandomRoom();
+      $scope.roomUrl = '/room/' + randomStringAndDashes();
       //the view will now show the div with link and password
       $scope.roomReady = true;
       
@@ -66,4 +66,16 @@ function RandomRoom () {
       randomstring += chars.substring(random_num, random_num + 1);
     }
     return randomstring;
+}
+
+// Random string of digits seperated by dashes
+function randomStringAndDashes () {
+  return S4() + '-' + S4() + '-' + S4();
+}
+// Generate random digits between 2 and 3 characters 
+function S4 () {
+  var min = 10;
+  var max = 999;
+  var num = Math.floor(Math.random() * (max - min + 1)) + min;
+  return num;
 }
