@@ -236,6 +236,9 @@ img {
 }
 #streamsContainer {
 	height:450px;
+	width:100%;
+	float:left;
+	z-index:100;
 	background-color: #fff;
 	background-image: url('../images/doxymevideobackground-text.png'), url('..images/doxymevideobackground-plus.png');
 	background-repeat: no-repeat;
@@ -243,7 +246,7 @@ img {
 }
 #myPublisherDiv {
 	border:solid 4px #fff;
-	z-index:1000;
+	z-index:1000000;
 	float:left;
 	position:absolute;
 }
@@ -260,14 +263,14 @@ img {
 #plussign {
 	height:450px;
 	width:100%;
-	float:left;
+	z-index:-1000000;
 	background-image:url('../images/doxymevideobackground-plus.png');
 	background-repeat: no-repeat;
 	background-position: right top;
 	animation: plussign 3s;
 	-webkit-animation: plussign 3s;
 	animation-iteration-count:10;
-	-webkit-animation-iteration-count:20;
+	-webkit-animation-iteration-count:5;
 }
 #flashOption {
 	max-width:37.5em;
