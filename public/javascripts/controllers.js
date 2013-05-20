@@ -7,19 +7,19 @@ function HomeCtrl ($scope, $location) {
   //set unavailble to false if a valid time in the future has been entered 
   function available() {
     try {
-      when = $scope.meetingId && $scope.password;
+      inputs = $scope.meetingId && $scope.password;
     }
     catch (err) {
-      when = 0;
+      inputs = 0;
       $scope.unavailable = true;
       return;
     }
-    if (when) {
+    if (inputs) {
       $scope.unavailable = false;
       return;
     }
     $scope.unavailable = true;
-    when = 0;
+    inputs = 0;
   }
 
   $scope.enterRoom = function () {

@@ -46,10 +46,6 @@ app.get("/", routes.index);
 app.get('/partials/:name', routes.partials);
 
 
-// // When user goes to /about send to about page
-// app.get("/about", function (req, res) {
-//   res.render( 'about', {title: "about"});
-// });
 
 // When user goes to /room/:room give them the same thing as a regular meeting except prompt them for a password first
 app.get("/room/:room", function(req, res){
@@ -69,15 +65,15 @@ app.get("/flash/room/:room", function(req, res){
   if(urlSessions[ req.params.room ] == undefined){
     OpenTokObject.createSession(function(sessionId){
       urlSessions[ req.params.room ] = sessionId;
-      sendResponse3( sessionId, res );
+      sendFlashFallbackResponse( sessionId, res );
     }, {'p2p.preference':'enabled'});
   }else{
     sessionId = urlSessions[req.params.room];
-    sendResponse3( sessionId, res );
+    sendFlashFallbackResponse( sessionId, res );
   }
 });
 
-function sendResponse3( sessionId, responder ){
+function sendFlashFallbackResponse( sessionId, responder ){
   var token = OpenTokObject.generateToken( {session_id: sessionId} );
   var data = {OpenTokKey:OTKEY, sessionId: sessionId, token:token, title: "New Room"};
   responder.render( 'fallback', data );
@@ -118,14 +114,6 @@ app.get("/quick/:room", function(req, res){
     sendResponse( sessionId, res );
   }
 });
-
-function sendResponse2( sessionId, responder ){
-  var token = OpenTokObject.generateToken( {session_id: sessionId} );
-  var data = {OpenTokKey:OTKEY, sessionId: sessionId, token:token, title: "New Room"};
-  responder.render( 'scheduled', data );
-}
-
-
 
 // ***
 // *** All sessionIds need a corresponding token
