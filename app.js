@@ -56,11 +56,11 @@ app.get("/room/:room", function(req, res){
   if(urlSessions[ req.params.room ] == undefined){
     OpenTokObject.createSession(function(sessionId){
       urlSessions[ req.params.room ] = sessionId;
-      sendResponse2( sessionId, res );
+      sendResponse( sessionId, res );
     }, {'p2p.preference':'enabled'});
   }else{
     sessionId = urlSessions[req.params.room];
-    sendResponse2( sessionId, res );
+    sendResponse( sessionId, res );
   }
 });
 

@@ -1,4 +1,4 @@
-function HomeCtrl ($scope) {
+function HomeCtrl ($scope, $location) {
   // Watch meetingId and password and when they are both legal enable the 'begin' button
   $scope.unavailable = true;
   $scope.$watch('meetingId', available);
@@ -21,6 +21,10 @@ function HomeCtrl ($scope) {
     $scope.unavailable = true;
     when = 0;
   }
+
+  $scope.enterRoom = function () {
+    window.location.replace("/room/" + $scope.meetingId);
+  };
 }
 
 function RoomCtrl ($scope) {
