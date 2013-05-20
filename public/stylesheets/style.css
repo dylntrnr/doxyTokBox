@@ -214,10 +214,10 @@ img {
 	font: 1.20em 'Steagal-Me', Helvetica, Arial, sans-serif;
 	letter-spacing: 0.0625em;
 	line-height:0;
+	cursor:pointer;
 }
 #schedule button:hover {
 	background-color:rgba(223,91,89,1);
-	cursor:pointer;
 }
 #schedule button:disabled {
 	background-color:#999;
@@ -229,6 +229,9 @@ img {
 	padding:5px;
 	margin:10px;
 }
+
+/*--- Begin Meeting styles ---*/
+
 
 /*--- Begin Navigation button styles ---*/
 .nav {
