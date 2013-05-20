@@ -9,7 +9,7 @@ session.connect(apiKey, token);
 
 function sessionConnectedHandler(event) {
   // Create publisher and start streaming into the session
-  var publisher = TB.initPublisher(apiKey, 'myPublisherDiv');
+  var publisher = TB.initPublisher(apiKey, 'myPublisherDiv', {height: "135px", width: "180px"});
   session.publish(publisher);
 
   // Subscribe to streams that were in the session when we connected
@@ -35,7 +35,7 @@ function subscribeToStreams(streams) {
     streamsContainer.appendChild(div);
 
     // Subscribe to the stream
-    session.subscribe(streams[i], div.id, {height: "480px", width: "640px"});
+    session.subscribe(streams[i], div.id, {height: "450px", width: "600px"});
   }
 }
 
