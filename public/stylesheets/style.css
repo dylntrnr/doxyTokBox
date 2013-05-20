@@ -234,18 +234,40 @@ img {
 #videos {
 	max-width:600px;
 }
-#streamsContainer div:first-of-type{
-	width:600px;
+#streamsContainer {
 	height:450px;
-	overflow:hidden;
+	background-color: #fff;
+	background-image: url('../images/doxymevideobackground-text.png'), url('..images/doxymevideobackground-plus.png');
+	background-repeat: no-repeat;
+	background-position: right top;
 }
 #myPublisherDiv {
-	width:180px;
-	height:135px;
-	overflow:hidden;
 	border:solid 4px #fff;
+	z-index:1000;
 	float:left;
-	margin-top:-480px;
+	position:absolute;
+}
+@keyframes plussign {
+	0% {opacity:1;}
+	50% {opacity:0;}
+	100% {opacity:1;}
+}
+@-webkit-keyframes plussign {
+	0% {opacity:1;}
+	50% {opacity:0;}
+	100% {opacity:1;}
+}
+#plussign {
+	height:450px;
+	width:100%;
+	float:left;
+	background-image:url('../images/doxymevideobackground-plus.png');
+	background-repeat: no-repeat;
+	background-position: right top;
+	animation: plussign 3s;
+	-webkit-animation: plussign 3s;
+	animation-iteration-count:10;
+	-webkit-animation-iteration-count:20;
 }
 #flashOption {
 	max-width:37.5em;
