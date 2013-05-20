@@ -240,7 +240,7 @@ img {
 	float:left;
 	z-index:100;
 	background-color: #fff;
-	background-image: url('../images/doxymevideobackground-text.png'), url('..images/doxymevideobackground-plus.png');
+	background-image: url('../images/doxymevideobackground.gif');
 	background-repeat: no-repeat;
 	background-position: right top;
 }
@@ -260,6 +260,7 @@ img {
 	50% {opacity:0;}
 	100% {opacity:1;}
 }
+/*--
 #plussign {
 	height:450px;
 	width:100%;
@@ -269,9 +270,9 @@ img {
 	background-position: right top;
 	animation: plussign 3s;
 	-webkit-animation: plussign 3s;
-	animation-iteration-count:10;
+	animation-iteration-count:5;
 	-webkit-animation-iteration-count:5;
-}
+}--*/
 #flashOption {
 	max-width:37.5em;
 	background-color:rgba(214,213,209,0.4);
