@@ -1,3 +1,28 @@
+function HomeCtrl ($scope) {
+  // Watch meetingId and password and when they are both legal enable the 'begin' button
+  $scope.unavailable = true;
+  $scope.$watch('meetingId', available);
+  $scope.$watch('password', available);
+
+  //set unavailble to false if a valid time in the future has been entered 
+  function available() {
+    try {
+      when = $scope.meetingId && $scope.password;
+    }
+    catch (err) {
+      when = 0;
+      $scope.unavailable = true;
+      return;
+    }
+    if (when) {
+      $scope.unavailable = false;
+      return;
+    }
+    $scope.unavailable = true;
+    when = 0;
+  }
+}
+
 function RoomCtrl ($scope) {
   var now = new Date(),
       hours = now.getHours() > 12 ? now.getHours() - 12 : now.getHours(),

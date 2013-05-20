@@ -8,4 +8,5 @@ div#haveApt
       | PLEASE ENTER YOUR PASSWORD:
       input(data-ng-model='password', type='password')
   div.clearfix
-  button BEGIN
+  button.btn(data-ng-click='enterRoom()', data-ng-disabled='unavailable') BEGIN
+  div(data-ng-show='testReady') {{meetingId}}
