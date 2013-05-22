@@ -36,8 +36,8 @@ function subscribeToStreams(streams) {
 
     // Subscribe to the stream
     session.subscribe(streams[i], div.id, {height: "450px", width: "600px"});
-    var plussign = document.getElementById("plussign");
-    plussign.remove();
+  //   var plussign = document.getElementById("plussign");
+  //   plussign.remove();
   }
 }
 

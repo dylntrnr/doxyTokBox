@@ -260,7 +260,7 @@ img {
 	50% {opacity:0;}
 	100% {opacity:1;}
 }
-#plussign {
+/*#plussign {
 	height:450px;
 	width:100%;
 	z-index:-1000000;
@@ -271,7 +271,7 @@ img {
 	-webkit-animation: plussign 3s;
 	animation-iteration-count:10;
 	-webkit-animation-iteration-count:50;
-}
+}*/
 
 #flashOption {
 	max-width:600px;
