@@ -14,4 +14,6 @@ div#schedule
   button.btn(data-ng-click='scheduleRoom()', data-ng-disabled='unavailable') Schedule Meeting
   div(data-ng-show='roomReady')
     a(data-ng-href='{{roomUrl}}', data-ng-bind='roomUrl')
+    a(onClick='window.print()') Print
+    a(href='mailto:someone@example.com?Subject=doxy.me%20appointment') Email
   
