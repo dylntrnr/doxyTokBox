@@ -330,16 +330,18 @@ a {
 
 /*--- Begin Footer Styles ---*/
 footer {
-	max-width:37.5em;
-	position:absolute;
+	max-width:600px;
+	position:fixed;
 	clear:both;
-	left:18em;
+	left:9em;
 	bottom:5px;
+	background-color:rgba(255,255,255,0.5);
+	padding:5px 150px;
 }
 /*--- This Media Query keeps the footer from overlaping any of the other elements on smaller screens. --*/
 @media (max-height: 750px) {
 	footer {
-		max-width:37.5em;
+		max-width:600px;
 		position:static;
 	}
 }
