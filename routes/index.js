@@ -4,7 +4,7 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: "DOXY.ME" });
+  res.render('index', { title: "Doxy.me - The simple, free, and secure way for the doc to see you" });
 };
 
 exports.partials = function (req, res) {
