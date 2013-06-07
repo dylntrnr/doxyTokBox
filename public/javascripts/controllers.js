@@ -55,9 +55,10 @@ function RoomCtrl ($scope) {
       var room = {time: when, password: $scope.password};
       
       //an element in the view binds to this value and sets its text to it
-      $scope.roomUrl = '/room/' + randomStringAndDashes();
+      $scope.roomUrl = randomStringAndDashes();
       //the view will now show the div with link and password
       $scope.roomReady = true;
+      $scope.password = medicalPassword();
       
     };
 
@@ -84,6 +85,15 @@ function RoomCtrl ($scope) {
       when = 0;
     }
 };
+
+// Generate random password out of list of medical terms
+function medicalPassword () {
+  var terms = ["patella", "cataracts", "myopia"];
+  var random_int = Math.floor(Math.random() * 100);
+  var random_term = terms[Math.floor(Math.random() * terms.length)];
+  return (random_term + random_int);
+};
+
 
 //Random Room Generator - inspired by webrtcio guys on github
 function RandomRoom () {
