@@ -143,7 +143,7 @@ img {
 	font-family: 'Steagal-Bo', Helvetica, Arial, sans-serif;
 	color:#c14543;
 	padding:0;
-	margin:10px 0 20px;
+	margin:0.625em 0 1.25em;
 }
 #schedule input {
 	padding:0.625em 1.25em;
@@ -167,7 +167,7 @@ img {
 	-moz-appearance:none;
 	appearance:none;
 	cursor:pointer;
-	width:40px;
+	width:2.5em;
 }
 #schedule label:first-of-type {
 	position:relative;
@@ -175,32 +175,32 @@ img {
 #schedule label:first-of-type:after {
 	content: "<>";
 	/* style */
- font: 11px 'Consolas', monospace;
+ font: 0.6875em 'Consolas', monospace;
  color:#aaa;
  -webkit-transform:rotate(90deg);
  -moz-transform:rotate(90deg);
  -ms-transform:rotate(90deg);
  transfrom:rotate(90deg);
- right:5px;
+ right:0.3125em;
  top:0px;
- padding:0 0 2px;
+ padding:0 0 0.125em;
  position:absolute;
  pointer-events:none;
 }
 #schedule label:first-of-type:before {
 	content: "";
 	/* style */
-	right:6px;
+	right:0.375em;
 	top:0px;
-	width:20px;
-	height:20px;
+	width:1.25em;
+	height:1.25em;
 	position:absolute;
 	pointer-events:none;
 	display:block;
 }
 #schedule label {
 	font: 0.875em 'Steagal-Re', Helvetica, Arial, sans-serif;
-	margin:10px 0 5px;
+	margin:0.625em 0 0.3125em;
 }
 #schedule button {
 	background-color:#c14543;
@@ -228,16 +228,16 @@ img {
 #schedule div a {
 	color:#4d5968;
 	background-color:#fff;
-	padding:5px;
-	margin:10px;
+	padding:0.3125em;
+	margin:0.625em;
 }
 
 /*--- Begin Meeting styles ---*/
 #videos {
-	max-width:600px;
+	max-width:37.5em;
 }
 #streamsContainer {
-	height:450px;
+	height:28.125em;
 	width:100%;
 	float:left;
 	z-index:100;
@@ -276,11 +276,11 @@ img {
 }*/
 
 #flashOption {
-	max-width:600px;
+	max-width:37.5em;
 	background-color:rgba(214,213,209,0.4);
-	padding:10px 30px;
-	margin:20px 0 0;
-	font-size:14px;
+	padding:0.625em 1.875em;
+	margin:1.25em 0 0;
+	font-size:0.875em;
 }
 #flashOption button {
 	background-color:#4d5968;
@@ -332,12 +332,12 @@ a {
 
 /*--- Begin Footer Styles ---*/
 footer {
-	width:600px;
+	width:37.5em;
 	position:fixed;
 	clear:both;
 	bottom:0;
 	background-color:rgba(214,213,209,0.7);
-	padding:5px 0;
+	padding:0.3125em 0;
 	border-top-left-radius:4px;
 	border-top-right-radius:4px;
 }
