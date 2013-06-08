@@ -12,14 +12,14 @@ body {
 	-o-background-size: cover;
 	background-size: cover;
   padding: 0 0 0 6.25em;
-  font: 1em 'Steagal-Re', Helvetica, Arial, sans-serif;
+  font: 1rem 'Steagal-Re', Helvetica, Arial, sans-serif;
   margin:0;
 }
 html, body {
 	height: 100%;
 }
 h1 {
-	font-size:2em;
+	font-size:2rem;
 	line-height:1em;
 }
 h2 {
@@ -30,7 +30,6 @@ h2 {
 /*--- Logo Img Styles - Super Simple ---*/
 img {
 	max-width: 21.875em;
-	
 	margin:0 0 2.125em;
 	padding:5em 7.8125em;
 }
@@ -55,7 +54,7 @@ img {
 }
 #haveApt p {
 	color:#c14543;
-	font: 1.25em 'Steagal-Bo', Helvetica, Arial, sans-serif;
+	font: 1.25rem 'Steagal-Bo', Helvetica, Arial, sans-serif;
 	letter-spacing:0.0625em;
 }
 #aptForm {
@@ -66,12 +65,12 @@ img {
 #haveApt label:first-of-type {
 	float:left;
 	margin-right: 0.9375em;
-	font: 0.875em 'Steagal-Re', Helvetica, Arial, sans-serif;
+	font: 0.875rem 'Steagal-Re', Helvetica, Arial, sans-serif;
 	text-align:left;
 }
 #haveApt label:last-of-type {
 	float:right;
-	font: 0.875em 'Steagal-Re', Helvetica, Arial, sans-serif;
+	font: 0.875rem 'Steagal-Re', Helvetica, Arial, sans-serif;
 	text-align:left;
 }
 #haveApt input {
@@ -79,7 +78,7 @@ img {
 	padding:0.625em 1.25em;
 	border-radius:0.25em;
 	border:none;
-	width:18em;
+	width:87%;
 }
 .clearfix {
 	float:none;
@@ -90,14 +89,13 @@ img {
 	border-radius:0.25em;
 	color:#fff;
 	border:none;
-	font-size:1em;
 	padding:0.625em 1.5625em 0.3125em;
 	display:block;
 	margin:1.25em auto 0.3125em;
 	height:2.1875em;
 	width:7.5em;
 	clear:left;
-	font: 1.20em 'Steagal-Me', Helvetica, Arial, sans-serif;
+	font: 1.20rem 'Steagal-Me', Helvetica, Arial, sans-serif;
 	letter-spacing: 0.0625em;
 	line-height:0;
 }
@@ -175,7 +173,7 @@ img {
 #schedule label:first-of-type:after {
 	content: "<>";
 	/* style */
- font: 0.6875em 'Consolas', monospace;
+ font: 0.6875rem 'Consolas', monospace;
  color:#aaa;
  -webkit-transform:rotate(90deg);
  -moz-transform:rotate(90deg);
@@ -199,7 +197,7 @@ img {
 	display:block;
 }
 #schedule label {
-	font: 0.875em 'Steagal-Re', Helvetica, Arial, sans-serif;
+	font: 0.875rem 'Steagal-Re', Helvetica, Arial, sans-serif;
 	margin:0.625em 0 0.3125em;
 }
 #schedule button {
@@ -207,13 +205,12 @@ img {
 	border-radius:0.25em;
 	color:#fff;
 	border:none;
-	font-size:1em;
 	padding:0.625em 1.5625em 0.3125em;
 	display:block;
 	margin:1.25em auto 0.75em;
 	height:2.1875em;
 	clear:left;
-	font: 1.20em 'Steagal-Me', Helvetica, Arial, sans-serif;
+	font: 1.20rem 'Steagal-Me', Helvetica, Arial, sans-serif;
 	letter-spacing: 0.0625em;
 	line-height:0;
 	cursor:pointer;
@@ -230,6 +227,30 @@ img {
 	background-color:#fff;
 	padding:0.3125em;
 	margin:0.625em;
+}
+
+/*--- Begin Confirmed Page Styles ---*/
+#confirmed {
+	background-color:rgba(214,213,209,0.4);
+	border:0.25em #fff solid;
+	border-radius:0.25em;
+	text-align:center;
+	max-width:37.5em;
+	padding:0.75em 0 1.25em;
+}
+#confirmed a {
+	background-color:#c14543;
+	border-radius:0.25em;
+	color:#fff;
+	border:none;
+	padding:1em;
+	display:inline-block;
+	margin:0.25em 1em 0.25em;
+	clear:left;
+	font: 1.20em 'Steagal-Me', Helvetica, Arial, sans-serif;
+	letter-spacing: 0.0625em;
+	line-height:0;
+	cursor:pointer;
 }
 
 /*--- Begin Meeting styles ---*/
@@ -280,7 +301,7 @@ img {
 	background-color:rgba(214,213,209,0.4);
 	padding:0.625em 1.875em;
 	margin:1.25em 0 0;
-	font-size:0.875em;
+	font-size:0.875rem;
 }
 #flashOption button {
 	background-color:#4d5968;
@@ -292,7 +313,7 @@ img {
 	margin:1.25em auto 0.75em;
 	height:2.1875em;
 	clear:left;
-	font: 1em 'Steagal-Li', Helvetica, Arial, sans-serif;
+	font: 1rem 'Steagal-Li', Helvetica, Arial, sans-serif;
 	letter-spacing: 0.0625em;
 	line-height:0;
 	text-transform:uppercase;
@@ -351,8 +372,38 @@ footer {
 footer p {
 	text-align:center;
 	margin:0;
-	font: 0.875em 'Steagal-Li', Helvetica, Arial, sans-serif;
+	font: 0.875rem 'Steagal-Li', Helvetica, Arial, sans-serif;
 }
 
+/*--- Media Query for any screen narrower than 800px ---*/
+@media (max-width:800px) {
+	body {
+		padding:5px;
+		margin:0 auto;
+		width:90%;
+	}
+	img {
+		width: 21.875em;
+		margin:1em auto;
+		padding:5em 20%;
+		text-align: center;
+	}
+}
+
+@media (max-width:640px) {
+	.nav {
+		margin: 3.75em 0 0;
+		font-size:14px;
+	}
+	.nav a {
+		margin:5px;
+	}
+	.nav li {
+		display:inline-block;
+		margin:5px 0;
+		padding:0.625em 0.5em 0.5em;
+		min-width:0.375em;
+	}
+}
 
 
