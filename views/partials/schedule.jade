@@ -7,11 +7,7 @@ div#schedule
       option(value='am') AM
       option(value='pm') PM
   br
-  button.btn(data-ng-click='scheduleRoom()', data-ng-disabled='unavailable') Schedule Meeting
-  div(data-ng-show='roomReady')
-    p Room Id: {{roomUrl}}
-    p Password: {{password}}
-    a(onClick='window.print()') Print
-    a(href='mailto:someone@example.com?Subject=Doxy.me%20Meeting&Body=Hi%20there%21%0A%0AYou%27ve%20been%20invited%20to%20a%20meeting%20at%20doxy.me.%20Copy%20and%20paste%20this%20link%20in%20your%20browser:%20doxy.me{{roomUrl}}') Email
+  button.btn(data-ng-click='scheduleRoom("/confirmed")', data-ng-disabled='unavailable') Schedule Meeting
+  
     
   

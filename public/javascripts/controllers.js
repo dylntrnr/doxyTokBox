@@ -27,7 +27,14 @@ function HomeCtrl ($scope, $location) {
   };
 }
 
-function RoomCtrl ($scope) {
+function ConfCtrl ($scope, $location) {
+  //an element in the view binds to this value and sets its text to it
+  $scope.roomUrl = randomStringAndDashes();
+  //the view will now show the div with link and password
+  $scope.password = medicalPassword();
+};
+
+function RoomCtrl ($scope, $location) {
   var now = new Date(),
       hours = now.getHours() > 12 ? now.getHours() - 12 : now.getHours(),
       minutes = now.getMinutes() < 10 ? '0' + now.getMinutes() : now.getMinutes(),
@@ -51,14 +58,9 @@ function RoomCtrl ($scope) {
     //the schedule meeting button will be disabled until the user enters a valid time
     $scope.unavailable = true;
 
-    $scope.scheduleRoom = function() {
+    $scope.scheduleRoom = function(hash) {
       var room = {time: when, password: $scope.password};
-      
-      //an element in the view binds to this value and sets its text to it
-      $scope.roomUrl = randomStringAndDashes();
-      //the view will now show the div with link and password
-      $scope.roomReady = true;
-      $scope.password = medicalPassword();
+      $location.path(hash);
       
     };
 
