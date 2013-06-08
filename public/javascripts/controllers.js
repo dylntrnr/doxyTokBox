@@ -90,7 +90,7 @@ function RoomCtrl ($scope, $location) {
 
 // Generate random password out of list of medical terms
 function medicalPassword () {
-  var terms = ["patella", "cataracts", "myopia"];
+  var terms = ["apgar", "galen", "heimlich", "osler"];
   var random_int = Math.floor(Math.random() * 100);
   var random_term = terms[Math.floor(Math.random() * terms.length)];
   return (random_term + random_int);
