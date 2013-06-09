@@ -59,7 +59,7 @@ img {
 }
 #aptForm {
 	text-align:center;
-	width:80%;
+	width:65%;
 	margin:0 auto;
 }
 #haveApt label:first-of-type {
@@ -78,7 +78,7 @@ img {
 	padding:0.625em 1.25em;
 	border-radius:0.25em;
 	border:1px solid #ddd;
-	width:87%;
+	width:97%;
 }
 .clearfix {
 	float:none;
