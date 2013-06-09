@@ -252,6 +252,58 @@ img {
 	cursor:pointer;
 }
 
+/*--- Begin Meeting Prompt Arrow styles ---*/
+@keyframes arrow {
+	0% {top:0;}
+	50% {top:10px;}
+	100% {top:0;}
+}
+@-webkit-keyframes arrow {
+	0% {top:0;}
+	50% {top:10px;}
+	100% {top:0;}
+}
+#promptArrow {
+  margin:0 auto;
+  position:absolute;
+  animation: arrow 1s ease infinite;
+  -webkit-animation: arrow 1s ease infinite;
+  top:0;
+  right:0;
+  width:140px;
+}
+.promptContainer {
+	margin:0 35px!important;
+	height:;
+}
+span {
+  background: none;
+  width: 70px;
+  height: 70px;
+  margin: 0 35px;
+}
+.triangle {
+  background: none;
+  width: 0;
+  height: 0;
+  border-bottom: 60px solid #c14543; 
+  border-left: 34px solid transparent; 
+  border-right: 34px solid transparent;
+  display:block;
+}
+.box {
+  width: 35px;
+  height: 55px;
+  background: #c14543;
+  display:block;
+  margin:-25px 52px 0;
+}
+#promptArrow p {
+	text-align:center;
+	margin:0;
+	padding:0;
+}
+
 /*--- Begin Meeting styles ---*/
 #videos {
 	max-width:37.5em;
