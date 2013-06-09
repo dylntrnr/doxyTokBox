@@ -266,8 +266,8 @@ img {
 #promptArrow {
   margin:0 auto;
   position:absolute;
-  animation: arrow 1s ease infinite;
-  -webkit-animation: arrow 1s ease infinite;
+  animation: arrow 0.75s ease 1s infinite;
+  -webkit-animation: arrow 0.75s ease 1s infinite;
   top:0;
   right:0;
   width:140px;
