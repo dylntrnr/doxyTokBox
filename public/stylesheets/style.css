@@ -59,7 +59,7 @@ img {
 }
 #aptForm {
 	text-align:center;
-	width:90%;
+	width:80%;
 	margin:0 auto;
 }
 #haveApt label:first-of-type {
@@ -77,7 +77,7 @@ img {
 	display:block;
 	padding:0.625em 1.25em;
 	border-radius:0.25em;
-	border:none;
+	border:1px solid #ddd;
 	width:87%;
 }
 .clearfix {
@@ -147,7 +147,6 @@ img {
 	padding:0.625em 1.25em;
 	border-radius:0.25em;
 	border:none;
-	width:18em;
 	margin:0.25em 0.5em;
 }
 #schedule select {
@@ -165,7 +164,7 @@ img {
 	-moz-appearance:none;
 	appearance:none;
 	cursor:pointer;
-	width:2.5em;
+	width:3.5em;
 }
 #schedule label:first-of-type {
 	position:relative;
@@ -383,17 +382,73 @@ footer p {
 		width:90%;
 	}
 	img {
-		width: 21.875em;
 		margin:1em auto;
-		padding:5em 20%;
+		padding:3em 20%;
 		text-align: center;
 	}
 }
 
 @media (max-width:640px) {
+	img {
+		margin:1em auto;
+		padding:3em 0;
+		text-align: center;
+		display:block;
+	}
+	#haveApt {
+		background-color:rgba(214,213,209,0.4);
+		border:0.25em #fff solid;
+		border-radius:0.25em;
+		text-align:center;
+		width:80%;
+		padding:0.5em 0;
+		margin:0 auto;
+	}
+	#haveApt form {
+		text-align:center;
+	}
+	#haveApt input {
+		display:inline;
+		padding:0.625em 0.25em;
+		border-radius:0.25em;
+		border:none;
+		width:80%;
+		margin:1em auto;
+	}
+	#haveApt label:first-of-type {
+		display:block;
+		float:none;
+		font: 0.875rem 'Steagal-Re', Helvetica, Arial, sans-serif;
+		text-align:center;
+		width:80%;
+		margin:0 auto;
+	}
+	#haveApt label:last-of-type {
+		display:block;
+		float:none;
+		font: 0.875rem 'Steagal-Re', Helvetica, Arial, sans-serif;
+		text-align:center;
+		margin:0 auto;
+		width:80%;
+	}
+
+	#schedule {
+		background-color:rgba(214,213,209,0.4);
+		border:0.25em #fff solid;
+		border-radius:0.25em;
+		text-align:center;
+		width:80%;
+		padding:0.75em 0 1.25em;
+		margin:0 auto;
+	}
+
+	#schedule + .nav {
+			margin:3em 0 0;
+	}
 	.nav {
-		margin: 3.75em 0 0;
+		margin: 8.75em 0 0;
 		font-size:14px;
+		max-width:100%;
 	}
 	.nav a {
 		margin:5px;
@@ -403,6 +458,9 @@ footer p {
 		margin:5px 0;
 		padding:0.625em 0.5em 0.5em;
 		min-width:0.375em;
+	}
+	footer {
+		width:100%;
 	}
 }
 
