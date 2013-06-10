@@ -1,0 +1,66 @@
+/*--- Begin Universal Styles --*/
+html {
+  margin:0;
+  padding:0;
+  border:0;
+}
+body {
+  color: #4d5968;
+  background: white;
+  padding: 0;
+  font: 1rem 'Steagal-Re', Helvetica, Arial, sans-serif;
+  margin:0;
+}
+html, body {
+  height: 100%;
+}
+h1 {
+  font-size:2rem;
+  line-height:1em;
+}
+h2 {
+  font-size:1.5em;
+  line-height:0.75em;
+}
+
+/*--- Logo Img Styles - Super Simple ---*/
+img {
+  margin:0 auto 1.125em;
+  padding:3em 0 0;
+  text-align:center;
+  display:block;
+}
+
+/*--- Begin changeable content of the page with a master div. All hail the master div. --*/
+.container {
+  height: 12.5em;
+  width:100%;
+}
+.content {
+  text-align:center;
+}
+
+/*--- Begin Confirmed Page Styles ---*/
+#confirmed {
+  text-align:center;
+  width:100%;
+  padding:0.75em 0 1.25em;
+}
+#confirmed a {
+  display:none;
+}
+
+/*--- Begin Navigation button styles ---*/
+.nav {
+  display:none;
+}
+
+/*--- Begin Footer Styles ---*/
+footer {
+  position:static;
+  background:none;
+  clear:both;
+  padding:0.3125em 0;
+  text-align:center;
+  font: 0.875rem 'Steagal-Li', Helvetica, Arial, sans-serif;
+}
