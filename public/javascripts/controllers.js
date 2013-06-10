@@ -27,14 +27,14 @@ function HomeCtrl ($scope, $location) {
   };
 }
 
-function ConfCtrl ($scope, $location) {
-  //an element in the view binds to this value and sets its text to it
+
+function RoomCtrl ($scope, $location) {
+   //an element in the view binds to this value and sets its text to it
   $scope.roomUrl = randomStringAndDashes();
   //the view will now show the div with link and password
   $scope.password = medicalPassword();
-};
 
-function RoomCtrl ($scope, $location) {
+  
   var now = new Date(),
       hours = now.getHours() > 12 ? now.getHours() - 12 : now.getHours(),
       minutes = now.getMinutes() < 10 ? '0' + now.getMinutes() : now.getMinutes(),
