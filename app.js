@@ -35,18 +35,19 @@ app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(function(req, res, next) {
-  if(!req.secure) {
-    return res.redirect('https://' + req.get('Host') + req.url);
-  }
-  next();
-});
+
 
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+app.get('*',function(req,res,next){
+  if(req.headers['x-forwarded-proto']!='https')
+    res.redirect('https://' + req.get('Host') + req.url)
+  else
+    next() /* Continue to other routes if we're not redirecting */
+});
 
 // When user goes to route directory send them the index.html file and partials
 app.get("/", routes.index);
