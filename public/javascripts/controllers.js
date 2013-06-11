@@ -27,13 +27,17 @@ function HomeCtrl ($scope, $location) {
   };
 }
 
-
-function RoomCtrl ($scope, $location) {
+function ConfCtrl ($scope, $location, Data) {
    //an element in the view binds to this value and sets its text to it
   $scope.roomUrl = randomStringAndDashes();
   //the view will now show the div with link and password
   $scope.password = medicalPassword();
+  $scope.data = Data;
+};
 
+function RoomCtrl ($scope, $location, Data) {
+  
+  
   
   var now = new Date(),
       hours = now.getHours() > 12 ? now.getHours() - 12 : now.getHours(),
@@ -81,6 +85,9 @@ function RoomCtrl ($scope, $location) {
       }
       if (when > new Date()) {
         $scope.unavailable = false;
+        Data.date = $scope.date;
+        Data.time = $scope.time;
+        Data.ampm = $scope.ampm;
         return;
       }
       $scope.unavailable = true;
