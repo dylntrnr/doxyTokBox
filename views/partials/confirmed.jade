@@ -4,4 +4,4 @@ div#confirmed
   p Password: {{password}}
   p {{data.date}} {{data.time}}{{data.ampm}}
   a(onClick='window.print()') Print
-  a(href='mailto:someone@example.com?Subject=Doxy.me%20Meeting&Body=Hi%20there%21%0A%0AYou%27ve%20been%20invited%20to%20a%20meeting%20at%20doxy.me.%20Go%20to%20doxy.me%20and%20enter%20this%20room%20id:%20{{roomUrl}}%20and%20this%20password:%20{{password}}%20at%20{{data.date}}%20{{data.time}}{{data.ampm}}') Email
+  a(href="mailto:recipient@example.com?Subject=Doxy.me%20meeting%20invitation&Body=Hi%20there!%0D%0DYou've%20been%20invited%20to%20a%20Doxy.me%20meeting!%0D%0DOn%20{{data.date}}%20at%20{{data.time}}%20go%20to%20https://doxy.me%20and%20enter%20the%20following%20information:%0D%0DRoom%20ID:%20{{roomUrl}}%0DPassword:%20{{password}}%0D%0DWe%20hope%20you%20have%20a%20wonderful%20experience%20using%20Doxy.me.%20If%20you%20get%20a%20chance,%20please%20let%20us%20know%20how%20it%20worked%20for%20you:%20http://tiny.cc/0g5iyw") Email
