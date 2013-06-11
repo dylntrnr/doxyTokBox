@@ -49,6 +49,7 @@ app.get('*',function(req,res,next){
     next() /* Continue to other routes if we're not redirecting */
 });
 
+
 // When user goes to route directory send them the index.html file and partials
 app.get("/", routes.index);
 app.get('/partials/:name', routes.partials);
