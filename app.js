@@ -55,6 +55,7 @@ if ('production' == app.get('env')) {
 
 
 
+
 // When user goes to route directory send them the index.html file and partials
 app.get("/", routes.index);
 app.get('/partials/:name', routes.partials);
