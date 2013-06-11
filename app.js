@@ -121,7 +121,7 @@ app.get("/quick/:room", function(req, res){
 // ***
 function sendResponse( sessionId, responder ){
   var token = OpenTokObject.generateToken( {session_id: sessionId} );
-  var data = {OpenTokKey:OTKEY, sessionId: sessionId, token:token, title: "New Room"};
+  var data = {OpenTokKey:OTKEY, sessionId: sessionId, token:token, title: "New Room: " + sessionId};
   responder.render( 'meeting', data );
 }
 

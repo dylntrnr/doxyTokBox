@@ -14,11 +14,14 @@ function sessionConnectedHandler(event) {
 
   // Subscribe to streams that were in the session when we connected
   subscribeToStreams(event.streams);
+
 }
 
 function streamCreatedHandler(event) {
   // Subscribe to any new streams that are created
   subscribeToStreams(event.streams);
+  $('#promptArrow').remove();
+  
 }
 
 function subscribeToStreams(streams) {
