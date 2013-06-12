@@ -1,4 +1,4 @@
-function HomeCtrl ($scope, $location) {
+function HomeCtrl ($scope, $location, analytics) {
   // Watch meetingId and password and when they are both legal enable the 'begin' button
   $scope.unavailable = true;
   $scope.$watch('meetingId', available);
@@ -27,7 +27,7 @@ function HomeCtrl ($scope, $location) {
   };
 }
 
-function ConfCtrl ($scope, $location, Data) {
+function ConfCtrl ($scope, $location, Data, analytics) {
    //an element in the view binds to this value and sets its text to it
   $scope.roomUrl = randomStringAndDashes();
   //the view will now show the div with link and password
@@ -35,7 +35,7 @@ function ConfCtrl ($scope, $location, Data) {
   $scope.data = Data;
 };
 
-function RoomCtrl ($scope, $location, Data) {
+function RoomCtrl ($scope, $location, Data, analytics) {
   
   
   
