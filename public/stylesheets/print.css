@@ -44,8 +44,11 @@ img {
 /*--- Begin Confirmed Page Styles ---*/
 #confirmed {
   text-align:center;
-  width:100%;
+  width:80%;
+  margin:0 auto;
   padding:0.75em 0 1.25em;
+  border:0.25em #aaa solid;
+  border-radius:0.5em;
 }
 #confirmed a {
   display:none;
@@ -56,12 +59,18 @@ img {
   display:none;
 }
 
+/*--- Begin feedback Button ---*/
+.ribbon-wrapper {
+  display:none;
+}
+
 /*--- Begin Footer Styles ---*/
 footer {
   position:static;
   background:none;
   clear:both;
-  padding:0.3125em 0;
+  padding:0.3125em 0 0;
+  margin:;
   text-align:center;
   font: 0.875rem 'Steagal-Li', Helvetica, Arial, sans-serif;
 }
