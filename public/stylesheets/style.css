@@ -45,6 +45,9 @@ img {
 	margin:0 0 2.125em;
 	padding:5em 7.8125em;
 }
+.imgMeeting {
+	padding:3em 7.8125em 2em!important;
+}
 
 /*--- Begin changeable content of the page with a master div. All hail the master div. --*/
 .container {
@@ -79,6 +82,7 @@ img {
 	margin-right: 0.9375em;
 	font: 0.875rem 'Steagal-Re', Helvetica, Arial, sans-serif;
 	text-align:left;
+	margin-left:-20px;
 }
 #haveApt label:last-of-type {
 	float:right;
