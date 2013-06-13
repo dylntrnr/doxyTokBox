@@ -21,6 +21,7 @@ function streamCreatedHandler(event) {
   // Subscribe to any new streams that are created
   subscribeToStreams(event.streams);
   $('#promptArrow').remove();
+  $('img').addClass('imgMeeting');
   
 }
 
