@@ -67,32 +67,20 @@ app.get("/room/:room", function(req, res){
   if(urlSessions[ req.params.room ] == undefined){
     OpenTokObject.createSession(function(sessionId){
       urlSessions[ req.params.room ] = sessionId;
-      sendResponse( sessionId, res );
+      sendRoomResponse( sessionId, res, req.params.room );
     }, {'p2p.preference':'enabled'});
   }else{
     sessionId = urlSessions[req.params.room];
-    sendResponse( sessionId, res );
+    sendRoomResponse( sessionId, res, req.params.room );
   }
 });
 
-// when they hit the flash fall back button go to room with flash
-app.get("/flash/room/:room", function(req, res){
-  if(urlSessions[ req.params.room ] == undefined){
-    OpenTokObject.createSession(function(sessionId){
-      urlSessions[ req.params.room ] = sessionId;
-      sendFlashFallbackResponse( sessionId, res );
-    }, {'p2p.preference':'enabled'});
-  }else{
-    sessionId = urlSessions[req.params.room];
-    sendFlashFallbackResponse( sessionId, res );
-  }
-});
-
-function sendFlashFallbackResponse( sessionId, responder ){
+function sendRoomResponse( sessionId, responder, room ){
   var token = OpenTokObject.generateToken( {session_id: sessionId} );
-  var data = {OpenTokKey:OTKEY, sessionId: sessionId, token:token, title: "New Room"};
-  responder.render( 'fallback', data );
+  var data = {OpenTokKey:OTKEY, sessionId: sessionId, token:token, title: "New Room: " + room, Room: "room/" + room};
+  responder.render( 'meeting', data );
 }
+
 
 // ***
 // *** When user goes to meeting directory, redirect them to a room (timestamp)
@@ -122,11 +110,11 @@ app.get("/quick/:room", function(req, res){
   if(urlSessions[ req.params.room ] == undefined){
     OpenTokObject.createSession(function(sessionId){
       urlSessions[ req.params.room ] = sessionId;
-      sendResponse( sessionId, res );
+      sendResponse( sessionId, res, req.params.room );
     }, {'p2p.preference':'enabled'});
   }else{
     sessionId = urlSessions[req.params.room];
-    sendResponse( sessionId, res );
+    sendResponse( sessionId, res, req.params.room );
   }
 });
 
@@ -134,9 +122,9 @@ app.get("/quick/:room", function(req, res){
 // *** All sessionIds need a corresponding token
 // *** generateToken and then sendResponse based on ejs template
 // ***
-function sendResponse( sessionId, responder ){
+function sendResponse( sessionId, responder, room ){
   var token = OpenTokObject.generateToken( {session_id: sessionId} );
-  var data = {OpenTokKey:OTKEY, sessionId: sessionId, token:token, title: "New Room: " + sessionId};
+  var data = {OpenTokKey:OTKEY, sessionId: sessionId, token:token, title: "New Room: " + room, Room: "quick/" + room};
   responder.render( 'meeting', data );
 }
 
