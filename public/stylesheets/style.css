@@ -385,20 +385,20 @@ li:first-of-type {
 }
 li {
 	display: inline-block;
+	margin-left:0.625em;
+}
+a.nav {
+  color: #ffffff;
+  text-transform:uppercase;
+  text-decoration:none;
 	background-color:#4d5968;
 	border-radius:0.25em;
 	padding:0.625em 1.25em 0.5em;
 	min-width:4.375em;
-}
-li:hover {
+  }
+a.nav:hover {
 	background-color:#66717f;
 }
-a {
-  color: #ffffff;
-  text-transform:uppercase;
-  text-decoration:none;
-  margin-left:0.625em;
-  }
 
 /*--- Begin feedback Button ---*/
 .ribbon-wrapper {

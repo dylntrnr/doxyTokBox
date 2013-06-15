@@ -8,22 +8,23 @@ html(ng-app="content")
 		link(rel='stylesheet', href='/stylesheets/print.css', media='print')
 		link(rel='apple-touch-icon', href='/images/favicon.icns')
 		link(rel='icon', href='/images/favicon.ico')
+		meta(charset='UTF-8')
 
 	body
-		img(src="/images/doxyme-logo.png")
+		img(src="/images/doxyme-logo.png", alt="DOXY.ME")
 		//- This is where all the partials are put
 		block content
 
 		div.nav
 			ul
-				a(href="/#/home")
-					li Home
-				a(href="/#/schedule")
-					li Schedule 
-				a(href="/quick/meeting")
-					li Quick Meeting
-				a(href="/#/about")
-					li About
+				li
+					a.nav(href="/#/home") Home
+				li
+					a.nav(href="/#/schedule") Schedule
+				li
+					a.nav(href="/quick/meeting") Quick Meeting
+				li
+					a.nav(href="/#/about") About
 
 		div.ribbon-wrapper
 			div.ribbon
