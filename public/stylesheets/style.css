@@ -326,6 +326,7 @@ span {
 	padding:0.5em 0.75em;
 	background-color:#c14543;
 	border-radius:0.25em;
+	color:#fff;
 }
 #emailLink a:hover {
 	background-color:rgba(223,91,89,1);
