@@ -13,7 +13,7 @@ var OpenTokLibrary = require('opentok');
 // ***
 // *** OpenTok Constants for creating Session and Token values
 // ***
-var OTKEY = 24250552;
+var OTKEY = 32321782;
 var OTSECRET = process.env.APIKEY;
 
 // ***
