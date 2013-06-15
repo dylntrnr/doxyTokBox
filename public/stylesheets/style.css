@@ -11,9 +11,6 @@ html {
 body {
 	color: #4d5968;
 	background: white url('../images/background.jpg') no-repeat center center fixed; background-size: 100%; min-width:500px;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
 	background-size: cover;
   padding: 0 0 0 6.25em;
   font: 1rem 'Steagal-Re', Helvetica, Arial, sans-serif;
@@ -168,17 +165,15 @@ img {
 #schedule select {
 	padding:5px 6px 8px;
 	margin:0;
-	-webkit-border-radius:0.25em;
-	-moz-border-radius:0.25em;
 	border-radius:0.25em;
 	border:none;
 	background-color:#fff;
 	color:#4d5968;
 	outline:none;
 	display:inline-block;
-	-webkit-appearance:none;
-	-moz-appearance:none;
 	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;
 	cursor:pointer;
 	width:3.5em;
 }
@@ -290,7 +285,6 @@ img {
 }
 .promptContainer {
 	margin:0 35px!important;
-	height:;
 }
 span {
   background: none;
@@ -424,13 +418,11 @@ a.nav:hover {
   width: 180px;
   background-color: rgba(77,89,104,1);
   color: #ddd;
-  -webkit-box-shadow: 0px 0px 3px rgba(255,255,255,0.3);
-  -moz-box-shadow:    0px 0px 3px rgba(255,255,255,0.3);
   box-shadow:         0px 0px 3px rgba(255,255,255,0.3);
 }
 .ribbon:before {
   content: "";
-  border-top:   14px solid rgba(58,67,78,1);   
+  border-top: 14px solid rgba(58,67,78,1);   
   border-left: 15px solid transparent;
   border-right: 25px solid rgba(58,67,78,1);
   border-bottom: 14px solid rgba(58,67,78,1);
