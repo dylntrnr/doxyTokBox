@@ -327,6 +327,8 @@ span {
 	background-color:#c14543;
 	border-radius:0.25em;
 	color:#fff;
+	text-decoration:none;
+	text-transform:uppercase;
 }
 #emailLink a:hover {
 	background-color:rgba(223,91,89,1);
