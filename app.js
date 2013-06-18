@@ -63,7 +63,7 @@ app.get('/partials/:name', routes.partials);
 
 
 
-// When user goes to /room/:room give them the same thing as a regular meeting except prompt them for a password first
+// When user goes to /:room with the the 123-123-133 form with optional password it redirects to a hashed value so two urls are the same
 app.get("/:room([0-9]+-[0-9]+-[0-9]+)/:pass?", function(req, res){
   // turn :room into hash
   var room = req.params.room;
@@ -130,9 +130,6 @@ app.get("/quick/:room", function(req, res){
   }
 });
 
-// Turn meeting ID into a hash
-
-// Route hash of meeting id to the same room as meeting ID and vice versa 
 
 // ***
 // *** All sessionIds need a corresponding token
