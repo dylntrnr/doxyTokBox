@@ -5,6 +5,7 @@
 
 var express = require('express')
   , routes = require('./routes')
+  , crypto = require('crypto')
   , http = require('http')
   , path = require('path');
 
@@ -63,7 +64,18 @@ app.get('/partials/:name', routes.partials);
 
 
 // When user goes to /room/:room give them the same thing as a regular meeting except prompt them for a password first
-app.get("/room/:room", function(req, res){
+app.get("/:room([0-9]+-[0-9]+-[0-9]+)/:pass?", function(req, res){
+  // turn :room into hash
+  var room = req.params.room;
+  var key = req.params.pass || process.env.TestKey;
+  var hash;
+  hash = crypto.createHmac('sha1', key).update(room).digest('hex');
+  console.log(room, key, hash);
+  res.redirect(hash);
+  res.end();
+});
+
+app.get("/:room", function (req, res) {
   if(urlSessions[ req.params.room ] == undefined){
     OpenTokObject.createSession(function(sessionId){
       urlSessions[ req.params.room ] = sessionId;
@@ -117,6 +129,10 @@ app.get("/quick/:room", function(req, res){
     sendResponse( sessionId, res, req.params.room );
   }
 });
+
+// Turn meeting ID into a hash
+
+// Route hash of meeting id to the same room as meeting ID and vice versa 
 
 // ***
 // *** All sessionIds need a corresponding token

@@ -23,7 +23,7 @@ function HomeCtrl ($scope, $location, analytics) {
   }
 
   $scope.enterRoom = function () {
-    window.location.replace("/room/" + $scope.meetingId);
+    window.location.replace("/" + $scope.meetingId + '/' + $scope.password);
   };
 }
 
