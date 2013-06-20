@@ -1,18 +1,17 @@
 {
   "name": "webRTC-Test",
-  "version": "0.0.2-4",
+  "version": "0.0.2-10",
   "private": true,
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
-    "opentok": "",
-    "express": "3.2.4",
-    "jade": "*"
+    "express": "3.2.4"
   },
   "subdomain": "dylantrnr",
   "domains": [
     "doxy.me",
+    "utah.doxy.me",
     "www.doxy.me"
   ],
   "engines": {
