@@ -1,0 +1,36 @@
+doctype 5
+html(ng-app="content")
+	head
+		
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/stylesheets/fordoxy.me.css')
+		link(rel='stylesheet', href='/stylesheets/print.css', media='print')
+		link(rel='apple-touch-icon', href='/images/favicon.icns')
+		link(rel='icon', href='/images/favicon.ico')
+		meta(charset='UTF-8')
+
+	body
+		img(src="/images/doxyme-logo.png", alt="DOXY.ME Logo")
+		//- This is where all the partials are put
+		block content
+
+		div.nav
+			ul
+				li
+					a.nav(href="/#/home") Home
+				li
+					a.nav(href="/#/schedule") Schedule
+				li
+					a.nav(href="/quick/meeting") Quick Meeting
+				li
+					a.nav(href="/#/about") About
+
+		div.ribbon-wrapper
+			div.ribbon
+				div.ribbon-text
+					i.icon &#9998;
+					a(href="http://tiny.cc/0g5iyw", target="_blank") Provide Feedback
+
+		footer
+			p 2013 DOXY.ME ALL RIGHTS RESERVED
