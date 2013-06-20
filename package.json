@@ -6,7 +6,9 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "3.2.4"
+    "express": "3.2.4",
+    "jade": "0.30.0",
+    "opentok": "0.3.2"
   },
   "subdomain": "dylantrnr",
   "domains": [
