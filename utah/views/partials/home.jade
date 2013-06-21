@@ -6,12 +6,12 @@ div#haveApt
         label
           | ROOM ID:
         span
-          input(data-ng-model='meetingId', type='text', size='30')
+          input(data-ng-model='meetingId', type='text')
       fieldset
         label
           | PASSWORD:
         span
-          input(data-ng-model='password', type='password', size='30')
+          input(data-ng-model='password', type='password')
     div.clearfix
     button.btn(data-ng-click='enterRoom()', data-ng-disabled='unavailable') BEGIN
     div(data-ng-show='testReady') {{meetingId}}

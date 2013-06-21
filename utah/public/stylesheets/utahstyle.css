@@ -43,7 +43,7 @@ img {
 	background-color:rgba(255,255,255,0.8);
 }
 .imgMeeting {
-	padding:3em 7.8125em 2em!important;
+	padding:2.25em 7.8125em 2em!important;
 }
 
 /*--- Begin changeable content of the page with a master div. All hail the master div. --*/
@@ -84,15 +84,17 @@ img {
   border:none;
   display:inline;
   float:left;
-  width:45%;
+  width:48%;
   padding:0;
+  margin:0;
 }
 #haveApt fieldset:last-of-type {
   border:none;
   display:inline;
   float:right;
-  width:45%;
+  width:48%;
   padding:0;
+  margin:0;
 }
 #haveApt label:first-of-type {
 	font: 0.875rem Helvetica, Arial, sans-serif;
@@ -115,14 +117,13 @@ img {
 --*/
 /*--- TESTING FORM INPUT WIDTHS ---*/
 #haveApt input {
-	width:100%;
+	width:90%;
 	border-radius:0.25em;
 	border:1px solid #aaa;
-  padding:0.75em 1.25em;
+  padding:0.75em 0.75em;
+  font-size: 12px;
 }
 #haveApt span {
-	display:block;
-	overflow:hidden;
 }
 /*--- END TESTING FORM INPUT WIDTHS ---*/
 
@@ -358,7 +359,7 @@ img {
 .promptContainer {
 	margin:0 35px!important;
 }
-span {
+.promptContainer span {
   background: none;
   width: 70px;
   height: 70px;
