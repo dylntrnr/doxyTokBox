@@ -2,12 +2,14 @@ div#haveApt
   div
     p ALREADY HAVE AN APPOINTMENT?
     div#aptForm
-      label
-        | ROOM ID:
+      fieldset
+        label
+          | ROOM ID:
         span
           input(data-ng-model='meetingId', type='text', size='30')
-      label
-        | PASSWORD:
+      fieldset
+        label
+          | PASSWORD:
         span
           input(data-ng-model='password', type='password', size='30')
     div.clearfix
