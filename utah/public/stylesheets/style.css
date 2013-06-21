@@ -1,0 +1,578 @@
+/*--- Tip of the Hat to: --*/
+/*Steagal font face designed by Jeremy Dooley in 2013. License from MyFonts.com*/
+/*Entypo pictograms by Daniel Bruce — www.entypo.com*/
+
+/*--- Begin Universal Styles --*/
+html {
+	margin:0;
+	padding:0;
+	border:0;
+}
+body {
+	color: #4d5968;
+	background: white url('../images/background.jpg') no-repeat center center fixed; background-size: 100%; min-width:500px;
+	background-size: cover;
+  padding: 0 0 0 6.25em;
+  font: 1rem 'Steagal-Re', Helvetica, Arial, sans-serif;
+  margin:0;
+}
+html, body {
+	height: 100%;
+}
+h1 {
+	font-size:2rem;
+	line-height:1em;
+}
+h2 {
+	font-size:1.5em;
+	line-height:0.75em;
+}
+@font-face {
+	font-family: 'entypo';
+	src: url('webfonts/entypo.eot'); /* IE9 Compat Modes */
+	src: url('webfonts/entypo.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     url('webfonts/entypo.woff') format('woff'), /* Modern Browsers */
+	     url('webfonts/entypo.ttf')  format('truetype'), /* Safari, Android, iOS */
+	     url('webfonts/entypo.svg#svgFontName') format('svg'); /* Legacy iOS */
+	}
+
+/*--- Logo Img Styles - Super Simple ---*/
+img {
+	max-width: 21.875em;
+	margin:0 0 2.125em;
+	padding:5em 7.8125em;
+}
+.imgMeeting {
+	padding:3em 7.8125em 2em!important;
+}
+
+/*--- Begin changeable content of the page with a master div. All hail the master div. --*/
+.container {
+	height: 12.5em;
+	max-width: 37.5em;
+}
+.content {
+	text-align:center;
+}
+
+/*--- The main appointment box styles for the landing page ---*/
+#haveApt {
+	background-color:rgba(214,213,209,0.4);
+	border:0.25em #fff solid;
+	border-radius:0.25em;
+	text-align:center;
+	max-width:37.5em;
+	padding:1.25em 0;
+}
+#haveApt p {
+	color:#c14543;
+	font: 1.25rem 'Steagal-Bo', Helvetica, Arial, sans-serif;
+	letter-spacing:0.0625em;
+}
+#aptForm {
+	text-align:center;
+	width:65%;
+	margin:0 auto;
+}
+#haveApt label:first-of-type {
+	float:left;
+	margin-right: 0.9375em;
+	font: 0.875rem 'Steagal-Re', Helvetica, Arial, sans-serif;
+	text-align:left;
+	margin-left:-20px;
+}
+#haveApt label:last-of-type {
+	float:right;
+	font: 0.875rem 'Steagal-Re', Helvetica, Arial, sans-serif;
+	text-align:left;
+}
+#haveApt input {
+	display:block;
+	padding:0.625em 1.25em;
+	border-radius:0.25em;
+	border:1px solid #ddd;
+	width:97%;
+}
+.clearfix {
+	float:none;
+	clear:both;
+}
+#haveApt button {
+	background-color:#c14543;
+	border-radius:0.25em;
+	color:#fff;
+	border:none;
+	padding:0.625em 1.5625em 0.3125em;
+	display:block;
+	margin:1.25em auto 0.3125em;
+	height:2.1875em;
+	width:7.5em;
+	clear:left;
+	font: 1.20rem 'Steagal-Me', Helvetica, Arial, sans-serif;
+	letter-spacing: 0.0625em;
+	line-height:0;
+}
+#haveApt button:hover {
+	background-color:rgba(223,91,89,1);
+	cursor:pointer;
+}
+
+#haveApt button:disabled {
+	background-color:#999;
+	color:#666;
+}
+
+/*--- Begin About div styles ---*/
+#about {
+	text-align:center;
+	padding:4em 0.75em;
+	max-width:100%;
+	margin:0 auto;
+	/*--
+	border-top:1px dashed #fff;
+	border-bottom:1px dashed #fff;
+	background:rgba(214,213,209,0.05);
+	--*/
+}
+#about div {
+	font-family: 'Steagal-Li', Helvetica, Arial, sans-serif;
+	width:80%;
+	margin:0 auto;
+}
+
+/*--- Begin Schedule div styles ---*/
+#schedule {
+	background-color:rgba(214,213,209,0.4);
+	border:0.25em #fff solid;
+	border-radius:0.25em;
+	text-align:center;
+	max-width:37.5em;
+	padding:0.75em 0 1.25em;
+}
+#schedule h2 {
+	text-transform: uppercase;
+	font-family: 'Steagal-Bo', Helvetica, Arial, sans-serif;
+	color:#c14543;
+	padding:0;
+	margin:0.625em 0 1.25em;
+}
+#schedule input {
+	padding:0.625em 1.25em;
+	border-radius:0.25em;
+	border:none;
+	margin:0.25em 0.5em;
+}
+#schedule select {
+	padding:5px 6px 8px;
+	margin:0;
+	border-radius:0.25em;
+	border:none;
+	background-color:#fff;
+	color:#4d5968;
+	outline:none;
+	display:inline-block;
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	cursor:pointer;
+	width:3.5em;
+}
+#schedule label:first-of-type {
+	position:relative;
+}
+#schedule label:first-of-type:after {
+	content: "<>";
+	/* style */
+ font: 0.6875rem 'Consolas', monospace;
+ color:#aaa;
+ -webkit-transform:rotate(90deg);
+ -moz-transform:rotate(90deg);
+ -ms-transform:rotate(90deg);
+ transfrom:rotate(90deg);
+ right:0.3125em;
+ top:0px;
+ padding:0 0 0.125em;
+ position:absolute;
+ pointer-events:none;
+}
+#schedule label:first-of-type:before {
+	content: "";
+	/* style */
+	right:0.375em;
+	top:0px;
+	width:1.25em;
+	height:1.25em;
+	position:absolute;
+	pointer-events:none;
+	display:block;
+}
+#schedule label {
+	font: 0.875rem 'Steagal-Re', Helvetica, Arial, sans-serif;
+	margin:0.625em 0 0.3125em;
+}
+#schedule button {
+	background-color:#c14543;
+	border-radius:0.25em;
+	color:#fff;
+	border:none;
+	padding:0.625em 1.5625em 0.3125em;
+	display:block;
+	margin:1.25em auto 0.75em;
+	height:2.1875em;
+	clear:left;
+	font: 1.20rem 'Steagal-Me', Helvetica, Arial, sans-serif;
+	letter-spacing: 0.0625em;
+	line-height:0;
+	cursor:pointer;
+}
+#schedule button:hover {
+	background-color:rgba(223,91,89,1);
+}
+#schedule button:disabled {
+	background-color:#999;
+	color:#666;
+}
+#schedule div a {
+	color:#4d5968;
+	background-color:#fff;
+	padding:0.3125em;
+	margin:0.625em;
+}
+
+/*--- Begin Confirmed Page Styles ---*/
+#confirmed {
+	background-color:rgba(214,213,209,0.4);
+	border:0.25em #fff solid;
+	border-radius:0.25em;
+	text-align:center;
+	max-width:37.5em;
+	padding:0.75em 0 1.25em;
+}
+#confirmed a {
+	background-color:#c14543;
+	border-radius:0.25em;
+	color:#fff;
+	border:none;
+	padding:1em;
+	display:inline-block;
+	margin:0.25em 1em 0.25em;
+	clear:left;
+	font: 1.20em 'Steagal-Me', Helvetica, Arial, sans-serif;
+	letter-spacing: 0.0625em;
+	line-height:0;
+	cursor:pointer;
+}
+
+/*--- Begin Meeting Prompt Arrow styles ---*/
+@keyframes arrow {
+	0% {top:0;}
+	50% {top:10px;}
+	100% {top:0;}
+}
+@-webkit-keyframes arrow {
+	0% {top:0;}
+	50% {top:10px;}
+	100% {top:0;}
+}
+#promptArrow {
+  margin:0 auto;
+  position:absolute;
+  animation: arrow 0.75s ease 1s infinite;
+  -webkit-animation: arrow 0.75s ease 1s infinite;
+  top:0;
+  right:0;
+  width:140px;
+}
+.promptContainer {
+	margin:0 35px!important;
+}
+span {
+  background: none;
+  width: 70px;
+  height: 70px;
+  margin: 0 35px;
+}
+.triangle {
+  background: none;
+  width: 0;
+  height: 0;
+  border-bottom: 60px solid #c14543; 
+  border-left: 34px solid transparent; 
+  border-right: 34px solid transparent;
+  display:block;
+}
+.box {
+  width: 35px;
+  height: 55px;
+  background: #c14543;
+  display:block;
+  margin:-25px 52px 0;
+}
+#promptArrow p {
+	text-align:center;
+	margin:0;
+	padding:0;
+}
+
+/*--- Begin Meeting styles ---*/
+#emailLink {
+	text-align:center;
+	margin: 1em 0;
+	max-width:600px;
+	padding:0;
+}
+#emailLink a {
+	margin:0!important;
+	padding:0.5em 0.75em;
+	background-color:#c14543;
+	border-radius:0.25em;
+	color:#fff;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+#emailLink a:hover {
+	background-color:rgba(223,91,89,1);
+}
+#emailLink a:active {
+	border: solid 2px #fff;
+}
+#videos {
+	max-width:37.5em;
+}
+#streamsContainer {
+	height:28.125em;
+	width:100%;
+	float:left;
+	z-index:100;
+	background-color: #fff;
+	background-image: url('../images/doxymevideobackground.gif');
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+#myPublisherDiv {
+	border:solid 4px #fff;
+	z-index:1000000;
+	float:left;
+	position:absolute;
+}
+@keyframes plussign {
+	0% {opacity:1;}
+	50% {opacity:0;}
+	100% {opacity:1;}
+}
+@-webkit-keyframes plussign {
+	0% {opacity:1;}
+	50% {opacity:0;}
+	100% {opacity:1;}
+}
+
+/*--- Begin Navigation button styles ---*/
+.nav {
+	text-align:center;
+	max-width:37.5em;
+	margin: 3.75em 0 0;
+}
+ul { 
+	list-style: none;
+	padding:0;
+	text-align:center;
+}
+li:first-of-type {
+	margin-left:0;
+}
+li {
+	display: inline-block;
+	margin-left:0.625em;
+}
+a.nav {
+  color: #ffffff;
+  text-transform:uppercase;
+  text-decoration:none;
+	background-color:#4d5968;
+	border-radius:0.25em;
+	padding:0.625em 1.25em 0.5em;
+	min-width:4.375em;
+  }
+a.nav:hover {
+	background-color:#66717f;
+}
+
+/*--- Begin feedback Button ---*/
+.ribbon-wrapper {
+  position: fixed;
+  bottom:60px;
+  right:-125px;
+  z-index: 90;
+  opacity:0.5;
+  transition:opacity 1s, right 0.5s;
+}
+.ribbon-wrapper:hover {
+	opacity:1;
+	right:-5px;
+}
+.ribbon {
+  font-size: 15px;
+  color: #ddd;
+  text-align: center;
+  position: relative;
+  padding: 7px 0;
+  left: -5px;
+  top: 15px;
+  width: 180px;
+  background-color: rgba(77,89,104,1);
+  color: #ddd;
+  box-shadow: 0px 0px 3px rgba(255,255,255,0.3);
+}
+.ribbon:before {
+  content: "";
+  border-top: 14px solid rgba(58,67,78,1);   
+  border-left: 15px solid transparent;
+  border-right: 25px solid rgba(58,67,78,1);
+  border-bottom: 14px solid rgba(58,67,78,1);
+  position:absolute;
+  display:block;
+  bottom:-6px;
+  z-index:-90;
+}
+.ribbon:before {
+  left: -25px;
+}
+.ribbon .ribbon-text:before {
+  content: "";
+  border-color: rgba(0,0,0,0.5) transparent transparent transparent;
+  position:absolute;
+  display:block;
+  border-style:solid;
+  bottom:-6px;
+  left:0;
+  border-width:6px 0 0 1em;
+}
+.ribbon-text a {
+	color:#fff;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.icon {
+	font-family: 'entypo';
+	color:#fff;
+	padding-right:5px;
+	font-size:20px;
+}
+
+
+
+/*--- Begin Footer Styles ---*/
+footer {
+	width:37.5em;
+	position:fixed;
+	clear:both;
+	bottom:0;
+	background-color:rgba(214,213,209,0.7);
+	padding:0.3125em 0;
+	border-top-left-radius:4px;
+	border-top-right-radius:4px;
+}
+/*--- This Media Query keeps the footer from overlaping any of the other elements on smaller screens. --*/
+@media (max-height: 750px) {
+	footer {
+		position:static;
+		background:none;
+	}
+}
+footer p {
+	text-align:center;
+	margin:0;
+	font: 0.875rem 'Steagal-Li', Helvetica, Arial, sans-serif;
+}
+
+/*--- Media Query for any screen narrower than 800px ---*/
+@media (max-width:800px) {
+	body {
+		padding:5px;
+		margin:0 auto;
+		width:90%;
+	}
+	img {
+		margin:1em auto;
+		padding:3em 20%;
+		text-align: center;
+	}
+}
+
+@media (max-width:640px) {
+	img {
+		margin:1em auto;
+		padding:3em 0;
+		text-align: center;
+		display:block;
+	}
+	#haveApt {
+		background-color:rgba(214,213,209,0.4);
+		border:0.25em #fff solid;
+		border-radius:0.25em;
+		text-align:center;
+		width:80%;
+		padding:0.5em 0;
+		margin:0 auto;
+	}
+	#haveApt form {
+		text-align:center;
+	}
+	#haveApt input {
+		display:inline;
+		padding:0.625em 0.25em;
+		border-radius:0.25em;
+		border:none;
+		width:80%;
+		margin:1em auto;
+	}
+	#haveApt label:first-of-type {
+		display:block;
+		float:none;
+		font: 0.875rem 'Steagal-Re', Helvetica, Arial, sans-serif;
+		text-align:center;
+		width:80%;
+		margin:0 auto;
+	}
+	#haveApt label:last-of-type {
+		display:block;
+		float:none;
+		font: 0.875rem 'Steagal-Re', Helvetica, Arial, sans-serif;
+		text-align:center;
+		margin:0 auto;
+		width:80%;
+	}
+
+	#schedule {
+		background-color:rgba(214,213,209,0.4);
+		border:0.25em #fff solid;
+		border-radius:0.25em;
+		text-align:center;
+		width:80%;
+		padding:0.75em 0 1.25em;
+		margin:0 auto;
+	}
+
+	#schedule + .nav {
+			margin:3em 0 0;
+	}
+	.nav {
+		margin: 8.75em 0 0;
+		font-size:14px;
+		max-width:100%;
+	}
+	.nav a {
+		margin:5px;
+	}
+	.nav li {
+		display:inline-block;
+		margin:5px 0;
+		padding:0.625em 0.5em 0.5em;
+		min-width:0.375em;
+	}
+	footer {
+		width:100%;
+	}
+}
+
+

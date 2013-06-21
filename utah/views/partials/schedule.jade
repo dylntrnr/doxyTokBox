@@ -1,0 +1,15 @@
+div#schedule
+  div
+    h2 Reserve Room
+    input(data-ng-model='date', placeholder='mm/dd/yy')
+    input(data-ng-model='time', placeholder='hh:mm')
+    label
+      select(data-ng-model='ampm')
+        option(value='am') AM
+        option(value='pm') PM
+    br
+    button.btn(data-ng-click='scheduleRoom("/confirmed")', data-ng-disabled='unavailable') Schedule Meeting
+
+  
+    
+  

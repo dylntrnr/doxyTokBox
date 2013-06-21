@@ -1,0 +1,40 @@
+doctype 5
+html(ng-app="content")
+	head
+		
+		title= title
+		link(rel='stylesheet', href='/stylesheets/utahstyle.css')
+		link(rel='stylesheet', href='/stylesheets/fordoxy.me.css')
+		link(rel='stylesheet', href='/stylesheets/print.css', media='print')
+		link(rel='apple-touch-icon', href='/images/favicon.icns')
+		link(rel='icon', href='/images/favicon.ico')
+		meta(charset='UTF-8')
+
+	body
+		img(src="/images/uhclogo.png", alt="University of Utah Health Care Logo")
+		//- This is where all the partials are put
+		p This should only be on utah.* and not localhost:3000
+		block content
+
+		div.nav
+			ul
+				li
+					a.nav(href="/#/home") Home
+				li
+					a.nav(href="/#/schedule") Schedule
+				li
+					a.nav(href="/quick/meeting") Quick Meeting
+				li
+					a.nav(href="/#/about") About
+
+		div.ribbon-wrapper
+			div.ribbon
+				div.ribbon-text
+					i.icon &#9998;
+					a(href="http://tiny.cc/0g5iyw", target="_blank") Provide Feedback
+
+		footer
+			p Service provided by
+			a(href="https://doxy.me", target="_blank")
+				img.doxy(src="/images/doxyme-logowhite.png", alt="Doxy.me Logo")
+			p Copyright © 2013 University of Utah Health Care
