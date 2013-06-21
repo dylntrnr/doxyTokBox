@@ -1,5 +1,4 @@
 /*--- Tip of the Hat to: --*/
-/*Steagal font face designed by Jeremy Dooley in 2013. License from MyFonts.com*/
 /*Entypo pictograms by Daniel Bruce — www.entypo.com*/
 
 /*--- Begin Universal Styles --*/
@@ -95,6 +94,7 @@ img {
 	font-weight:bold;
 	text-align:left;
 }
+/*--
 #haveApt input {
 	display:block;
 	padding:0.75em 1.25em;
@@ -102,6 +102,20 @@ img {
 	border:1px solid #aaa;
 	width:100%;
 }
+--*/
+/*--- TESTING FORM INPUT WIDTHS ---*/
+#haveApt input {
+	width:100%;
+	border-radius:0.25em;
+	border:1px solid #aaa;
+}
+#haveApt span {
+	display:block;
+	overflow:hidden;
+	padding:0.75em 1.25em;
+}
+/*--- END TESTING FORM INPUT WIDTHS ---*/
+
 .clearfix {
 	float:none;
 	clear:both;

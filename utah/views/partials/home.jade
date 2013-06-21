@@ -4,10 +4,12 @@ div#haveApt
     div#aptForm
       label
         | ROOM ID:
-        input(data-ng-model='meetingId', type='text', size='30')
+        span
+          input(data-ng-model='meetingId', type='text', size='30')
       label
         | PASSWORD:
-        input(data-ng-model='password', type='password', size='30')
+        span
+          input(data-ng-model='password', type='password', size='30')
     div.clearfix
     button.btn(data-ng-click='enterRoom()', data-ng-disabled='unavailable') BEGIN
     div(data-ng-show='testReady') {{meetingId}}
