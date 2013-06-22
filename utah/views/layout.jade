@@ -1,5 +1,5 @@
 doctype 5
-html(ng-app="content")
+html(ng-app="content", lang="en")
 	head
 		
 		title= title
@@ -8,9 +8,11 @@ html(ng-app="content")
 		link(rel='apple-touch-icon', href='/images/favicon.icns')
 		link(rel='icon', href='/images/favicon.ico')
 		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
 
 	body
-		img(src="/images/uhclogo.png", alt="University of Utah Health Care Logo")
+		div.imgBackground
+			img(src="/images/uhclogo.png", alt="University of Utah Health Care Logo")
 		//- This is where all the partials are put
 		block content
 
