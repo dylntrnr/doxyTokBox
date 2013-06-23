@@ -423,7 +423,7 @@ img {
 	float:left;
 	z-index:100;
 	background-color: #fff;
-	background-image: url('../images/doxymevideobackground.gif');
+	background-image: url('../images/utahdoxymevideobackground.gif');
 	background-repeat: no-repeat;
 	background-position: right top;
 }
@@ -662,6 +662,12 @@ img.doxy {
 		width:80%;
 		font-weight:bold;
 	}
+	#about {
+		display:block;
+		max-width:100%;
+		margin:0 auto;
+		padding:0.5em 0;
+	}
 
 	#schedule {
 		background-color:rgba(192,168,158,0.85);
@@ -711,6 +717,18 @@ img.doxy {
 		display:block;
 		margin:0 auto;
 	}
+	#about {
+		display:block;
+		max-width:90%;
+		margin:0 auto;
+		padding:3em 0;
+	}
+	#schedule {
+		display:block;
+		max-width:90%;
+		margin:0 auto;
+		padding:1.5em 0;
+	}
 	.nav {
 		max-width:100%;
 		margin:100px auto 0;
@@ -727,6 +745,46 @@ img.doxy {
 		margin:0 auto;
 		padding:10px 0;
 	}
+	/*--- Begin feedback Button ---*/
+.ribbon-wrapper {
+  position: static;
+  display:block;
+  width:90%;
+  margin:0 auto;
+  z-index: 90;
+  opacity:1;
+  transition:opacity 1s, right 0.5s;
+  padding-bottom:0.5em;
+}
+.ribbon-wrapper:hover {
+	opacity:1;
+}
+.ribbon {
+  font-size: 15px;
+  color: #ddd;
+  text-align: center;
+  padding: 7px 0;
+  width: 100%;
+  background-color: #cc0000;
+  color: #ddd;
+  box-shadow: none;
+  border-radius:0.25em;
+}
+.ribbon:before {
+  content: "";
+  display:none;
+}
+.ribbon-text a {
+	color:#fff;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.icon {
+	font-family: 'entypo';
+	color:#fff;
+	padding-right:5px;
+	font-size:20px;
+}
 	footer {
 		max-width:100%;
 	}
