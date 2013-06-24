@@ -1,0 +1,10 @@
+{
+  "name": "doxy",
+  "version": "0.0.2-4",
+  "private": true,
+  "dependencies": {
+    "opentok": "0.3.2",
+    "express": "3.2.4",
+    "jade": "0.30.0"
+  }
+}
