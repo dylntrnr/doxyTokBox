@@ -459,6 +459,16 @@ a.nav {
 a.nav:hover {
 	background-color:#66717f;
 }
+.iconNav {
+	font-family: 'entypo';
+	color:#fff;
+	padding-left:5px;
+	font-size:40px;
+	font-style:inherit;
+	position:relative;
+	top:4px;
+	font-weight:100;
+}
 
 /*--- Begin Support Logos ---*/
 .supportLogos {
