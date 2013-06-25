@@ -37,10 +37,14 @@ h2 {
 	}
 
 /*--- Logo Img Styles - Super Simple ---*/
+.imgBackground {
+	width:600px;
+	margin:1em 0 3em;
+}
 img {
-	max-width: 21.875em;
-	margin:0 0 2.125em;
-	padding:5em 7.8125em;
+	width: 355px;
+	height:100%;
+	padding:4em 7.8125em 2.75em;
 }
 .imgMeeting {
 	padding:3em 7.8125em 2em!important;
@@ -61,8 +65,13 @@ img {
 	border:0.25em #fff solid;
 	border-radius:0.25em;
 	text-align:center;
-	max-width:37.5em;
+	width:550px;
 	padding:1.25em 0;
+	margin:0 auto;
+}
+#haveApt div {
+	animation: fadein 0.5s ease-in;
+	-webkit-animation: fadein 0.5s ease-in;
 }
 #haveApt p {
 	color:#c14543;
@@ -71,27 +80,48 @@ img {
 }
 #aptForm {
 	text-align:center;
-	width:65%;
+	width:85%;
 	margin:0 auto;
 }
+#haveApt fieldset:first-of-type {
+  border:none;
+  display:inline;
+  float:left;
+  width:48%;
+  padding:0;
+  margin:0;
+}
+#haveApt fieldset:last-of-type {
+  border:none;
+  display:inline;
+  float:right;
+  width:48%;
+  padding:0;
+  margin:0;
+}
 #haveApt label:first-of-type {
-	float:left;
-	margin-right: 0.9375em;
 	font: 0.875rem 'Steagal-Re', Helvetica, Arial, sans-serif;
 	text-align:left;
-	margin-left:-20px;
 }
 #haveApt label:last-of-type {
-	float:right;
 	font: 0.875rem 'Steagal-Re', Helvetica, Arial, sans-serif;
 	text-align:left;
 }
+/*
 #haveApt input {
 	display:block;
 	padding:0.625em 1.25em;
 	border-radius:0.25em;
 	border:1px solid #ddd;
 	width:97%;
+}
+*/
+#haveApt input {
+	width:90%;
+	border-radius:0.25em;
+	border:1px solid #ddd;
+  padding:0.75em 0.75em;
+  font-size: 12px;
 }
 .clearfix {
 	float:none;
@@ -116,7 +146,10 @@ img {
 	background-color:rgba(223,91,89,1);
 	cursor:pointer;
 }
-
+#haveApt button:active {
+	background-color:rgba(223,91,89,1);
+	border:2px solid #ddd;
+}
 #haveApt button:disabled {
 	background-color:#999;
 	color:#666;
@@ -126,18 +159,24 @@ img {
 #about {
 	text-align:center;
 	padding:4em 0.75em;
-	max-width:100%;
+	width:550px;
 	margin:0 auto;
-	/*--
-	border-top:1px dashed #fff;
-	border-bottom:1px dashed #fff;
-	background:rgba(214,213,209,0.05);
-	--*/
+}
+@keyframes fadein {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+@-webkit-keyframes fadein {
+	from {opacity:0;}
+	to {opacity:1;}
 }
 #about div {
+	animation: fadein 0.5s ease-in;
+	-webkit-animation: fadein 0.5s ease-in;
 	font-family: 'Steagal-Li', Helvetica, Arial, sans-serif;
 	width:80%;
 	margin:0 auto;
+	line-height:1.5;
 }
 
 /*--- Begin Schedule div styles ---*/
@@ -146,8 +185,13 @@ img {
 	border:0.25em #fff solid;
 	border-radius:0.25em;
 	text-align:center;
-	max-width:37.5em;
+	width:550px;
+	margin:0 auto;
 	padding:0.75em 0 1.25em;
+}
+#schedule div {
+	animation: fadein 0.5s ease-in;
+	-webkit-animation: fadein 0.5s ease-in;
 }
 #schedule h2 {
 	text-transform: uppercase;
@@ -163,7 +207,7 @@ img {
 	margin:0.25em 0.5em;
 }
 #schedule select {
-	padding:5px 6px 8px;
+	padding:7px 6px 9px;
 	margin:0;
 	border-radius:0.25em;
 	border:none;
@@ -190,7 +234,7 @@ img {
  -ms-transform:rotate(90deg);
  transfrom:rotate(90deg);
  right:0.3125em;
- top:0px;
+ top:2px;
  padding:0 0 0.125em;
  position:absolute;
  pointer-events:none;
@@ -228,6 +272,9 @@ img {
 #schedule button:hover {
 	background-color:rgba(223,91,89,1);
 }
+#schedule button:active {
+	background-color:rgba(223,91,89,1);
+}
 #schedule button:disabled {
 	background-color:#999;
 	color:#666;
@@ -245,8 +292,13 @@ img {
 	border:0.25em #fff solid;
 	border-radius:0.25em;
 	text-align:center;
-	max-width:37.5em;
+	width:550px;
 	padding:0.75em 0 1.25em;
+	margin:0 auto;
+}
+#confirmed div {
+	animation: fadein 0.5s ease-in;
+	-webkit-animation: fadein 0.5s ease-in;
 }
 #confirmed a {
 	background-color:#c14543;
@@ -261,6 +313,15 @@ img {
 	letter-spacing: 0.0625em;
 	line-height:0;
 	cursor:pointer;
+	text-decoration:none;
+	transition: background-color 0.25s;
+	-webkit-transition:background-color 0.25s;
+}
+#confirmed a:hover {
+	background-color:#990000;
+}
+#confirmed a:active {
+	background-color:#cc0000;
 }
 
 /*--- Begin Meeting Prompt Arrow styles ---*/
@@ -284,13 +345,10 @@ img {
   width:140px;
 }
 .promptContainer {
-	margin:0 35px!important;
-}
-span {
-  background: none;
+	background: none;
   width: 70px;
   height: 70px;
-  margin: 0 35px;
+	margin:0 35px!important;
 }
 .triangle {
   background: none;
@@ -300,17 +358,18 @@ span {
   border-left: 34px solid transparent; 
   border-right: 34px solid transparent;
   display:block;
+  margin:0 0 0 45px;
 }
 .box {
   width: 35px;
   height: 55px;
   background: #c14543;
   display:block;
-  margin:-25px 52px 0;
+  margin:-25px 62px 0;
 }
 #promptArrow p {
 	text-align:center;
-	margin:0;
+	margin:0 0 0 20px;
 	padding:0;
 }
 
@@ -329,6 +388,8 @@ span {
 	color:#fff;
 	text-decoration:none;
 	text-transform:uppercase;
+	transition: background-color 0.25s;
+	-webkit-transition:background-color 0.25s;
 }
 #emailLink a:hover {
 	background-color:rgba(223,91,89,1);
@@ -369,7 +430,7 @@ span {
 /*--- Begin Navigation button styles ---*/
 .nav {
 	text-align:center;
-	max-width:37.5em;
+	width:37.5em;
 	margin: 3.75em 0 0;
 }
 ul { 
@@ -391,7 +452,9 @@ a.nav {
 	background-color:#4d5968;
 	border-radius:0.25em;
 	padding:0.625em 1.25em 0.5em;
-	min-width:4.375em;
+	width:4.375em;
+	transition: background-color 0.25s, color 0.25s;
+	-webkit-transition:background-color 0.25s, color 0.25s;
   }
 a.nav:hover {
 	background-color:#66717f;
@@ -514,32 +577,60 @@ footer p {
 }
 
 /*--- Media Query for any screen narrower than 800px ---*/
-@media (max-width:800px) {
+@media (min-width:641px) and (max-width:800px) {
 	body {
-		padding:5px;
+		padding:0 0 5px;
 		margin:0 auto;
-		width:90%;
+		width:100%;
+	}
+	.imgBackground {
+		padding:3em 0;
+		margin:0 auto 1em;
+		width:100%;
+		display:block;
 	}
 	img {
-		margin:1em auto;
-		padding:3em 20%;
-		text-align: center;
+		margin:0 auto;
+		padding:0;
+		display:block;
+	}
+	.container {
+		max-width:100%;
+	}
+	.nav {
+		width:100%;
+	}
+	footer {
+		width:100%;
 	}
 }
 
-@media (max-width:640px) {
-	img {
-		margin:1em auto;
-		padding:3em 0;
-		text-align: center;
+@media (min-width:481px) and (max-width:640px) {
+	body {
+		margin:0 auto;
+		padding:0;
+		width:100%;
+	}
+	.imgBackground {
+		margin:0 auto 1em;
 		display:block;
+		width:100%;
+		padding:3em 0;
+	}
+	img {
+		margin:0 auto;
+		padding:0;
+		display:block;
+	}
+	.container {
+		max-width:100%;
 	}
 	#haveApt {
 		background-color:rgba(214,213,209,0.4);
 		border:0.25em #fff solid;
 		border-radius:0.25em;
 		text-align:center;
-		width:80%;
+		width:90%;
 		padding:0.5em 0;
 		margin:0 auto;
 	}
@@ -570,7 +661,12 @@ footer p {
 		margin:0 auto;
 		width:80%;
 	}
-
+	#about {
+		display:block;
+		max-width:100%;
+		margin:0 auto;
+		padding:0.5em 0;
+	}
 	#schedule {
 		background-color:rgba(214,213,209,0.4);
 		border:0.25em #fff solid;
@@ -587,9 +683,9 @@ footer p {
 	.nav {
 		margin: 8.75em 0 0;
 		font-size:14px;
-		max-width:100%;
+		width:100%;
 	}
-	.nav a {
+	/*.nav a {
 		margin:5px;
 	}
 	.nav li {
@@ -597,10 +693,113 @@ footer p {
 		margin:5px 0;
 		padding:0.625em 0.5em 0.5em;
 		min-width:0.375em;
-	}
+	}*/
 	footer {
 		width:100%;
 	}
 }
-
+@media (max-width:480px) {
+	html, body {
+		padding:0px;
+		margin:0 auto;
+		width:100%;
+	}
+	.imgBackground {
+		margin:0 auto 1em;
+		display:block;
+		width:100%;
+	}
+	img {
+		width:300px;
+		height:100%;
+		padding:10px 0;
+		display:block;
+		margin:0 auto;
+	}
+	.container {
+		max-width:100%;
+	}
+	#haveApt {
+		width:90%;
+		display:block;
+		margin:0 auto;
+	}
+	#about {
+		display:block;
+		max-width:90%;
+		margin:0 auto;
+		padding:3em 0;
+	}
+	#schedule {
+		display:block;
+		max-width:90%;
+		margin:0 auto;
+		padding:1.5em 0;
+	}
+	.nav {
+		max-width:100%;
+		margin:100px auto 0;
+		display:block;
+	}
+	.nav li {
+		display:block;
+		width:80%;
+		margin:15px auto;
+	}
+	.nav a {
+		width:100%;
+		display:block;
+		margin:0 auto;
+		padding:10px 0;
+	}
+/*--- Begin feedback Button ---*/
+.ribbon-wrapper {
+  position: static;
+  display:block;
+  width:80%;
+  margin:0 auto;
+  z-index: 90;
+  opacity:1;
+}
+.ribbon-wrapper:hover {
+	opacity:1;
+}
+.ribbon {
+  font-size: 15px;
+  text-align: center;
+  padding: 7px 0;
+  width: 100%;
+  background-color: rgba(77,89,104,1);
+  color: #ddd;
+  box-shadow: none;
+  border-radius:0.25em;
+  border-color:none;
+  position:static;
+}
+.ribbon:hover {
+	background-color:#66717f;
+}
+.ribbon:before {
+  content: "";
+  display:none;
+}
+.ribbon-text a {
+	color:#fff;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.ribbon .ribbon-text:before {
+	display:none;
+}
+.icon {
+	font-family: 'entypo';
+	color:#fff;
+	padding-right:5px;
+	font-size:20px;
+}
+	footer {
+		max-width:100%;
+		background-color:none;
+	}
+}
 

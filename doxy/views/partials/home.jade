@@ -1,12 +1,17 @@
 div#haveApt
   p ALREADY HAVE AN APPOINTMENT?
   div#aptForm
-    label
-      | ROOM ID:
-      input(data-ng-model='meetingId', type='text')
-    label
-      | PASSWORD:
-      input(data-ng-model='password', type='password')
+    div
+      fieldset
+        label
+          | ROOM ID:
+        span
+          input(data-ng-model='meetingId', type='text')
+      fieldset
+        label
+          | PASSWORD:
+        span
+          input(data-ng-model='password', type='password')
   div.clearfix
   button.btn(data-ng-click='enterRoom()', data-ng-disabled='unavailable') BEGIN
   div(data-ng-show='testReady') {{meetingId}}

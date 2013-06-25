@@ -9,9 +9,11 @@ html(ng-app="content")
 		link(rel='apple-touch-icon', href='/images/favicon.icns')
 		link(rel='icon', href='/images/favicon.ico')
 		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
 
 	body
-		img(src="/images/doxyme-logo.png", alt="DOXY.ME Logo")
+		div.imgBackground
+			img(src="/images/doxyme-logo.png", alt="DOXY.ME Logo")
 		//- This is where all the partials are put
 		block content
 
@@ -38,4 +40,4 @@ html(ng-app="content")
 					a(href="http://tiny.cc/0g5iyw", target="_blank") Provide Feedback
 
 		footer
-			p 2013 DOXY.ME ALL RIGHTS RESERVED
+			p Copyright © 2013 DOXY.ME ALL RIGHTS RESERVED
