@@ -426,6 +426,20 @@ img {
 	50% {opacity:0;}
 	100% {opacity:1;}
 }
+.meetingNav {
+	position:absolute;
+	top:140px;
+	left:-67px;
+	transition: left 0.25s ease;
+	-webkit-transition: left 0.25s ease-out;
+}
+.meetingNav a.nav {
+	border-radius: 0;
+	padding-right:0.75em;
+}
+.meetingNav:hover {
+	left:0;
+}
 
 /*--- Begin Navigation button styles ---*/
 .nav {
@@ -462,7 +476,7 @@ a.nav:hover {
 .iconNav {
 	font-family: 'entypo';
 	color:#fff;
-	padding-left:5px;
+	padding-left:10px;
 	font-size:40px;
 	font-style:inherit;
 	position:relative;
