@@ -28,7 +28,7 @@
 
 
 /* @import must be at top of file, otherwise CSS will not work */
-@import url("//hello.myfonts.net/count/270d46");
+/*@import url("//hello.myfonts.net/count/270d46");*/
 
   
 @font-face {font-family: 'Steagal-Bo';src: url('webfonts/270D46_0_0.eot');src: url('webfonts/270D46_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/270D46_0_0.woff') format('woff'),url('webfonts/270D46_0_0.ttf') format('truetype');}

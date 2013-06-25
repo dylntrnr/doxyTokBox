@@ -397,6 +397,34 @@ a.nav:hover {
 	background-color:#66717f;
 }
 
+/*--- Begin Support Logos ---*/
+.supportLogos {
+	width:600px;
+	opacity:.75;
+	display:none;
+}
+.supportLogos:hover {
+	opacity:1;
+}
+.supportLogos div {
+	width:90%;
+	margin:0 auto;
+	padding:10px 0;
+	text-align:center;
+}
+.chrome {
+	width:66px;
+	display:inline;
+	padding:0;
+	position:relative;
+	top:-5px;
+}
+.firefox {
+	width:70px;
+	display:inline;
+	padding:0;
+}
+
 /*--- Begin feedback Button ---*/
 .ribbon-wrapper {
   position: fixed;
