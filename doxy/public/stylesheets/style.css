@@ -10,7 +10,7 @@ html {
 }
 body {
 	color: #4d5968;
-	background: white url('../images/background.jpg') no-repeat center center fixed; background-size: 100%; width:500px;
+	background: white url('../images/background.jpg') no-repeat center center fixed; background-size: 100%; width:100%;
 	background-size: cover;
   padding: 0 0 0 6.25em;
   font: 1rem 'Steagal-Re', Helvetica, Arial, sans-serif;
