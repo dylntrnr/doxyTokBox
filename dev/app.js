@@ -60,7 +60,14 @@ if ('production' == app.get('env')) {
 app.get("/", routes.index);
 app.get('/partials/:name', routes.partials);
 
-
+// api call to get room url
+app.get('/api/:room/:pass', function (req, res) {
+  var room = req.params.room;
+  var key = req.params.pass ;
+  var hash;
+  hash = crypto.createHmac('sha1', key).update(room).digest('hex');
+  res.send("/" + hash);
+});
 
 // When user goes to /:room with the the 123-123-133 form with optional password it redirects to a hashed value so two urls are the same
 app.get("/:room([0-9]+-[0-9]+-[0-9]+)/:pass?", function(req, res){
@@ -69,7 +76,7 @@ app.get("/:room([0-9]+-[0-9]+-[0-9]+)/:pass?", function(req, res){
   var key = req.params.pass || process.env.TestKey;
   var hash;
   hash = crypto.createHmac('sha1', key).update(room).digest('hex');
-  console.log(room, key, hash);
+  console.log(room, key, hash, process.env.TestKey);
   res.redirect(hash);
   res.end();
 });
