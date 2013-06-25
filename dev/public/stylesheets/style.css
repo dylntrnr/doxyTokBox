@@ -426,11 +426,32 @@ img {
 	50% {opacity:0;}
 	100% {opacity:1;}
 }
+.meetingImg {
+	position:absolute;
+	top:0;
+	left:-292px;
+	padding:0;
+	margin:0;
+	transition:left 0.5s ease-out;
+	-webkit-transition: left 0.5s ease-out;
+}
+.meetingImg:hover {
+	left:0;
+}
+.meetingImg .imgBackground {
+	padding:10px;
+	margin:0!important;
+}
+.meetingImg img {
+	padding:10px 20px;
+	margin:0;
+	background-color:rgba(214,213,209,1);
+}
 .meetingNav {
 	position:absolute;
 	top:140px;
 	left:-67px;
-	transition: left 0.25s ease;
+	transition: left 0.25s ease-out;
 	-webkit-transition: left 0.25s ease-out;
 }
 .meetingNav a.nav {
