@@ -85,17 +85,17 @@ app.get("/:room", function (req, res) {
   if(urlSessions[ req.params.room ] == undefined){
     OpenTokObject.createSession(function(sessionId){
       urlSessions[ req.params.room ] = sessionId;
-      sendRoomResponse( sessionId, res, req.params.room );
+      sendRoomResponse( sessionId, res, req.params.room, req.headers.host );
     }, {'p2p.preference':'enabled'});
   }else{
     sessionId = urlSessions[req.params.room];
-    sendRoomResponse( sessionId, res, req.params.room );
+    sendRoomResponse( sessionId, res, req.params.room, req.headers.host );
   }
 });
 
-function sendRoomResponse( sessionId, responder, room ){
+function sendRoomResponse( sessionId, responder, room, origin ){
   var token = OpenTokObject.generateToken( {session_id: sessionId} );
-  var data = {OpenTokKey:OTKEY, sessionId: sessionId, token:token, title: "New Room: " + room, Room: room};
+  var data = {OpenTokKey:OTKEY, sessionId: sessionId, token:token, title: "New Room: " + room, Room: room, origin: origin};
   responder.render( 'meeting', data );
 }
 
@@ -125,7 +125,6 @@ function RandomRoom () {
 // *** If sessionId does not exist for url, create one
 // ***
 app.get("/quick/:room", function(req, res){
-  console.log(req.headers.host);
   if(urlSessions[ req.params.room ] == undefined){
     OpenTokObject.createSession(function(sessionId){
       urlSessions[ req.params.room ] = sessionId;
