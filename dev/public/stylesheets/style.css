@@ -10,7 +10,7 @@ html {
 }
 body {
 	color: #4d5968;
-	background: white url('../images/background.jpg') no-repeat center center fixed; background-size: 100%; width:100%;
+	background: white url('../images/background.jpg') no-repeat center center fixed; background-size: 100%; max-width:650px; width:100%;
 	background-size: cover;
   padding: 0 0 0 6.25em;
   font: 1rem 'Steagal-Re', Helvetica, Arial, sans-serif;
@@ -461,6 +461,14 @@ img {
 .meetingNav:hover {
 	left:0;
 }
+.meetingFooter {
+	position:absolute;
+	bottom:0;
+	left:0;
+	padding:0;
+	margin:0;
+	background-color:none;
+}
 
 /*--- Begin Navigation button styles ---*/
 .nav {
@@ -503,6 +511,9 @@ a.nav:hover {
 	position:relative;
 	top:4px;
 	font-weight:100;
+}
+i {
+	display:none;
 }
 
 /*--- Begin Support Logos ---*/
@@ -588,6 +599,9 @@ a.nav:hover {
 	text-transform: uppercase;
 	text-decoration: none;
 }
+i.icon {
+	display:inline;
+}
 .icon {
 	font-family: 'entypo';
 	color:#fff;
@@ -598,19 +612,18 @@ a.nav:hover {
 
 
 /*--- Begin Footer Styles ---*/
-footer {
-	width:37.5em;
+footer div {
+	width:600px;
 	position:fixed;
 	clear:both;
 	bottom:0;
-	background-color:rgba(214,213,209,0.7);
 	padding:0.3125em 0;
 	border-top-left-radius:4px;
 	border-top-right-radius:4px;
 }
 /*--- This Media Query keeps the footer from overlaping any of the other elements on smaller screens. --*/
 @media (max-height: 750px) {
-	footer {
+	footer div {
 		position:static;
 		background:none;
 	}
@@ -645,7 +658,7 @@ footer p {
 	.nav {
 		width:100%;
 	}
-	footer {
+	footer div {
 		width:100%;
 	}
 }
@@ -739,7 +752,7 @@ footer p {
 		padding:0.625em 0.5em 0.5em;
 		min-width:0.375em;
 	}*/
-	footer {
+	footer div {
 		width:100%;
 	}
 }
@@ -842,7 +855,7 @@ footer p {
 	padding-right:5px;
 	font-size:20px;
 }
-	footer {
+	footer div {
 		max-width:100%;
 		background-color:none;
 	}
