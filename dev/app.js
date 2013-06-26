@@ -125,14 +125,15 @@ function RandomRoom () {
 // *** If sessionId does not exist for url, create one
 // ***
 app.get("/quick/:room", function(req, res){
+  console.log(req.headers.host);
   if(urlSessions[ req.params.room ] == undefined){
     OpenTokObject.createSession(function(sessionId){
       urlSessions[ req.params.room ] = sessionId;
-      sendResponse( sessionId, res, req.params.room );
+      sendResponse( sessionId, res, req.params.room, req.headers.host );
     }, {'p2p.preference':'enabled'});
   }else{
     sessionId = urlSessions[req.params.room];
-    sendResponse( sessionId, res, req.params.room );
+    sendResponse( sessionId, res, req.params.room, req.headers.host );
   }
 });
 
@@ -141,9 +142,9 @@ app.get("/quick/:room", function(req, res){
 // *** All sessionIds need a corresponding token
 // *** generateToken and then sendResponse based on ejs template
 // ***
-function sendResponse( sessionId, responder, room ){
+function sendResponse( sessionId, responder, room, origin ){
   var token = OpenTokObject.generateToken( {session_id: sessionId} );
-  var data = {OpenTokKey:OTKEY, sessionId: sessionId, token:token, title: "New Room: " + room, Room: "quick/" + room};
+  var data = {OpenTokKey:OTKEY, sessionId: sessionId, token:token, title: "New Room: " + room, Room: "quick/" + room, origin: origin};
   responder.render( 'meeting', data );
 }
 
