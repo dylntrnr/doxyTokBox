@@ -425,7 +425,7 @@ img {
 	background-color: #fff;
 	background-image: url('../images/doxymevideobackground.gif');
 	background-repeat: no-repeat;
-	background-position: right top;
+	background-position: center center;
 }
 #myPublisherDiv {
 	border:solid 4px #fff;
