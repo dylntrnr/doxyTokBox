@@ -1,4 +1,3 @@
-window.div;
 
 TB.setLogLevel(TB.DEBUG);
 // Initialize session, set up event listeners, and connect
@@ -32,7 +31,7 @@ function subscribeToStreams(streams) {
     }
 
     // Create the div to put the subscriber element in to
-    div = document.createElement('div');
+    var div = document.createElement('div');
     div.setAttribute('id', 'stream' + streams[i].streamId);
     var streamsContainer = document.getElementById('streamsContainer');
     streamsContainer.appendChild(div);
@@ -41,13 +40,8 @@ function subscribeToStreams(streams) {
     var browserWidth = $(window).width();
     // Subscribe to the stream
     session.subscribe(streams[i], div.id, {height: browserHeight + "px", width: browserWidth + "px"});
-  //   var plussign = document.getElementById("plussign");
-  //   plussign.remove();
   }
 }
 
-function resizePublisher() {
-  var streamsContainer = document.getElementById('videos');
-  streamsContainer.webkitRequestFullScreen();
-}
+
 
