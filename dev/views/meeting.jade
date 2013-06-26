@@ -27,6 +27,7 @@ block content
   
   div#emailLink
       a(href="mailto:recipient@example.com?Subject=Doxy.me%20meeting%20invitation&Body=Hi%20there!%0D%0DYou've%20been%20invited%20to%20a%20Doxy.me%20meeting!%0D%0DGo%20to%20https://doxy.me/" + Room + "%0D%0DWe%20hope%20you%20have%20a%20wonderful%20experience%20using%20Doxy.me.%20If%20you%20get%20a%20chance,%20please%20let%20us%20know%20how%20it%20worked%20for%20you:%20http://tiny.cc/0g5iyw", target="_blank") Email this link
+        i.iconNav &#9993;
 
 
   div#promptArrow
@@ -47,6 +48,9 @@ block content
   script
     $(function() {
       $('.imgBackground').addClass('meetingImg');
-      $('.nav li').addClass('meetingNav');
+      $('.nav ul').addClass('meetingNav');
+      $('.nav li').addClass('meetingLi');
+      $('#emailLink').addClass('fullEmailLink');
+      $('.footer').addClass('meetingFooter');
 
     })
