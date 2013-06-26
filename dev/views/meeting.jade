@@ -20,7 +20,7 @@ block content
     var apiKey = #{OpenTokKey}
     var token = "#{token}"
     var Room = "#{Room}"
-    $('img').addClass('imgMeeting');
+
 
   script(src="/javascripts/main.js")
     
@@ -44,3 +44,9 @@ block content
 
   div.clearfix
   
+  script
+    $(function() {
+      $('.imgBackground').addClass('meetingImg');
+      $('.nav li').addClass('meetingNav');
+
+    })
