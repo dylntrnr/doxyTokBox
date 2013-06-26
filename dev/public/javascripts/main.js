@@ -37,16 +37,16 @@ function subscribeToStreams(streams) {
     var streamsContainer = document.getElementById('streamsContainer');
     streamsContainer.appendChild(div);
 
+    var browserHeight = $(window).height();
+    var browserWidth = $(window).width();
     // Subscribe to the stream
-    session.subscribe(streams[i], div.id, {height: "450px", width: "600px"});
+    session.subscribe(streams[i], div.id, {height: browserHeight + "px", width: browserWidth + "px"});
   //   var plussign = document.getElementById("plussign");
   //   plussign.remove();
   }
 }
 
 function resizePublisher() {
-  div.style.width = "1000px";
-  div.style.height = "750px";
   var streamsContainer = document.getElementById('videos');
   streamsContainer.webkitRequestFullScreen();
 }
