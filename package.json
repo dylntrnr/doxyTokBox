@@ -1,6 +1,6 @@
 {
   "name": "webRTC-Test",
-  "version": "0.0.2-22",
+  "version": "0.0.2-23",
   "private": true,
   "scripts": {
     "start": "node app.js"
