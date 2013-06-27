@@ -129,7 +129,7 @@ app.get("/quick/:room", function(req, res){
     OpenTokObject.createSession(function(sessionId){
       urlSessions[ req.params.room ] = sessionId;
       sendResponse( sessionId, res, req.params.room, req.headers.host );
-    }, {'p2p.preference':'enabled'});
+    });
   }else{
     sessionId = urlSessions[req.params.room];
     sendResponse( sessionId, res, req.params.room, req.headers.host );
