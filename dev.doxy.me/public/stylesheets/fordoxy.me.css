@@ -1,0 +1,44 @@
+/* @license
+ * MyFonts Webfont Build ID 2559302, 2013-05-18T19:38:20-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Steagal Bold by insigne
+ * URL: http://www.myfonts.com/fonts/insigne/steagal/bold/
+ * 
+ * Webfont: Steagal Light by insigne
+ * URL: http://www.myfonts.com/fonts/insigne/steagal/light/
+ * 
+ * Webfont: Steagal Medium by insigne
+ * URL: http://www.myfonts.com/fonts/insigne/steagal/medium/
+ * 
+ * Webfont: Steagal by insigne
+ * URL: http://www.myfonts.com/fonts/insigne/steagal/regular/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2559302
+ * Webfonts copyright: Generated in 2013 by FontLab Studio. Copyright info pending.
+ * 
+ * © 2013 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/270d46");
+
+  
+@font-face {font-family: 'Steagal-Bo';src: url('webfonts/270D46_0_0.eot');src: url('webfonts/270D46_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/270D46_0_0.woff') format('woff'),url('webfonts/270D46_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Steagal-Li';src: url('webfonts/270D46_1_0.eot');src: url('webfonts/270D46_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/270D46_1_0.woff') format('woff'),url('webfonts/270D46_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Steagal-Me';src: url('webfonts/270D46_2_0.eot');src: url('webfonts/270D46_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/270D46_2_0.woff') format('woff'),url('webfonts/270D46_2_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Steagal-Re';src: url('webfonts/270D46_3_0.eot');src: url('webfonts/270D46_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/270D46_3_0.woff') format('woff'),url('webfonts/270D46_3_0.ttf') format('truetype');}
+ 
