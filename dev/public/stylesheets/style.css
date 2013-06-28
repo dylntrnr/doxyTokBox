@@ -10,7 +10,7 @@ html {
 }
 body {
 	color: #4d5968;
-	background: white url('../images/background.jpg') no-repeat center center fixed; background-size: 100%; max-width:650px; width:100%;
+	background: white url('../images/background.jpg') no-repeat center center fixed; background-size: 100%; max-width:600px; width:100%;
 	background-size: cover;
   padding: 0 0 0 6.25em;
   font: 1rem 'Steagal-Re', Helvetica, Arial, sans-serif;
@@ -575,30 +575,55 @@ i {
 
 /*--- Begin Support Logos ---*/
 .supportLogos {
-	width:600px;
-	opacity:.75;
-	display:none;
+  width:600px;
+  opacity:0.75;
+  display:block;
+  margin:0 auto;
+  padding:0;
+  position:fixed;
+  bottom:15px;
+  transition:opacity .5s;
+  -webkit-transition:opacity .5s;
 }
 .supportLogos:hover {
-	opacity:1;
+  opacity:1;
+}
+@media (max-height:750px) {
+  .supportLogos {
+    position:static;
+  }
+  .chrome {
+    width:45px!important;
+    top:-3px!important;
+  }
+  .firefox {
+    width:45px!important;
+  }
 }
 .supportLogos div {
-	width:90%;
-	margin:0 auto;
-	padding:10px 0;
-	text-align:center;
+  width:90%;
+  margin:20px auto 0;
+  padding:5px 0;
+  text-align:center;
+}
+.supportLogos p {
+  padding:5px;
+  margin:0 auto 10px;
+  background-color:rgba(255,255,255,.5);
+  width:180px;
+  border-radius:4px;
 }
 .chrome {
-	width:66px;
-	display:inline;
-	padding:0;
-	position:relative;
-	top:-5px;
+  width:50px;
+  display:inline;
+  padding:0;
+  position:relative;
+  top:-5px;
 }
 .firefox {
-	width:70px;
-	display:inline;
-	padding:0;
+  width:50px;
+  display:inline;
+  padding:0;
 }
 
 /*--- Begin feedback Button ---*/

@@ -3,7 +3,7 @@ html(ng-app="content")
 	head
 		
 		title= title
-		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/stylesheets/greenstyle.css')
 		link(rel='stylesheet', href='/stylesheets/fordoxy.me.css')
 		link(rel='stylesheet', href='/stylesheets/print.css', media='print')
 		link(rel='apple-touch-icon', href='/images/favicon.icns')
@@ -13,7 +13,7 @@ html(ng-app="content")
 
 	body
 		div.imgBackground
-			img(src="/images/doxyme-logo-opt.png", alt="DOXY.ME Logo", width="355", height="73")
+			img(src="/images/doxyme-logo-blk-optest.png", alt="DOXY.ME Logo", width="355", height="73")
 		//- This is where all the partials are put
 		block content
 
@@ -34,8 +34,10 @@ html(ng-app="content")
 		
 		div.supportLogos
 			div
-				img.chrome(src="/images/chromelogo.png", alt="Supported on Chrome")
-				img.firefox(src="/images/firefox-logo.png", alt="Support coming soon for Firefox")
+				p.main Supported Browsers:
+				img.chrome(src="/images/chromelogo-sm-opt.png", alt="Supported on Chrome Version 25 and up", height="60", title="Chrome - Version 25+")
+				img.firefox(src="/images/firefox_logo-sm-opt.png", alt="Support coming soon for Firefox Version 22", height="60", title="Firefox - Version 22")
+				p.soon (Coming Soon)
 
 		div.ribbon-wrapper
 			div.ribbon
