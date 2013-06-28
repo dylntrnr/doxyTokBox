@@ -12,11 +12,17 @@ html {
 }
 body {
   color: #262523;
-  background: white url('../images/greenbkgd-opt.png') no-repeat top center fixed; background-size: 100%; max-width:600px; width:100%;
+  background: white url('../images/doxymegreenbkgd_1920x1327-opt.png') no-repeat top center fixed; background-size: 100%; max-width:600px; width:100%;
   background-size: cover;
   padding: 0 0 0 6.25em;
   font: 1rem 'Steagal-Re', Helvetica, Arial, sans-serif;
   margin:0;
+  overflow: hidden;
+}
+@media (max-height:750px) {
+  body {
+    overflow: scroll;
+  }
 }
 html, body {
   height:100%;
@@ -46,7 +52,7 @@ h2 {
 img {
   width:355px;
   height:100%;
-  padding:2em 7.8125em 2.75em;
+  padding:3em 7.8125em 2em;
 }
 .imgMeeting {
   padding:3em 7.8125em 2em!important;
@@ -379,17 +385,18 @@ img {
 }
 #emailLink a {
   margin:0!important;
-  padding:0.5em 0.75em;
+  padding:0.625em 0.75em 0.5em;
   background-color:#759b2f;
   border-radius:0.25em;
   color:#fff;
   text-decoration:none;
   text-transform:uppercase;
-  transition: background-color 0.25s;
+  transition:background-color 0.25s;
   -webkit-transition:background-color 0.25s;
+  box-shadow: 0px 0px 2px 3px rgba(38,37,35,0.25);
 }
 #emailLink a:hover {
-  background-color:rgba(223,91,89,1);
+  background-color:#668729;
 }
 #emailLink a:active {
   border: solid 2px #fff;
@@ -397,11 +404,11 @@ img {
 .fullEmailLink {
   position:absolute;
   top:100px;
-  left:-135px;
+  left:-133px;
   margin:0;
   padding:0;
-  transition:left 0.75s ease-in-out;
-  -webkit-transition: left 0.75s ease-in-out;
+  transition:left 0.5s ease-in-out;
+  -webkit-transition: left 0.5s ease-in-out;
 }
 .fullEmailLink:hover {
   left:0;
@@ -413,7 +420,7 @@ img {
   max-width:37.5em;
 }
 #streamsContainer {
-  height:45em;
+  height:100%;
   width:100%;
   z-index:-900;
   position:absolute;
@@ -449,8 +456,8 @@ img {
   padding:0;
   margin:0;
   z-index:90;
-  transition:left 0.75s ease-in-out;
-  -webkit-transition: left 0.75s ease-in-out;
+  transition:left 0.5s ease-in-out;
+  -webkit-transition: left 0.5s ease-in-out;
 }
 .meetingImg:hover {
   left:0;
@@ -522,6 +529,7 @@ i.iconNav {
   padding:0;
   margin:0;
   background-color:none;
+  color:#262523;
 }
 
 /*--- Begin Navigation button styles ---*/
@@ -557,10 +565,11 @@ a.nav {
   }
 a.nav:hover {
   background-color:#444;
+  color:#fff;
 }
 .iconNav {
   font-family: 'entypo';
-  color:#fff;
+  color:#262523;
   padding-left:20px;
   font-size:40px;
   font-style:inherit;
@@ -580,7 +589,7 @@ i {
   margin:0 auto;
   padding:0;
   position:fixed;
-  bottom:5px;
+  bottom:15px;
   transition:opacity .5s;
   -webkit-transition:opacity .5s;
 }
@@ -590,7 +599,8 @@ i {
 @media (max-height:750px) {
   .supportLogos {
     position:static;
-    background-color:rgba(255,255,255,5);
+    /*background-color:rgba(255,255,255,.5);*/
+    border-radius:0.25em;
     width:200px;
     padding:0;
     margin:0 auto;
@@ -602,6 +612,14 @@ i {
   .firefox {
     width:45px!important;
   }
+  .main {
+    background-color:#fff;
+    color:#262523!important;
+    box-shadow: 0px 0px 2px 3px rgba(38,37,35,0.25);
+  }
+  .soon {
+    color:#fff;
+  }
 }
 .supportLogos div {
   width:90%;
@@ -612,7 +630,7 @@ i {
 .main {
   padding:5px;
   margin:0 auto 10px;
-  background-color:rgba(255,255,255,.5);
+  /*background-color:rgba(255,255,255,.5);*/
   width:180px;
   border-radius:4px;
 }
@@ -721,6 +739,7 @@ i.icon {
   .footer {
     position:static;
     background:none;
+    color:#fff;
   }
   .meetingFooter {
     position:fixed!important;
@@ -739,6 +758,7 @@ i.icon {
     padding:0 0 5px;
     margin:0 auto;
     width:100%;
+    overflow: scroll;
   }
   .imgBackground {
     padding:3em 0;
@@ -762,11 +782,15 @@ i.icon {
   }
 }
 
-@media (min-width:481px) and (max-width:640px) {
+@media only screen and (min-width:481px) and (max-width:640px) {
   body {
     margin:0 auto;
     padding:0;
     width:100%;
+    overflow: scroll;
+    background: white url('../images/doxymegreenbkgd_1025x708-opt.png') no-repeat top center fixed;
+    background-size: 100%;
+    background-size: cover;
   }
   .imgBackground {
     margin:0 auto 1em;
@@ -787,7 +811,7 @@ i.icon {
     border:0.25em #fff solid;
     border-radius:0.25em;
     text-align:center;
-    width:90%;
+    width:80%;
     padding:0.5em 0;
     margin:0 auto;
   }
@@ -820,9 +844,9 @@ i.icon {
   }
   #about {
     display:block;
-    max-width:100%;
+    max-width:80%;
     margin:0 auto;
-    padding:0.5em 0;
+    padding:4em 0;
   }
   #schedule {
     background-color:rgba(209,210,201,0.95);
@@ -842,15 +866,6 @@ i.icon {
     font-size:14px;
     width:100%;
   }
-  /*.nav a {
-    margin:5px;
-  }
-  .nav li {
-    display:inline-block;
-    margin:5px 0;
-    padding:0.625em 0.5em 0.5em;
-    min-width:0.375em;
-  }*/
   footer div {
     width:100%;
   }
@@ -860,6 +875,7 @@ i.icon {
     padding:0px;
     margin:0 auto;
     width:100%;
+    overflow: scroll;
   }
   .imgBackground {
     margin:0 auto 1em;
@@ -926,7 +942,7 @@ i.icon {
   text-align: center;
   padding: 7px 0;
   width: 100%;
-  background-color: rgba(77,89,104,1);
+  background-color: rgba(38,37,35,1);
   color: #ddd;
   box-shadow: none;
   border-radius:0.25em;
@@ -934,7 +950,7 @@ i.icon {
   position:static;
 }
 .ribbon:hover {
-  background-color:#66717f;
+  background-color:rgba(23,22,21,1);
 }
 .ribbon:before {
   content: "";
@@ -954,9 +970,58 @@ i.icon {
   padding-right:5px;
   font-size:20px;
 }
-  footer div {
-    max-width:100%;
+.supportLogos {
+  width:100%;
+  opacity:1;
+  display:block;
+  margin:0 auto;
+  padding:0;
+  position:static;
+  transition:opacity .5s;
+  -webkit-transition:opacity .5s;
+  border-radius:0.25em;
+}
+.supportLogos div {
+  width:90%;
+  margin:20px auto 0;
+  padding:5px 0;
+  text-align:center;
+}
+.main {
+  padding:5px;
+  margin:0 auto 10px;
+  width:180px;
+  border-radius:4px;
+  color:#fff;
+}
+.chrome {
+  display:inline;
+  padding:0 10px 0 0;
+  position:relative;
+  width:45px;
+  top:-3px;
+}
+.firefox {
+  width:45px;
+  display:inline;
+  padding:0 0 0 10px;
+}
+p.soon {
+  font-size:10px;
+  background-color:none;
+  position:relative;
+  top:-5px;
+  right:-35px;
+  padding:0;
+  margin:0;
+  color:#fff;
+}
+  .footer {
+    width:100%;
     background-color:none;
+    position:static;
+    margin:10px auto 0;
+    padding:0;
   }
 }
 
