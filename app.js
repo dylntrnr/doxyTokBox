@@ -14,7 +14,6 @@ app.set('port', process.env.PORT || 3000);
 app.use(express.errorHandler());
 app.use(express.vhost('doxy.me', require('./doxy/app').app));
 app.use(express.vhost('utah.doxy.me', require('./utah/app').app));
-app.use(express.vhost('dev.doxy.me', require('./dev/app').app));
 
 
 http.createServer(app).listen(app.get('port'), function(){
