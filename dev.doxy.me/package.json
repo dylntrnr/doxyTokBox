@@ -1,0 +1,20 @@
+{
+  "name": "dev-doxy",
+  "version": "0.0.1-2",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "opentok": "0.3.2",
+    "express": "3.2.4",
+    "jade": "0.30.0"
+  },
+  "subdomain": "dev-doxy",
+  "domains": [
+    "dev.doxy.me"
+  ],
+  "engines": {
+    "node": "0.8.x"
+  }
+}
