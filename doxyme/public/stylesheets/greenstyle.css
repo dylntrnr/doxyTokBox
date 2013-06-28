@@ -12,7 +12,9 @@ html {
 }
 body {
   color: #262523;
-  background: white url('../images/doxymegreenbkgd_1920x1327-opt.png') no-repeat top center fixed; background-size: 100%; max-width:600px; width:100%;
+  background: white url('../images/doxymegreenbkgd_1920x1327-opt.png') no-repeat top center fixed;
+  background-size: 100%;
+  /*max-width:600px; width:100%;*/
   background-size: cover;
   padding: 0 0 0 6.25em;
   font: 1rem 'Steagal-Re', Helvetica, Arial, sans-serif;
@@ -725,8 +727,6 @@ i.icon {
   font-size:20px;
 }
 
-
-
 /*--- Begin Footer Styles ---*/
 .footer {
   width:600px;
@@ -780,7 +780,7 @@ i.icon {
   .nav {
     width:100%;
   }
-  footer div {
+  footer {
     width:100%;
   }
 }
@@ -869,7 +869,7 @@ i.icon {
     font-size:14px;
     width:100%;
   }
-  footer div {
+  footer {
     width:100%;
   }
 }

@@ -20,12 +20,23 @@ html(ng-app="content", lang="en")
 			ul
 				li
 					a.nav(href="/#/home") Home
+						i.iconHidden &#8962;
 				li
 					a.nav(href="/#/schedule") Schedule
+						i.iconHidden &#59273;
 				li
 					a.nav(href="/quick/meeting") Quick Meeting
+						i.iconHidden &#128101;
 				li
 					a.nav(href="/#/about") About
+						i.iconHidden &#59170;
+
+		div.supportLogos
+			div
+				p.main Supported Browsers:
+				img.chrome(src="/images/chromelogo-sm-opt.png", alt="Supported on Chrome Version 25 and up", height="60", title="Chrome - Version 25+", height="60", width="60")
+				img.firefox(src="/images/firefox_logo-sm-opt.png", alt="Support coming soon for Firefox Version 22", height="60", title="Firefox - Version 22", height="58", width="60")
+				p.soon (Coming Soon)
 
 		div.ribbon-wrapper
 			div.ribbon
@@ -34,7 +45,8 @@ html(ng-app="content", lang="en")
 					a(href="http://tiny.cc/0g5iyw", target="_blank") Provide Feedback
 
 		footer
-			p Service provided by
-			a(href="https://doxy.me", target="_blank")
-				img.doxy(src="/images/doxyme-logowhitesmall.png", alt="Doxy.me Logo", height="36", width="176")
-			p Copyright © 2013 University of Utah Health Care
+			div.footer
+				p Service provided by
+				a(href="https://doxy.me", target="_blank")
+					img.doxy(src="/images/doxyme-logowhitesmall.png", alt="Doxy.me Logo", height="36", width="176")
+				p Copyright © 2013 University of Utah Health Care

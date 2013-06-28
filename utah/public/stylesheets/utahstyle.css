@@ -1,6 +1,8 @@
 /*--- Tip of the Hat to: --*/
 /*Entypo pictograms by Daniel Bruce — www.entypo.com*/
 
+/*-- Utah.Doxy.me Styles --*/
+
 /*--- Begin Universal Styles --*/
 html {
 	margin:0;
@@ -16,8 +18,11 @@ body {
   font: 1rem Helvetica, Arial, sans-serif;
   margin:0;
 }
+.noBackground {
+	background:none!important;
+}
 html, body {
-	height: 100%;
+	height:100%;
 }
 h1 {
 	font-size:2rem;
@@ -25,10 +30,10 @@ h1 {
 }
 h2 {
 	font-size:1.5em;
-	line-height:0.75em;
+	line-height:.75em;
 }
 @font-face {
-	font-family: 'entypo';
+	font-family:'entypo';
 	src: url('webfonts/entypo.eot'); /* IE9 Compat Modes */
 	src: url('webfonts/entypo.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
 	     url('webfonts/entypo.woff') format('woff'), /* Modern Browsers */
@@ -38,7 +43,7 @@ h2 {
 
 /*--- Logo Img Styles - Super Simple ---*/
 .imgBackground {
-	background-color:rgba(255,255,255,0.8);
+	background-color:rgba(255,255,255,.8);
 	width:600px;
 	margin:0 0 3em;
 }
@@ -111,16 +116,6 @@ img {
 	font-weight:bold;
 	text-align:left;
 }
-/*--
-#haveApt input {
-	display:block;
-	padding:0.75em 1.25em;
-	border-radius:0.25em;
-	border:1px solid #aaa;
-	width:100%;
-}
---*/
-/*--- TESTING FORM INPUT WIDTHS ---*/
 #haveApt input {
 	width:90%;
 	border-radius:0.25em;
@@ -128,8 +123,6 @@ img {
   padding:0.75em 0.75em;
   font-size: 12px;
 }
-/*--- END TESTING FORM INPUT WIDTHS ---*/
-
 .clearfix {
 	float:none;
 	clear:both;
@@ -384,8 +377,10 @@ img {
 #promptArrow p {
 	text-align:center;
 	margin:0 0 0 20px;
-	padding:0;
+	padding:10px 0;
 	color:#fff;
+	background-color:#cc0000;
+	border-radius:.25em;
 }
 
 /*--- Begin Meeting styles ---*/
@@ -412,24 +407,49 @@ img {
 #emailLink a:active {
 	background-color: #cc0000;
 }
+.fullEmailLink {
+  position:absolute;
+  top:120px;
+  left:-150px;
+  margin:0;
+  padding:0;
+  transition:left 0.5s ease-in-out;
+  -webkit-transition:left 0.5s ease-in-out;
+}
+.fullEmailLink:hover {
+  left:0;
+}
+.fullEmailLink a {
+  border-radius:0!important;
+}
+.fullEmailLink i {
+	transition:color 0.25s;
+  -webkit-transition:color 0.25s;
+}
+.fullEmailLink:hover i {
+	color:#fff!important;
+}
 #videos {
 	max-width:37.5em;
 }
 #streamsContainer {
-	height:28.125em;
+	height:100%;
 	width:100%;
-	float:left;
-	z-index:100;
+	z-index:-900;
+	position:absolute;
+	top:0;
+	right:0;
 	background-color: #fff;
 	background-image: url('../images/utahdoxymevideobackground.gif');
 	background-repeat: no-repeat;
-	background-position: right top;
+	background-position: center center;
 }
 #myPublisherDiv {
 	border:solid 4px #fff;
-	z-index:1000000;
-	float:left;
+	z-index:-1;
 	position:absolute;
+	top:0;
+	right:0;
 }
 @keyframes plussign {
 	0% {opacity:1;}
@@ -440,6 +460,92 @@ img {
 	0% {opacity:1;}
 	50% {opacity:0;}
 	100% {opacity:1;}
+}
+.meetingImg {
+  width:355px;
+  position:absolute;
+  top:0;
+  left:0;
+  padding:0;
+  margin:0;
+  z-index:90;
+  transition:left 0.5s ease-in-out;
+  -webkit-transition: left 0.5s ease-in-out;
+}
+.meetingImg:hover {
+  left:0;
+}
+.meetingImg .imgBackground {
+  padding:0!important;
+  margin:0!important;
+}
+.meetingImg img {
+  padding:10px 20px!important;
+  margin:0;
+  background-color:rgba(255,255,255,1);
+  z-index:1000000000000;
+}
+.meetingNav {
+  position:absolute;
+  top:160px;
+  left:0;
+  z-index:100000000000;
+  transition: left 0.5s ease-in-out;
+  -webkit-transition: left 0.5s ease-in-out;
+}
+.meetingLi {
+  display:block!important;
+  margin:20px 0;
+  transition: left 0.5s ease-in-out, color 0.25s;
+  -webkit-transition: left 0.5s ease-in-out, color 0.25s;
+}
+.meetingLi:hover i {
+	color:#fff!important;
+}
+li.meetingLi:nth-child(1) {
+  position:relative;
+  left:-119px;
+}
+li.meetingLi:nth-child(1):hover {
+  left:-50px;
+}
+li.meetingLi:nth-child(2) {
+  position:relative;
+  left:-137px;
+}
+li.meetingLi:nth-child(2):hover {
+  left:-30px;
+}
+li.meetingLi:nth-child(3) {
+  position:relative;
+  left:-160px;
+}
+li.meetingLi:nth-child(3):hover {
+  left:-5px;
+}
+li.meetingLi:nth-child(4) {
+  position:relative;
+  left:-125px;
+}
+li.meetingLi:nth-child(4):hover {
+  left:-40px;
+}
+.meetingNav a.nav {
+  border-radius: 0;
+  padding-right:0.75em;
+  width:185px;
+}
+i.iconNav {
+  display:inline;
+}
+.meetingFooter {
+  position:absolute;
+  bottom:0;
+  left:0;
+  padding:0;
+  margin:0;
+  background-color:none;
+  /*color:#262523;*/
 }
 
 /*--- Begin Navigation button styles ---*/
@@ -476,6 +582,97 @@ li {
 	background-color:#808080;
 	color:#fff;
 }
+.iconNav {
+  font-family: 'entypo';
+  color:#262523;
+  padding-left:20px;
+  font-size:40px;
+  font-style:inherit;
+  position:relative;
+  top:4px;
+  font-weight:100;
+}
+i {
+  display:none;
+}
+
+/*--- Begin Support Logos ---*/
+.supportLogos {
+  width:600px;
+  opacity:0.75;
+  display:block;
+  margin:0 auto;
+  padding:0;
+  position:fixed;
+  bottom:75px;
+  color:#fff;
+  transition:opacity .5s;
+  -webkit-transition:opacity .5s;
+}
+.supportLogos:hover {
+  opacity:1;
+}
+@media (max-height:750px) {
+  .supportLogos {
+    position:static;
+    /*background-color:rgba(255,255,255,.5);*/
+    border-radius:0.25em;
+    width:200px;
+    padding:0;
+    margin:0 auto;
+  }
+  .chrome {
+    width:45px!important;
+    top:-3px!important;
+  }
+  .firefox {
+    width:45px!important;
+  }
+  .main {
+    background-color:#fff;
+    color:#262523!important;
+    box-shadow: 0px 0px 2px 3px rgba(38,37,35,0.25);
+  }
+  .soon {
+    color:#fff;
+  }
+}
+.supportLogos div {
+  width:90%;
+  margin:20px auto 0;
+  padding:5px 0;
+  text-align:center;
+}
+.main {
+  padding:5px;
+  margin:0 auto 10px;
+  background-color:rgba(255,255,255,1);
+  width:170px;
+  border-radius:4px;
+  color:#231f20;
+  /*text-transform:uppercase;*/
+}
+.chrome {
+  width:50px;
+  display:inline;
+  padding:0 10px 0 0;
+  position:relative;
+  top:-2px;
+}
+.firefox {
+  width:50px;
+  display:inline;
+  padding:0 0 0 10px;
+}
+p.soon {
+  font-size:10px;
+  background-color:none;
+  position:relative;
+  top:-5px;
+  right:-35px;
+  padding:0;
+  margin:0;
+}
 
 /*--- Begin feedback Button ---*/
 .ribbon-wrapper {
@@ -498,7 +695,7 @@ li {
   padding: 7px 0;
   left: -5px;
   top: 15px;
-  width: 180px;
+  width: 190px;
   background-color: #cc0000;
   color: #ddd;
   box-shadow: 0px 0px 3px rgba(255,255,255,0.3);
@@ -532,18 +729,20 @@ li {
 	text-transform: uppercase;
 	text-decoration: none;
 }
+i.icon {
+  display:inline;
+}
 .icon {
 	font-family: 'entypo';
 	color:#fff;
 	padding-right:5px;
 	font-size:20px;
+	top:0px;
 }
 
-
-
 /*--- Begin Footer Styles ---*/
-footer {
-	width:37.5em;
+.footer {
+	width:600px;
 	position:fixed;
 	clear:both;
 	bottom:0;
@@ -552,12 +751,16 @@ footer {
 }
 /*--- This Media Query keeps the footer from overlaping any of the other elements on smaller screens. --*/
 @media (max-height: 750px) {
-	footer {
+	.footer {
 		position:static;
 		background:none;
 	}
+	.meetingFooter {
+    position:fixed!important;
+    bottom:0!important;
+  }
 }
-footer p {
+.footer p {
 	text-align:center;
 	margin:0;
 	font: 0.875rem Helvetica, Arial, sans-serif;
@@ -785,7 +988,53 @@ img.doxy {
 	padding-right:5px;
 	font-size:20px;
 }
-	footer {
+.supportLogos {
+  width:100%;
+  opacity:1;
+  display:block;
+  margin:0 auto;
+  padding:0;
+  position:static;
+  transition:opacity .5s;
+  -webkit-transition:opacity .5s;
+  border-radius:0.25em;
+}
+.supportLogos div {
+  width:90%;
+  margin:20px auto 0;
+  padding:5px 0;
+  text-align:center;
+}
+.main {
+  padding:5px;
+  margin:0 auto 10px;
+  width:180px;
+  border-radius:4px;
+  color:#fff;
+}
+.chrome {
+  display:inline;
+  padding:0 10px 0 0;
+  position:relative;
+  width:45px;
+  top:-3px;
+}
+.firefox {
+  width:45px;
+  display:inline;
+  padding:0 0 0 10px;
+}
+p.soon {
+  font-size:10px;
+  background-color:none;
+  position:relative;
+  top:-5px;
+  right:-35px;
+  padding:0;
+  margin:0;
+  color:#fff;
+}
+	.footer {
 		max-width:100%;
 	}
 }
