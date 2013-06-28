@@ -7,6 +7,12 @@ session.addEventListener('sessionConnected', sessionConnectedHandler);
 session.addEventListener('streamCreated', streamCreatedHandler);
 session.connect(apiKey, token);
 
+TB.addEventListener("exception", exceptionHandler);
+
+function exceptionHandler(event) {
+    alert("Exception:" + event.title + ". " + event.message);
+}
+
 function sessionConnectedHandler(event) {
   // Create publisher and start streaming into the session
   var publisher = TB.initPublisher(apiKey, 'myPublisherDiv', {height: "135px", width: "180px"});

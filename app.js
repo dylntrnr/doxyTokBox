@@ -12,9 +12,8 @@ var app = express();
 app.set('port', process.env.PORT || 3000);
 
 app.use(express.errorHandler());
-app.use(express.vhost('localhost', require('./doxy/app').app));
-app.use(express.vhost('utah.localhost', require('./utah/app').app));
-app.use(express.vhost('dev.localhost', require('./dev/app').app));
+app.use(express.vhost('doxy.me', require('./doxy/app').app));
+app.use(express.vhost('utah.doxy.me', require('./utah/app').app));
 
 
 http.createServer(app).listen(app.get('port'), function(){
