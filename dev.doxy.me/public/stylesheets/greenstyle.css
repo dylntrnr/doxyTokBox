@@ -24,6 +24,9 @@ body {
     overflow: scroll;
   }
 }
+.noBackground {
+  background:none!important;
+}
 html, body {
   height:100%;
 }
