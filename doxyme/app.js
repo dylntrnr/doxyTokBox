@@ -60,7 +60,14 @@ if ('production' == app.get('env')) {
 app.get("/", routes.index);
 app.get('/partials/:name', routes.partials);
 
-
+// api call to get room url
+app.get('/api/:room/:pass', function (req, res) {
+  var room = req.params.room;
+  var key = req.params.pass ;
+  var hash;
+  hash = crypto.createHmac('sha1', key).update(room).digest('hex');
+  res.send("/" + hash);
+});
 
 // When user goes to /:room with the the 123-123-133 form with optional password it redirects to a hashed value so two urls are the same
 app.get("/:room([0-9]+-[0-9]+-[0-9]+)/:pass?", function(req, res){
@@ -69,7 +76,7 @@ app.get("/:room([0-9]+-[0-9]+-[0-9]+)/:pass?", function(req, res){
   var key = req.params.pass || process.env.TestKey;
   var hash;
   hash = crypto.createHmac('sha1', key).update(room).digest('hex');
-  console.log(room, key, hash);
+  console.log(room, key, hash, process.env.TestKey);
   res.redirect(hash);
   res.end();
 });
@@ -78,17 +85,17 @@ app.get("/:room", function (req, res) {
   if(urlSessions[ req.params.room ] == undefined){
     OpenTokObject.createSession(function(sessionId){
       urlSessions[ req.params.room ] = sessionId;
-      sendRoomResponse( sessionId, res, req.params.room );
+      sendRoomResponse( sessionId, res, req.params.room, req.headers.host );
     }, {'p2p.preference':'enabled'});
   }else{
     sessionId = urlSessions[req.params.room];
-    sendRoomResponse( sessionId, res, req.params.room );
+    sendRoomResponse( sessionId, res, req.params.room, req.headers.host );
   }
 });
 
-function sendRoomResponse( sessionId, responder, room ){
+function sendRoomResponse( sessionId, responder, room, origin ){
   var token = OpenTokObject.generateToken( {session_id: sessionId} );
-  var data = {OpenTokKey:OTKEY, sessionId: sessionId, token:token, title: "New Room: " + room, Room: room};
+  var data = {OpenTokKey:OTKEY, sessionId: sessionId, token:token, title: "New Room: " + room, Room: room, origin: origin};
   responder.render( 'meeting', data );
 }
 
@@ -121,11 +128,11 @@ app.get("/quick/:room", function(req, res){
   if(urlSessions[ req.params.room ] == undefined){
     OpenTokObject.createSession(function(sessionId){
       urlSessions[ req.params.room ] = sessionId;
-      sendResponse( sessionId, res, req.params.room );
-    }, {'p2p.preference':'enabled'});
+      sendResponse( sessionId, res, req.params.room, req.headers.host );
+    });
   }else{
     sessionId = urlSessions[req.params.room];
-    sendResponse( sessionId, res, req.params.room );
+    sendResponse( sessionId, res, req.params.room, req.headers.host );
   }
 });
 
@@ -134,12 +141,16 @@ app.get("/quick/:room", function(req, res){
 // *** All sessionIds need a corresponding token
 // *** generateToken and then sendResponse based on ejs template
 // ***
-function sendResponse( sessionId, responder, room ){
+function sendResponse( sessionId, responder, room, origin ){
   var token = OpenTokObject.generateToken( {session_id: sessionId} );
-  var data = {OpenTokKey:OTKEY, sessionId: sessionId, token:token, title: "New Room: " + room, Room: "quick/" + room};
+  var data = {OpenTokKey:OTKEY, sessionId: sessionId, token:token, title: "New Room: " + room, Room: "quick/" + room, origin: origin};
   responder.render( 'meeting', data );
 }
 
+
+// http.createServer(app).listen(app.get('port'), function(){
+//   console.log('Express server listening on port ' + app.get('port'));
+// });
 
 
 exports.app = app;
