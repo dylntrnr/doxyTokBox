@@ -52,10 +52,27 @@ img {
 	height:100%;
 	padding:2.25em 7.8125em 2.75em;
 }
+.fullscreenImg img {
+	width: 293px;
+	height:100%;
+	padding:2.25em 7.8125em 2.75em;
+}
 .imgMeeting {
 	padding:2.25em 7.8125em 2em!important;
+	height:59px;
+	width:293px;
 }
-
+.imgEm {
+	position:absolute;
+	top:-30px;
+	left:-110px;
+	z-index:100000000;
+	width:85px;
+}
+.imgEm img {
+	width:84px;
+	height:103px;
+}
 /*--- Begin changeable content of the page with a master div. All hail the master div. --*/
 .container {
 	height: 12.5em;
@@ -464,16 +481,16 @@ img {
 .meetingImg {
   width:355px;
   position:absolute;
-  top:0;
-  left:0;
+  top:32px;
+  left:-350px;
   padding:0;
   margin:0;
   z-index:90;
   transition:left 0.5s ease-in-out;
   -webkit-transition: left 0.5s ease-in-out;
 }
-.meetingImg:hover {
-  left:0;
+.meetingImgHover {
+  left:90px;
 }
 .meetingImg .imgBackground {
   padding:0!important;
