@@ -58,7 +58,6 @@ h2 {
 }
 img {
   width:355px;
-  height:100%;
   padding:3.5em 7.8125em 2em;
 }
 .imgMeeting {
@@ -496,7 +495,7 @@ img {
 .meetingImg img {
   padding:10px 20px;
   margin:0;
-  background-color:rgba(209,210,201,1);
+  background-color:#fff;
   z-index:1000000000000;
 }
 .meetingNav {
