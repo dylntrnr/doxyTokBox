@@ -20,6 +20,8 @@ body {
   font: 1rem 'Steagal-Re', Helvetica, Arial, sans-serif;
   margin:0;
   overflow: hidden;
+  animation:fadein 0.5s;
+  -webkit-animation:fadein 0.5s;
 }
 @media (max-height:750px) {
   body {
@@ -57,7 +59,7 @@ h2 {
 img {
   width:355px;
   height:100%;
-  padding:3em 7.8125em 2em;
+  padding:3.5em 7.8125em 2em;
 }
 .imgMeeting {
   padding:3em 7.8125em 2em!important;
@@ -75,13 +77,18 @@ img {
 /*--- The main appointment box styles for the landing page ---*/
 #haveApt {
   background-color:rgba(209,210,201,0.95);
-  border:.25em #fff solid;
+  border:.125em #fff solid;
   /*box-shadow: 0px 0px 2px 3px rgba(255,255,255,1);*/
   border-radius:.25em;
   text-align:center;
   width:550px;
   padding:1.25em 0;
   margin:0 auto;
+  transition:background-color .25s;
+  -webkit-transition:background-color .25s;
+}
+#haveApt:hover {
+  background-color:rgba(209,210,201,1);
 }
 #haveApt div {
   animation:fadein .5s ease-in;
@@ -163,12 +170,17 @@ img {
 /*--- Begin About div styles ---*/
 #about {
   background-color:rgba(209,210,201,0.95);
-  border:0.25em #fff solid;
+  border:0.125em #fff solid;
   border-radius:0.25em;
   text-align:center;
   padding:4em 0.75em;
   width:550px;
   margin:0 auto;
+  transition:background-color .25s;
+  -webkit-transition:background-color .25s;
+}
+#about:hover {
+  background-color:rgba(209,210,201,1);
 }
 @keyframes fadein {
   from {opacity: 0;}
@@ -190,12 +202,17 @@ img {
 /*--- Begin Schedule div styles ---*/
 #schedule {
   background-color:rgba(209,210,201,0.95);
-  border:0.25em #fff solid;
+  border:0.125em #fff solid;
   border-radius:0.25em;
   text-align:center;
   width:550px;
   margin:0 auto;
   padding:0.75em 0 1.25em;
+  transition:background-color .25s;
+  -webkit-transition:background-color .25s;
+}
+#schedule:hover {
+  background-color:rgba(209,210,201,1);
 }
 #schedule div {
   animation: fadein 0.5s ease-in;
@@ -297,12 +314,17 @@ img {
 /*--- Begin Confirmed Page Styles ---*/
 #confirmed {
   background-color:rgba(209,210,201,0.95);
-  border:0.25em #fff solid;
+  border:0.125em #fff solid;
   border-radius:0.25em;
   text-align:center;
   width:550px;
   padding:0.75em 0 1.25em;
   margin:0 auto;
+  transition:background-color .25s;
+  -webkit-transition:background-color .25s;
+}
+#confirmed:hover {
+  background-color:rgba(209,210,201,1);
 }
 #confirmed div {
   animation: fadein 0.5s ease-in;
@@ -562,7 +584,7 @@ a.nav {
   background-color:#fff;
   border-radius:0.25em;
   /*border:2px solid rgba(38,37,35,0.25);*/
-  box-shadow: 0px 0px 2px 3px rgba(38,37,35,0.25);
+  /*box-shadow: 0px 0px 2px 3px rgba(38,37,35,0.25);*/
   padding:0.625em 1.25em 0.5em;
   width:4.375em;
   transition:background-color 0.25s, color 0.25s;
@@ -594,11 +616,22 @@ i {
   margin:0 auto;
   padding:0;
   position:fixed;
-  bottom:15px;
-  transition:opacity .5s;
-  -webkit-transition:opacity .5s;
+  bottom:-60px;
+  transition:opacity .5s, bottom .5s;
+  -webkit-transition:opacity .5s, bottom .5s;
+  overflow:hidden;
 }
 .supportLogos:hover {
+  opacity:1;
+  bottom:15px;
+}
+.supportLogos:hover .chrome {
+  opacity:1;
+}
+.supportLogos:hover .firefox {
+  opacity:1;
+}
+.supportLogos:hover .soon {
   opacity:1;
 }
 @media (max-height:750px) {
@@ -638,6 +671,10 @@ i {
   /*background-color:rgba(255,255,255,.5);*/
   width:180px;
   border-radius:4px;
+  display:block;
+  text-transform:uppercase;
+  font-size:14px;
+  text-decoration:underline;
 }
 .chrome {
   width:50px;
@@ -645,11 +682,23 @@ i {
   padding:0 10px 0 0;
   position:relative;
   top:-2px;
+  opacity:0;
+  transition:opacity .5s;
+  -webkit-transition:opacity .5s;
 }
 .firefox {
   width:50px;
   display:inline;
   padding:0 0 0 10px;
+  opacity:0;
+  transition:opacity .5s;
+  -webkit-transition:opacity .5s;
+}
+.soon {
+  display:block;
+  opacity:0;
+  transition:opacity .5s;
+  -webkit-transition:opacity .5s;
 }
 p.soon {
   font-size:10px;
