@@ -809,6 +809,7 @@ i.icon {
     position:static;
     background:none;
     color:#fff;
+    bottom:0px;
   }
   .meetingFooter {
     position:fixed!important;
@@ -846,8 +847,79 @@ i.icon {
   .nav {
     width:100%;
   }
-  footer {
+  .supportLogos {
+  width:100%;
+  display:block;
+  margin:0 auto;
+  padding:0;
+  position:static;
+  height:110px;
+}
+.supportLogos div {
+  width:90%;
+  margin:20px auto 0;
+  padding:5px 0;
+  text-align:center;
+}
+.supportLogos:hover {
+  opacity:1;
+  height:110px;
+}
+.supportLogos:hover .chrome {
+  opacity:1;
+}
+.supportLogos:hover .firefox {
+  opacity:1;
+}
+.supportLogos:hover .soon {
+  opacity:1;
+}
+.supportLogos:hover .main {
+    background-color:none!important;
+    color:#fff!important;
+  }
+.main {
+  padding:5px;
+  margin:0 auto 10px;
+  /*background-color:rgba(255,255,255,.5);*/
+  width:180px;
+  border-radius:4px;
+  display:block;
+  text-transform:uppercase;
+  font-size:14px;
+  text-decoration:underline;
+}
+.chrome {
+  width:50px;
+  display:inline;
+  padding:0 10px 0 0;
+  position:relative;
+  top:-2px;
+  opacity:1;
+}
+.firefox {
+  width:50px;
+  display:inline;
+  padding:0 0 0 10px;
+  opacity:1;
+}
+.soon {
+  display:block;
+  opacity:1;
+}
+p.soon {
+  font-size:10px;
+  background-color:none;
+  position:relative;
+  top:-5px;
+  right:-35px;
+  padding:0;
+  margin:0;
+}
+  .footer {
     width:100%;
+    margin:0 auto;
+    position:static;
   }
 }
 
@@ -935,7 +1007,76 @@ i.icon {
     font-size:14px;
     width:100%;
   }
-  footer {
+  .supportLogos {
+  width:100%;
+  display:block;
+  margin:0 auto;
+  padding:0;
+  position:static;
+  height:110px;
+}
+.supportLogos div {
+  width:90%;
+  margin:20px auto 0;
+  padding:5px 0;
+  text-align:center;
+}
+.supportLogos:hover {
+  opacity:1;
+  height:110px;
+}
+.supportLogos:hover .chrome {
+  opacity:1;
+}
+.supportLogos:hover .firefox {
+  opacity:1;
+}
+.supportLogos:hover .soon {
+  opacity:1;
+}
+.supportLogos:hover .main {
+    background-color:none!important;
+    color:#fff!important;
+  }
+.main {
+  padding:5px;
+  margin:0 auto 10px;
+  /*background-color:rgba(255,255,255,.5);*/
+  width:180px;
+  border-radius:4px;
+  display:block;
+  text-transform:uppercase;
+  font-size:14px;
+  text-decoration:underline;
+}
+.chrome {
+  width:50px;
+  display:inline;
+  padding:0 10px 0 0;
+  position:relative;
+  top:-2px;
+  opacity:1;
+}
+.firefox {
+  width:50px;
+  display:inline;
+  padding:0 0 0 10px;
+  opacity:1;
+}
+.soon {
+  display:block;
+  opacity:1;
+}
+p.soon {
+  font-size:10px;
+  background-color:none;
+  position:relative;
+  top:-5px;
+  right:-35px;
+  padding:0;
+  margin:0;
+}
+  .footer {
     width:100%;
   }
 }
@@ -1041,14 +1182,11 @@ i.icon {
 }
 .supportLogos {
   width:100%;
-  opacity:1;
   display:block;
   margin:0 auto;
   padding:0;
   position:static;
-  transition:opacity .5s;
-  -webkit-transition:opacity .5s;
-  border-radius:0.25em;
+  height:110px;
 }
 .supportLogos div {
   width:90%;
@@ -1056,24 +1194,52 @@ i.icon {
   padding:5px 0;
   text-align:center;
 }
+.supportLogos:hover {
+  opacity:1;
+  height:110px;
+}
+.supportLogos:hover .chrome {
+  opacity:1;
+}
+.supportLogos:hover .firefox {
+  opacity:1;
+}
+.supportLogos:hover .soon {
+  opacity:1;
+}
+.supportLogos:hover .main {
+    background-color:#fff!important;
+    color:#262523!important;
+  }
 .main {
   padding:5px;
   margin:0 auto 10px;
+  /*background-color:rgba(255,255,255,.5);*/
   width:180px;
   border-radius:4px;
-  color:#fff;
+  display:block;
+  text-transform:uppercase;
+  font-size:14px;
+  text-decoration:underline;
+  color:#262523!important;
 }
 .chrome {
+  width:50px;
   display:inline;
   padding:0 10px 0 0;
   position:relative;
-  width:45px;
-  top:-3px;
+  top:-2px;
+  opacity:1;
 }
 .firefox {
-  width:45px;
+  width:50px;
   display:inline;
   padding:0 0 0 10px;
+  opacity:1;
+}
+.soon {
+  display:block;
+  opacity:1;
 }
 p.soon {
   font-size:10px;
@@ -1083,7 +1249,6 @@ p.soon {
   right:-35px;
   padding:0;
   margin:0;
-  color:#fff;
 }
   .footer {
     width:100%;
