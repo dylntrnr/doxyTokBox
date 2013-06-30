@@ -403,18 +403,21 @@ img {
 /*--- Begin Meeting styles ---*/
 #emailLink {
 	text-align:center;
-	margin: 1em 0;
+	margin: 1em 0 1.5em;
 	max-width:600px;
-	padding:0;
+	/*padding:0;*/
+  
+  /*padding:0 0.75em 0.125em;*/
 }
 #emailLink a {
 	margin:0!important;
-	padding:0.5em 0.75em;
-	background-color:#cc0000;
+  padding:0.5em 0.75em;
+  background-color:#cc0000;
 	border-radius:0.25em;
 	color:#fff;
 	text-decoration:none;
 	text-transform:uppercase;
+  line-height:0;
 	transition: background-color 0.25s;
 	-webkit-transition:background-color 0.25s;
 }
@@ -426,7 +429,7 @@ img {
 }
 .fullEmailLink {
   position:absolute;
-  top:120px;
+  top:150px;
   left:-150px;
   margin:0;
   padding:0;
@@ -479,7 +482,7 @@ img {
 	100% {opacity:1;}
 }
 .meetingImg {
-  width:355px;
+  width:293px!important;
   position:absolute;
   top:32px;
   left:-350px;
@@ -501,6 +504,7 @@ img {
   margin:0;
   background-color:rgba(255,255,255,1);
   z-index:1000000000000;
+  width:293px;
 }
 .meetingNav {
   position:absolute;
