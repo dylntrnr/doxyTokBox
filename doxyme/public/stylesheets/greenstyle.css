@@ -20,6 +20,8 @@ body {
   font: 1rem 'Steagal-Re', Helvetica, Arial, sans-serif;
   margin:0;
   overflow: hidden;
+  animation:fadein 0.5s;
+  -webkit-animation:fadein 0.5s;
 }
 @media (max-height:750px) {
   body {
@@ -56,8 +58,7 @@ h2 {
 }
 img {
   width:355px;
-  height:100%;
-  padding:3em 7.8125em 2em;
+  padding:3.5em 7.8125em 2em;
 }
 .imgMeeting {
   padding:3em 7.8125em 2em!important;
@@ -75,13 +76,18 @@ img {
 /*--- The main appointment box styles for the landing page ---*/
 #haveApt {
   background-color:rgba(209,210,201,0.95);
-  border:.25em #fff solid;
+  border:.125em #fff solid;
   /*box-shadow: 0px 0px 2px 3px rgba(255,255,255,1);*/
   border-radius:.25em;
   text-align:center;
   width:550px;
   padding:1.25em 0;
   margin:0 auto;
+  transition:background-color .25s;
+  -webkit-transition:background-color .25s;
+}
+#haveApt:hover {
+  background-color:rgba(209,210,201,1);
 }
 #haveApt div {
   animation:fadein .5s ease-in;
@@ -163,12 +169,17 @@ img {
 /*--- Begin About div styles ---*/
 #about {
   background-color:rgba(209,210,201,0.95);
-  border:0.25em #fff solid;
+  border:0.125em #fff solid;
   border-radius:0.25em;
   text-align:center;
   padding:4em 0.75em;
   width:550px;
   margin:0 auto;
+  transition:background-color .25s;
+  -webkit-transition:background-color .25s;
+}
+#about:hover {
+  background-color:rgba(209,210,201,1);
 }
 @keyframes fadein {
   from {opacity: 0;}
@@ -190,12 +201,17 @@ img {
 /*--- Begin Schedule div styles ---*/
 #schedule {
   background-color:rgba(209,210,201,0.95);
-  border:0.25em #fff solid;
+  border:0.125em #fff solid;
   border-radius:0.25em;
   text-align:center;
   width:550px;
   margin:0 auto;
   padding:0.75em 0 1.25em;
+  transition:background-color .25s;
+  -webkit-transition:background-color .25s;
+}
+#schedule:hover {
+  background-color:rgba(209,210,201,1);
 }
 #schedule div {
   animation: fadein 0.5s ease-in;
@@ -297,12 +313,17 @@ img {
 /*--- Begin Confirmed Page Styles ---*/
 #confirmed {
   background-color:rgba(209,210,201,0.95);
-  border:0.25em #fff solid;
+  border:0.125em #fff solid;
   border-radius:0.25em;
   text-align:center;
   width:550px;
   padding:0.75em 0 1.25em;
   margin:0 auto;
+  transition:background-color .25s;
+  -webkit-transition:background-color .25s;
+}
+#confirmed:hover {
+  background-color:rgba(209,210,201,1);
 }
 #confirmed div {
   animation: fadein 0.5s ease-in;
@@ -398,7 +419,7 @@ img {
   text-transform:uppercase;
   transition:background-color 0.25s;
   -webkit-transition:background-color 0.25s;
-  box-shadow: 0px 0px 2px 3px rgba(38,37,35,0.25);
+  /*box-shadow: 0px 0px 2px 3px rgba(38,37,35,0.25);*/
 }
 #emailLink a:hover {
   background-color:#668729;
@@ -474,7 +495,7 @@ img {
 .meetingImg img {
   padding:10px 20px;
   margin:0;
-  background-color:rgba(209,210,201,1);
+  background-color:#fff;
   z-index:1000000000000;
 }
 .meetingNav {
@@ -562,7 +583,7 @@ a.nav {
   background-color:#fff;
   border-radius:0.25em;
   /*border:2px solid rgba(38,37,35,0.25);*/
-  box-shadow: 0px 0px 2px 3px rgba(38,37,35,0.25);
+  /*box-shadow: 0px 0px 2px 3px rgba(38,37,35,0.25);*/
   padding:0.625em 1.25em 0.5em;
   width:4.375em;
   transition:background-color 0.25s, color 0.25s;
@@ -591,36 +612,65 @@ i {
   width:600px;
   opacity:0.75;
   display:block;
-  margin:0 auto;
+  margin:0;
   padding:0;
   position:fixed;
-  bottom:15px;
-  transition:opacity .5s;
-  -webkit-transition:opacity .5s;
+  bottom:-60px;
+  transition:opacity .5s, bottom .5s;
+  -webkit-transition:opacity .5s, bottom .5s;
 }
 .supportLogos:hover {
+  opacity:1;
+  bottom:15px;
+}
+.supportLogos:hover .chrome {
+  opacity:1;
+}
+.supportLogos:hover .firefox {
+  opacity:1;
+}
+.supportLogos:hover .soon {
   opacity:1;
 }
 @media (max-height:750px) {
   .supportLogos {
-    position:static;
+    position:relative;
     /*background-color:rgba(255,255,255,.5);*/
-    border-radius:0.25em;
-    width:200px;
+    /*border-radius:0.25em;*/
+    width:600px;
     padding:0;
-    margin:0 auto;
+    top:0px;
+    opacity:1;
+    height:30px;
+    transition:height .25s;
+    -webkit-transition:height .25s;
+  }
+  .supportLogos:hover {
+    height:110px;
   }
   .chrome {
     width:45px!important;
-    top:-3px!important;
+    height:45px!important;
+    opacity:1;
   }
   .firefox {
     width:45px!important;
+    height:47px!important;
+    opacity:1;
   }
   .main {
-    background-color:#fff;
-    color:#262523!important;
-    box-shadow: 0px 0px 2px 3px rgba(38,37,35,0.25);
+    /*background-color:#fff;*/
+    color:#fff!important;
+    /*text-decoration:none!important;*/
+    /*box-shadow: 0px 0px 2px 3px rgba(38,37,35,0.25);*/
+    transition:background-color .5s, color .5s;
+    -webkit-transition:background-color .5s, color .5s;
+    padding:5px;
+    font: 0.875rem 'Steagal-Li', Helvetica, Arial, sans-serif;
+  }
+  .supportLogos:hover .main {
+    background-color:#262523;
+    color:#fff!important;
   }
   .soon {
     color:#fff;
@@ -638,6 +688,10 @@ i {
   /*background-color:rgba(255,255,255,.5);*/
   width:180px;
   border-radius:4px;
+  display:block;
+  text-transform:uppercase;
+  font-size:14px;
+  text-decoration:underline;
 }
 .chrome {
   width:50px;
@@ -645,11 +699,23 @@ i {
   padding:0 10px 0 0;
   position:relative;
   top:-2px;
+  opacity:0;
+  transition:opacity .5s;
+  -webkit-transition:opacity .5s;
 }
 .firefox {
   width:50px;
   display:inline;
   padding:0 0 0 10px;
+  opacity:0;
+  transition:opacity .5s;
+  -webkit-transition:opacity .5s;
+}
+.soon {
+  display:block;
+  opacity:0;
+  transition:opacity .5s;
+  -webkit-transition:opacity .5s;
 }
 p.soon {
   font-size:10px;
@@ -743,6 +809,7 @@ i.icon {
     position:static;
     background:none;
     color:#fff;
+    bottom:0px;
   }
   .meetingFooter {
     position:fixed!important;
@@ -780,8 +847,79 @@ i.icon {
   .nav {
     width:100%;
   }
-  footer {
+  .supportLogos {
+  width:100%;
+  display:block;
+  margin:0 auto;
+  padding:0;
+  position:static;
+  height:110px;
+}
+.supportLogos div {
+  width:90%;
+  margin:20px auto 0;
+  padding:5px 0;
+  text-align:center;
+}
+.supportLogos:hover {
+  opacity:1;
+  height:110px;
+}
+.supportLogos:hover .chrome {
+  opacity:1;
+}
+.supportLogos:hover .firefox {
+  opacity:1;
+}
+.supportLogos:hover .soon {
+  opacity:1;
+}
+.supportLogos:hover .main {
+    background-color:none!important;
+    color:#fff!important;
+  }
+.main {
+  padding:5px;
+  margin:0 auto 10px;
+  /*background-color:rgba(255,255,255,.5);*/
+  width:180px;
+  border-radius:4px;
+  display:block;
+  text-transform:uppercase;
+  font-size:14px;
+  text-decoration:underline;
+}
+.chrome {
+  width:50px;
+  display:inline;
+  padding:0 10px 0 0;
+  position:relative;
+  top:-2px;
+  opacity:1;
+}
+.firefox {
+  width:50px;
+  display:inline;
+  padding:0 0 0 10px;
+  opacity:1;
+}
+.soon {
+  display:block;
+  opacity:1;
+}
+p.soon {
+  font-size:10px;
+  background-color:none;
+  position:relative;
+  top:-5px;
+  right:-35px;
+  padding:0;
+  margin:0;
+}
+  .footer {
     width:100%;
+    margin:0 auto;
+    position:static;
   }
 }
 
@@ -869,7 +1007,76 @@ i.icon {
     font-size:14px;
     width:100%;
   }
-  footer {
+  .supportLogos {
+  width:100%;
+  display:block;
+  margin:0 auto;
+  padding:0;
+  position:static;
+  height:110px;
+}
+.supportLogos div {
+  width:90%;
+  margin:20px auto 0;
+  padding:5px 0;
+  text-align:center;
+}
+.supportLogos:hover {
+  opacity:1;
+  height:110px;
+}
+.supportLogos:hover .chrome {
+  opacity:1;
+}
+.supportLogos:hover .firefox {
+  opacity:1;
+}
+.supportLogos:hover .soon {
+  opacity:1;
+}
+.supportLogos:hover .main {
+    background-color:none!important;
+    color:#fff!important;
+  }
+.main {
+  padding:5px;
+  margin:0 auto 10px;
+  /*background-color:rgba(255,255,255,.5);*/
+  width:180px;
+  border-radius:4px;
+  display:block;
+  text-transform:uppercase;
+  font-size:14px;
+  text-decoration:underline;
+}
+.chrome {
+  width:50px;
+  display:inline;
+  padding:0 10px 0 0;
+  position:relative;
+  top:-2px;
+  opacity:1;
+}
+.firefox {
+  width:50px;
+  display:inline;
+  padding:0 0 0 10px;
+  opacity:1;
+}
+.soon {
+  display:block;
+  opacity:1;
+}
+p.soon {
+  font-size:10px;
+  background-color:none;
+  position:relative;
+  top:-5px;
+  right:-35px;
+  padding:0;
+  margin:0;
+}
+  .footer {
     width:100%;
   }
 }
@@ -975,14 +1182,11 @@ i.icon {
 }
 .supportLogos {
   width:100%;
-  opacity:1;
   display:block;
   margin:0 auto;
   padding:0;
   position:static;
-  transition:opacity .5s;
-  -webkit-transition:opacity .5s;
-  border-radius:0.25em;
+  height:110px;
 }
 .supportLogos div {
   width:90%;
@@ -990,24 +1194,52 @@ i.icon {
   padding:5px 0;
   text-align:center;
 }
+.supportLogos:hover {
+  opacity:1;
+  height:110px;
+}
+.supportLogos:hover .chrome {
+  opacity:1;
+}
+.supportLogos:hover .firefox {
+  opacity:1;
+}
+.supportLogos:hover .soon {
+  opacity:1;
+}
+.supportLogos:hover .main {
+    background-color:#fff!important;
+    color:#262523!important;
+  }
 .main {
   padding:5px;
   margin:0 auto 10px;
+  /*background-color:rgba(255,255,255,.5);*/
   width:180px;
   border-radius:4px;
-  color:#fff;
+  display:block;
+  text-transform:uppercase;
+  font-size:14px;
+  text-decoration:underline;
+  color:#262523!important;
 }
 .chrome {
+  width:50px;
   display:inline;
   padding:0 10px 0 0;
   position:relative;
-  width:45px;
-  top:-3px;
+  top:-2px;
+  opacity:1;
 }
 .firefox {
-  width:45px;
+  width:50px;
   display:inline;
   padding:0 0 0 10px;
+  opacity:1;
+}
+.soon {
+  display:block;
+  opacity:1;
 }
 p.soon {
   font-size:10px;
@@ -1017,7 +1249,6 @@ p.soon {
   right:-35px;
   padding:0;
   margin:0;
-  color:#fff;
 }
   .footer {
     width:100%;
