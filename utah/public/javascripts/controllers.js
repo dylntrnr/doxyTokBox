@@ -27,11 +27,15 @@ function HomeCtrl ($scope, $location, analytics) {
   };
 }
 
-function ConfCtrl ($scope, $location, Data, analytics) {
+function ConfCtrl ($scope, $location, $http, Data, analytics) {
+  $scope.origin = window.location.origin;
    //an element in the view binds to this value and sets its text to it
   $scope.roomUrl = randomStringAndDashes();
   //the view will now show the div with link and password
   $scope.password = medicalPassword();
+  $http.get('/api/' + $scope.roomUrl + '/' + $scope.password).success(function (data) {
+    $scope.link = data;
+  });
   $scope.data = Data;
 };
 
