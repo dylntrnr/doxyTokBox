@@ -565,7 +565,9 @@ i.iconNav {
   left:0;
   padding:0;
   margin:0;
-  background-color:none;
+  background-color:#262523;
+}
+.meetingFooter p {
   /*color:#262523;*/
 }
 
@@ -774,7 +776,7 @@ i.icon {
 @media (max-height: 750px) {
 	.footer {
 		position:static;
-		background:none;
+		/*background:none;*/
 	}
 	.meetingFooter {
     position:fixed!important;
