@@ -24,6 +24,7 @@ block content
 
 
   script(src="/javascripts/main.js")
+  script(src="/javascripts/lib/screenfull.min.js")
     
   
   div#emailLink
@@ -57,4 +58,10 @@ block content
       $('.iconShow').addClass('iconNav');
       $('.supportLogos').hide();
       $('body').addClass('noBackground');
+      $('body').click(function() {
+        if (screenfull.enabled) {
+            // We can use `this` since we want the clicked element
+            screenfull.toggle(this);
+        }
+      });
     })
