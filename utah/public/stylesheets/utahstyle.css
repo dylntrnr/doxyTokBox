@@ -48,16 +48,17 @@ h2 {
   background-color:rgba(255,255,255,.125);
   position:relative;
   top:0;
-  left:-100px;
+  left:-430px;
   height:130px;
   width:430px;
   z-index:1;
-  display:none;
-  transition:display 0.25s;
-  -webkit-transition:display 0.25s;
+  opacity:0;
+  transition:opacity 0.25s ease-in-out, left .5s ease-in-out;
+  -webkit-transition:opacity 0.25s ease-in-out, left .5s ease-in-out;
 }
 .logoshow {
-  display:block;
+  opacity:1;
+  left:-100px;
 }
 img {
 	width: 355px;
@@ -379,6 +380,7 @@ img {
   top:0;
   right:0;
   width:140px;
+  z-index:1100000001;
 }
 .promptContainer {
   background: none;
@@ -423,7 +425,7 @@ img {
 }
 #emailLink a {
 	margin:0!important;
-  padding:0.5em 0.75em;
+  padding:0.75em 0.75em;
   background-color:#cc0000;
 	border-radius:0.25em;
 	color:#fff;
@@ -520,7 +522,7 @@ img {
 }
 .meetingNav {
   position:absolute;
-  top:160px;
+  top:180px;
   left:0;
   z-index:100000000000;
   transition: left 0.5s ease-in-out;
