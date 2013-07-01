@@ -21,9 +21,6 @@ body {
 .noBackground {
 	background:none!important;
 }
-html, body {
-	height:100%;
-}
 h1 {
 	font-size:2rem;
 	line-height:1em;
@@ -46,6 +43,21 @@ h2 {
 	background-color:rgba(255,255,255,.8);
 	width:600px;
 	margin:0 0 3em;
+}
+.logoholder {
+  background-color:rgba(255,255,255,.125);
+  position:relative;
+  top:0;
+  left:-100px;
+  height:130px;
+  width:430px;
+  z-index:1;
+  display:none;
+  transition:display 0.25s;
+  -webkit-transition:display 0.25s;
+}
+.logoshow {
+  display:block;
 }
 img {
 	width: 355px;
@@ -466,7 +478,7 @@ img {
 }
 #myPublisherDiv {
 	border:solid 4px #fff;
-	z-index:-1;
+	z-index:1000000000;
 	position:absolute;
 	top:0;
 	right:0;
@@ -502,7 +514,7 @@ img {
 .meetingImg img {
   padding:10px 20px!important;
   margin:0;
-  background-color:rgba(255,255,255,1);
+  /*background-color:rgba(255,255,255,0);*/
   z-index:1000000000000;
   width:293px;
 }
@@ -566,6 +578,7 @@ i.iconNav {
   padding:0;
   margin:0;
   background-color:#262523;
+  display:none;
 }
 .meetingFooter p {
   /*color:#262523;*/

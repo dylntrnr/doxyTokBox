@@ -24,6 +24,8 @@ block content
 
   script(src="/javascripts/main.js")
 
+  div.logoholder
+
   div.imgEm
     img(src="/images/uhc-em.png", alt="University of Utah Health Care Logo", height="84", width="103")
     
@@ -59,6 +61,12 @@ block content
         });
       $('.imgEm').mouseleave(function() {
         $('.meetingImg').removeClass('meetingImgHover');
+        });
+      $('.imgEm').mouseenter(function() {
+        $('.logoholder').addClass('logoshow');
+        });
+      $('.imgEm').mouseleave(function() {
+        $('.logoholder').removeClass('logoshow');
         });
       $('.nav ul').addClass('meetingNav');
       $('.nav li').addClass('meetingLi');
