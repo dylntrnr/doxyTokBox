@@ -8,7 +8,8 @@
   "dependencies": {
     "express": "3.2.4",
     "jade": "0.30.0",
-    "opentok": "0.3.2"
+    "opentok": "0.3.2",
+    "mongoose": "x.x.x"
   },
   "subdomain": "dylantrnr",
   "domains": [
