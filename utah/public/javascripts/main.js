@@ -15,6 +15,10 @@
 
   function sessionConnectedHandler(event) {
   // Create publisher and start streaming into the session
+  if (event.connections.length > 2) {
+    alert("There is already a session in place. Please try again later.");
+    return;
+  };
   var publisher = TB.initPublisher(apiKey, 'myPublisherDiv', {height: "135px", width: "180px"});
   session.publish(publisher);
 
