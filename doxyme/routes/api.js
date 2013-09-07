@@ -66,7 +66,7 @@ var Room = mongoose.model('Room', RoomSchema);
 exports.newRoom = function (req, res) {
   OpenTokObject.createSession(null, {'p2p.preference':'enabled'}, function (sessionId) {
     sendDrClarkResponse(sessionId, res, req);
-    
+
   });
 
 
@@ -74,10 +74,10 @@ exports.newRoom = function (req, res) {
 
 function sendDrClarkResponse(sessionId, res, req) {
   token = OpenTokObject.generateToken({ session_id:sessionId, role:"publisher", connection_data: sessionId});
-  data = {dr:req.path.substring(1), sessionId:sessionId, token:token, OpenTokKey:OTKEY, title: "DrClark's room", Room: "DrClarks room", origin: "origin"};
+  data = {dr:req.path.substring(1), sessionId:sessionId, token:token, OpenTokKey:OTKEY, title: req.path.substring(1) +" room", Room: req.path.substring(1) +" room", origin: "origin"};
   var newRoom = new Room(data);
   newRoom.save();
-  console.log("Post added: " + data.dr, data.sessionId, data.token, data.apiKey);
+  console.log("Post added: " + data.dr, data.sessionId, data.token, data.title);
   res.render('meeting', data);
 }
 

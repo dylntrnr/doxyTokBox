@@ -74,7 +74,11 @@ app.get('/api/:room/:pass', function (req, res) {
 
 
 // Make it do '/drclark' and 'DrClark' go to a different room than everything else
+// I add other drs here and send them to different rooms and it should work?
 app.get("/DrClark", api.newRoom);
+app.get("/DrChestnut", api.newRoom);
+app.get("/DrWelch", api.newRoom);
+app.get("/dylntrnr", api.newRoom);
 
 // When user goes to /:room with the the 123-123-133 form with optional password it redirects to a hashed value so two urls are the same
 app.get("/:room([0-9]+-[0-9]+-[0-9]+)/:pass?", function(req, res){
