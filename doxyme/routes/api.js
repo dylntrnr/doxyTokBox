@@ -30,6 +30,7 @@ var RoomSchema = new Schema({
     },
     dr: {
         type: String,
+        lowercase: true,
         default: 'DrX',
         trim: true
     },
@@ -73,7 +74,7 @@ exports.newRoom = function (req, res) {
 
 function sendDrClarkResponse(sessionId, res, req) {
   token = OpenTokObject.generateToken({ session_id:sessionId, role:"publisher", connection_data: sessionId});
-  data = {dr:'DrClark', sessionId:sessionId, token:token, OpenTokKey:OTKEY, title: "DrClark's room", Room: "DrClarks room", origin: "origin"};
+  data = {dr:req.path.substring(1), sessionId:sessionId, token:token, OpenTokKey:OTKEY, title: "DrClark's room", Room: "DrClarks room", origin: "origin"};
   var newRoom = new Room(data);
   newRoom.save();
   console.log("Post added: " + data.dr, data.sessionId, data.token, data.apiKey);
