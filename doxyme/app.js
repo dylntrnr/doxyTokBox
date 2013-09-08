@@ -79,6 +79,7 @@ app.get("/DrClark", api.newRoom);
 app.get("/DrChestnut", api.newRoom);
 app.get("/DrWelch", api.newRoom);
 app.get("/dylntrnr", api.newRoom);
+app.get("/theonlypat", api.newRoom);
 
 // When user goes to /:room with the the 123-123-133 form with optional password it redirects to a hashed value so two urls are the same
 app.get("/:room([0-9]+-[0-9]+-[0-9]+)/:pass?", function(req, res){
