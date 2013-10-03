@@ -517,28 +517,28 @@ img {
 }
 li.meetingLi:nth-child(1) {
   position:relative;
-  left:-150px;
+  left:-170px;
 }
 li.meetingLi:nth-child(1):hover {
   left:-10px;
 }
 li.meetingLi:nth-child(2) {
   position:relative;
-  left:-160px;
+  left:-175px;
 }
 li.meetingLi:nth-child(2):hover {
-  left:-10px;
+  left:5px;
 }
 li.meetingLi:nth-child(3) {
   position:relative;
-  left:-145px;
+  left:-155px;
 }
 li.meetingLi:nth-child(3):hover {
   left:-5px;
 }
 li.meetingLi:nth-child(4) {
   position:relative;
-  left:-113px;
+  left:-123px;
 }
 li.meetingLi:nth-child(4):hover {
   left:-40px;
