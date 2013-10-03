@@ -517,17 +517,17 @@ img {
 }
 li.meetingLi:nth-child(1) {
   position:relative;
-  left:-110px;
+  left:-150px;
 }
 li.meetingLi:nth-child(1):hover {
-  left:-40px;
+  left:-10px;
 }
 li.meetingLi:nth-child(2) {
   position:relative;
-  left:-120px;
+  left:-160px;
 }
 li.meetingLi:nth-child(2):hover {
-  left:-30px;
+  left:-10px;
 }
 li.meetingLi:nth-child(3) {
   position:relative;
