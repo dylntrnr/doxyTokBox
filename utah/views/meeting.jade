@@ -1,4 +1,4 @@
-extends layout
+extends meetingLayout
 
 
 block content
@@ -78,10 +78,11 @@ block content
       $('.iconShow').addClass('iconNav');
       $('.supportLogos').hide();
       $('body').addClass('noBackground');
-      $('body').click(function() {
-          if (screenfull.enabled) {
-              // We can use `this` since we want the clicked element
-              screenfull.toggle(this);
-          }
-      });
+      $('#toggle').click(function() {
+        if (screenfull.enabled) {
+            // We can use `this` since we want the clicked element
+            var body = $('body')[0];
+            screenfull.toggle(body);
+        }
+      }); 
     })
