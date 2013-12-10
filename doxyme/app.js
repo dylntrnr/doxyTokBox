@@ -93,23 +93,26 @@ app.get("/:room([0-9]+-[0-9]+-[0-9]+)/:pass?", function(req, res){
   res.end();
 });
 
-app.get("/:room", function (req, res) {
-  if(urlSessions[ req.params.room ] == undefined){
-    OpenTokObject.createSession(function(sessionId){
-      urlSessions[ req.params.room ] = sessionId;
-      sendRoomResponse( sessionId, res, req.params.room, req.headers.host );
-    }, {'p2p.preference':'enabled'});
-  }else{
-    sessionId = urlSessions[req.params.room];
-    sendRoomResponse( sessionId, res, req.params.room, req.headers.host );
-  }
-});
-
 function sendRoomResponse( sessionId, responder, room, origin ){
   var token = OpenTokObject.generateToken( {session_id: sessionId} );
   var data = {OpenTokKey:OTKEY, sessionId: sessionId, token:token, title: "New Room: " + room, Room: room, origin: origin};
   responder.render( 'meeting', data );
 }
+
+app.get("/:room", function (req, res) {
+  var room = req.params.room;
+  room = room.toLowerCase();
+  if(urlSessions[ room ] === undefined){
+    OpenTokObject.createSession(function(sessionId){
+      urlSessions[ room ] = sessionId;
+      sendRoomResponse( sessionId, res, room, req.headers.host );
+    }, {'p2p.preference':'enabled'});
+  }else{
+    sessionId = urlSessions[room];
+    sendRoomResponse( sessionId, res, room, req.headers.host );
+  }
+});
+
 
 
 // ***
