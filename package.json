@@ -1,6 +1,6 @@
 {
   "name": "webRTC-Test",
-  "version": "0.0.3-7",
+  "version": "0.0.3-12",
   "private": true,
   "scripts": {
     "start": "node app.js"
@@ -14,7 +14,6 @@
   },
   "subdomain": "dylantrnr",
   "domains": [
-    "doxy.me",
     "utah.doxy.me"
   ],
   "engines": {
